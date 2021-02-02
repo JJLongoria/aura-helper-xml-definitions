@@ -1,0 +1,18 @@
+{
+  "name": "@ah/sf-metadata-types",
+  "productName": "Aura Helper Metadata Types Library",
+  "version": "1.0.0",
+  "description": "Libraries to work with Salesforce Metadata Types",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sf-metadata-types",
+    "metadata",
+    "aurahelper",
+    "aura-helper"
+  ],
+  "author": "Juan José Longoria López (Kanko) <juanjoselongoria@gmail.com>",
+  "license": "MIT"
+}
