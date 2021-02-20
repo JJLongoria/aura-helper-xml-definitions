@@ -25,7 +25,7 @@ function getAllDefinitions(apiVersion) {
     const definitions = require('./src/definitions');
     const result = {};
     for (let key of Object.keys(definitions)) {
-        let typeProcessed = processType(definitions[key])
+        let typeProcessed = processType(definitions[key], apiVersion)
         if (typeProcessed != null && Object.keys(typeProcessed).length > 0) {
             result[key] = typeProcessed;
         }
