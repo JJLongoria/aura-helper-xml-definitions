@@ -1,0 +1,80 @@
+const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('../factory/xmlFactory');
+const MetadataTypes = require('../values/metadataTypes');
+const FilterItemType = require('./types/filterItem');
+const WorkflowActionReferenceType = require('./types/workflowActionReference')
+
+module.exports = {
+    active: new BooleanXMLField('active', 'Active')
+        .setMinApi(27)
+        .setEditable(),
+    businessHours: new StringXMLField('businessHours', 'Business Hours')
+        .setMinApi(30)
+        .setEditable(),
+    description: new StringXMLField('description', 'Description')
+        .setMinApi(27)
+        .setEditable(),
+    entryStartDateField: new EnumXMLField('entryStartDateField', 'Entry Start Date Field')
+        .setMinApi(27)
+        .setEditable()
+        .addEnumValue('SLA Start Date', 'SlaStartDate')
+        .addEnumValue('Created Date', 'CreatedDate')
+        .addEnumValue('Closed Date', 'ClosedDate')
+        .addEnumValue('Last Modified Date', 'LastModifiedDate')
+        .addEnumValue('Stop Start Date', 'StopStartDate'),
+    exitCriteriaBooleanFilter: new StringXMLField('exitCriteriaBooleanFilter', 'Exit Criteria Boolean Filter')
+        .setMinApi(27)
+        .setEditable(),
+    exitCriteriaFilterItems: FilterItemType('exitCriteriaFilterItems', 'Exit Criteria Filter Items', 27),
+    exitCriteriaFormula: new StringXMLField('exitCriteriaFormula', 'Exit Criteria Formula')
+        .setMinApi(27)
+        .setEditable(),
+    isVersionDefault: new BooleanXMLField('isVersionDefault', 'Is Version Default')
+        .setMinApi(28)
+        .setEditable(),
+    milestones: new ArrayXMLField('milestones', 'Milestones')
+        .setMinApi(27)
+        .setEditable()
+        .setFieldKey('milestoneName')
+        .addField('businessHours', new StringXMLField('businessHours', 'Business Hours')
+            .setMinApi(30)
+            .setEditable()
+        )
+        .addField('criteriaBooleanFilter', new StringXMLField('criteriaBooleanFilter', 'Criteria Boolean Filter')
+            .setMinApi(27)
+            .setEditable()
+        )
+        .addField('milestoneCriteriaFilterItems', FilterItemType('milestoneCriteriaFilterItems', 'Milestone Criteria Filter Items', 27))
+        .addField('milestoneCriteriaFormula', new StringXMLField('milestoneCriteriaFormula', 'Milestone Criteria Formula')
+            .setMinApi(27)
+            .setEditable()
+        )
+        .addField('milestoneName', new StringXMLField('milestoneName', 'Milestone Name')
+            .setMinApi(27)
+            .setEditable()
+        )
+        .addField('minutesCustomClass', new StringXMLField('minutesCustomClass', 'Minutes Custom Class')
+            .setMinApi(30)
+            .setEditable()
+            .setMetadataType(MetadataTypes.APEX_CLASS)
+        )
+        .addField('minutesToComplete', new IntegerXMLField('minutesToComplete', 'Minutes To Complete')
+            .setEditable()
+        )
+        .addField('successActions', WorkflowActionReferenceType('successActions', 'Success Actions', 27))
+        .addField('timeTriggers', new ArrayXMLField('timeTriggers', 'Time Triggers')
+            .setEditable()
+            .addField('actions', WorkflowActionReferenceType('actions', 'Actions', 27))
+            .addField('timeLength', new IntegerXMLField('timeLength', 'Time Length')
+                .setEditable()
+            )
+            .addField('workflowTimeTriggerUnit', new EnumXMLField('workflowTimeTriggerUnit', 'Workflow Time Trigger Unit')
+                .setEditable()
+                .addEnumValue('Minutes', 'Minutes')
+                .addEnumValue('Hours', 'Hours')
+                .addEnumValue('Days', 'Days')
+            )
+        ),
+    useCriteriaStartTime: new BooleanXMLField('useCriteriaStartTime', 'Use Criteria Start Time')
+        .setMinApi(27)
+        .setEditable()
+}

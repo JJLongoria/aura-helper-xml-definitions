@@ -1,0 +1,41 @@
+const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('../factory/xmlFactory');
+
+module.exports = {
+    description: new StringXMLField('description', 'Description')
+        .setMinApi(35)
+        .setEditable(),
+    isDefaultPartition: new BooleanXMLField('isDefaultPartition', 'Is Default Partition')
+        .setMinApi(35)
+        .setEditable()
+        .setRequired(),
+    masterLabel: new StringXMLField('masterLabel', 'Master Label')
+        .setMinApi(35)
+        .setEditable()
+        .setRequired(),
+    platformCachePartitionTypes: new ArrayXMLField('platformCachePartitionTypes', 'Platform Cache Partition Types')
+        .setMinApi(35)
+        .setEditable()
+        .addField('allocatedCapacity', new IntegerXMLField('allocatedCapacity', 'Allocated Capacity')
+            .setEditable()
+            .setRequired()
+        )
+        .addField('allocatedPartnerCapacity', new IntegerXMLField('allocatedPartnerCapacity', 'Allocated Partner Capacity')
+            .setMinApi(51)
+            .setEditable()
+            .setRequired()
+        )
+        .addField('allocatedPurchasedCapacity', new IntegerXMLField('allocatedPurchasedCapacity', 'Allocated Purchased Capacity')
+            .setEditable()
+            .setRequired()
+        )
+        .addField('allocatedTrialCapacity', new IntegerXMLField('allocatedTrialCapacity', 'Allocated Trial Capacity')
+            .setEditable()
+            .setRequired()
+        )
+        .addField('cacheType', new EnumXMLField('cacheType', 'Cache Type')
+            .setEditable()
+            .setRequired()
+            .addEnumValue('Session', 'Session')
+            .addEnumValue('Organization', 'Organization')
+        )
+}
