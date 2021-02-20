@@ -1,0 +1,37 @@
+const { StringXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('../factory/xmlFactory');
+const MetadataTypes = require('../values/metadataTypes');
+const DataValues = require('../values/dataValues');
+
+module.exports = {
+    labels: new ArrayXMLField('labels', 'Labels')
+        .setMinApi(14)
+        .setEditable()
+        .setFieldKey('fullName')
+        .setMetadataType(MetadataTypes.CUSTOM_LABEL)
+        .addField('categories', new StringXMLField('categories', 'Categories')
+            .setEditable()
+            .setMaxLength(255)
+        )
+        .addField('fullName', new StringXMLField('fullName', 'Full Name')
+            .setEditable()
+            .setRequired()
+        )
+        .addField('language', new EnumXMLField('language', 'Language')
+            .setEditable()
+            .setRequired()
+            .setEnumValues(DataValues.SF_LANGUAGES)
+        )
+        .addField('protected', new BooleanXMLField('protected', 'Protected')
+            .setEditable()
+            .setRequired()
+        )
+        .addField('shortDescription', new StringXMLField('shortDescription', 'Short Description')
+            .setEditable()
+            .setRequired()
+        )
+        .addField('value', new StringXMLField('value', 'Value')
+            .setEditable()
+            .setRequired()
+            .setMaxLength(1000)
+        )
+}
