@@ -35,3 +35,17 @@ The difference between the XML definition and the raw XML definition is that the
     const CustomFieldRawDefinition = AllRawDefinitions.CustomField;
     const WorkflowRawDefinition = AllRawDefinitions['Workflow'];
 
+## **XML Factory**
+
+This library provide the data types to process properly the files. This classes are store in the object XML Factory
+
+**Example**
+
+    const XMLDefinitions = require('@ah/xml-definitions');
+    const XMLFactory = XMLDefinitions.XMLFactory;
+    const ArrayXMLField = XMLFactory.ArrayXMLField;
+
+    let arrayField = new ArrayXMLField('apiName', 'label');
+
+    
+
