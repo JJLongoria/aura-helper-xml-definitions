@@ -39,12 +39,7 @@ module.exports = {
     description: new StringXMLField('description', 'Description')
         .setMinApi(19)
         .setEditable()
-        .setValidation(function (value) {
-            if (value && value.length > 1000) {
-                return "Description to long. Remove at least " + (value.length - 1000) + " characters";
-            }
-            return undefined;
-        }),
+        .setMaxLength(100),
     fields: new ArrayXMLField('fields', 'Fields')
         .setMinApi(19)
         .setEditable()

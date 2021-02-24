@@ -21,7 +21,7 @@ module.exports = {
     botUser: new StringXMLField('botUser', 'Bot User')
         .setMinApi(46)
         .setEditable(),
-    botVersion: new ObjectXMLField('botVersions', 'Bot Versions')
+    botVersions: new ObjectXMLField('botVersions', 'Bot Versions')
         .setMinApi(43)
         .setEditable()
         .setFields(BotVersion),
