@@ -13,6 +13,7 @@ module.exports = {
     fieldOverrides: new ArrayXMLField('fieldOverrides', 'Field Overrides')
         .setMinApi(28)
         .setEditable()
+        .setFieldKey('field')
         .addField('field', new StringXMLField('field', 'Field')
             .setEditable()
             .setRequired()

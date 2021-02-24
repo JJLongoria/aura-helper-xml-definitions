@@ -66,7 +66,7 @@ module.exports = {
             )
             .addField('botSteps', new ArrayXMLField('botSteps', 'Bot Steps')
                 .setEditable()
-                .setDefinitionReference('botDialogs>botSteps')
+                .setDefinitionReference('this>botVersions>botDialogs>botSteps')
             )
             .addField('botVariableOperation', new ArrayXMLField('botVariableOperation', 'Bot Variable Operation')
                 .setEditable()

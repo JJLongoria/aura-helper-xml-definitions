@@ -202,12 +202,8 @@ module.exports = {
     relationshipOrder: new IntegerXMLField('relationshipOrder', 'Relationship Order')
         .setMinApi(10)
         .setEditable()
-        .setValidation(function (value) {
-            if (value != 0 && value != 1) {
-                return "Not Allowed Vaue. Valid values are 0 or 1 ";
-            }
-            return undefined;
-        }),
+        .setMinValue(0)
+        .setMaxValue(1),
     reparentableMasterDetail: new BooleanXMLField('reparentableMasterDetail', 'Reparentable Master Detail')
         .setMinApi(25)
         .setEditable()

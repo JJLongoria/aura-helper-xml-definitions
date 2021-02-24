@@ -67,12 +67,7 @@ module.exports = {
     description: new StringXMLField('description', 'Description')
         .setMinApi(51)
         .setEditable()
-        .setValidation(function (value) {
-            if (value && value.length > 255) {
-                return "Description to long. Remove at least " + (value.length - 255) + " characters";
-            }
-            return undefined;
-        }),
+        .setMaxLength(255),
     flowApiName: new StringXMLField('flowApiName', 'Flow Api Name')
         .setMinApi(51)
         .setEditable()
@@ -86,12 +81,7 @@ module.exports = {
         .setMinApi(51)
         .setEditable()
         .setRequired()
-        .setValidation(function (value) {
-            if (value && value.length > 80) {
-                return "Description to long. Remove at least " + (value.length - 80) + " characters";
-            }
-            return undefined;
-        }),
+        .setMaxLength(80),
     processGroup: new StringXMLField('processGroup', 'Process Group')
         .setMinApi(51)
         .setEditable()

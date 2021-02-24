@@ -37,6 +37,24 @@ function getAllRawDefinitions() {
     return require('./src/definitions');
 }
 
+function resolveDefinitionReference(typeDefinition, subFieldDefinition) {
+    if (typeDefinition) {
+        const references = subFieldDefinition.definitionRef.split('>');
+        let parentDefinition;
+        for (const ref of references) {
+            if (ref === 'this') {
+                parentDefinition = typeDefinition;
+            } else if (parentDefinition && parentDefinition.fields && parentDefinition.fields[ref]) {
+                parentDefinition = parentDefinition.fields[ref];
+            } else if (parentDefinition && parentDefinition[ref]) {
+                parentDefinition = parentDefinition[ref];
+            }
+        }
+        return parentDefinition;
+    }
+    return subFieldDefinition;
+}
+
 function processType(typeDefinition, apiVersion) {
     const result = {};
     for (let key of Object.keys(typeDefinition)) {
@@ -100,7 +118,7 @@ function processEntity(entityData, apiVersion) {
     return result;
 }
 
-function isReserved(entityData){
+function isReserved(entityData) {
     return entityData.reserved !== undefined && entityData.reserved;
 }
 
@@ -109,7 +127,7 @@ function isApiAvailable(entityData, apiVersion) {
 }
 
 function transformTypeName(type) {
-    if(type === MetadataTypes.INDEX)
+    if (type === MetadataTypes.INDEX)
         type = type + 'Xml';
     let typeFirstChar = type.substring(0, 1);
     let typeRest = type.substring(1);
@@ -121,5 +139,6 @@ module.exports = {
     getRawDefinition: getRawDefinition,
     getAllDefinitions: getAllDefinitions,
     getAllRawDefinitions: getAllRawDefinitions,
+    resolveDefinitionReference: resolveDefinitionReference,
     XMLFactory: XMLFactory
 }
