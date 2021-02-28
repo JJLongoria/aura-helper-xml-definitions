@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = {
     action: new ObjectXMLField('action', 'Action')

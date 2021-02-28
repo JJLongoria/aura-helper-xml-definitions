@@ -1,6 +1,5 @@
-const { StringXMLField, ArrayXMLField, XMLDependencyField, EnumXMLField } = require('../../factory/xmlFactory');
-const DataValues = require('../../values/dataValues');
-const MetadataTypes = require('../../values/metadataTypes');
+const { StringXMLField, ArrayXMLField, XMLDependencyField, EnumXMLField } = require('@ah/core').Types;
+const { MetadataTypes, DataValues } = require('@ah/core').Values;
 
 
 module.exports = function (actionReferenceName, actionReferenceLabel, minApi) {

@@ -1,4 +1,4 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, BooleanXMLField } = require('../factory/xmlFactory');
+const { StringXMLField, ObjectXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
 
 module.exports = {
     dataFlowDirection: new ObjectXMLField('dataFlowDirection', 'Data Flow Direction')

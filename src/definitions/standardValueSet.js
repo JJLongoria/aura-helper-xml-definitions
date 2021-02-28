@@ -1,4 +1,4 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('../factory/xmlFactory');
+const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
 
 module.exports = {
     groupingStringEnum: new EnumXMLField('groupingStringEnum', 'Grouping String Enum')

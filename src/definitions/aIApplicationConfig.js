@@ -1,5 +1,4 @@
-const { StringXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('../factory/xmlFactory');
-
+const { StringXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
 
 module.exports = {
     aiApplicationDeveloperName: new StringXMLField('aiApplicationDeveloperName', 'AI Application Developer Name')

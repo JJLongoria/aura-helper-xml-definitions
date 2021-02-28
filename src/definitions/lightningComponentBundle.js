@@ -1,4 +1,4 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, DoubleXMLField, EnumXMLField, BooleanXMLField } = require('../factory/xmlFactory');
+const { StringXMLField, ObjectXMLField, ArrayXMLField, DoubleXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
 
 module.exports = {
     apiVersion: new DoubleXMLField('LightningComponentBundle', 'Lightning Component Bundle')

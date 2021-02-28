@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 const SharedTo = require('./sharedTo');
 const FilterItemType = require('./types/filterItem');
 

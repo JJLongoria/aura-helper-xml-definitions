@@ -1,5 +1,5 @@
-const { StringXMLField, BooleanXMLField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField, BooleanXMLField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = {
     appointmentBookingFlowName: new StringXMLField('appointmentBookingFlowName', 'Appointment Booking Flow Name')

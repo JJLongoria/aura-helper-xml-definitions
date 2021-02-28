@@ -1,5 +1,5 @@
 const CustomShortcutType = require('../../../../src/definitions/types/customShortcut');
-const { ArrayXMLField } = require('../../../../src/factory/xmlFactory');
+const { ArrayXMLField } = require('@ah/core').Types;
 
 describe('Testing src/definitions/types/customShortcut.js', () => {
     test('Testing Definition', () => {

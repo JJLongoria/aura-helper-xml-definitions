@@ -1,5 +1,5 @@
-const { StringXMLField, ArrayXMLField, BooleanXMLField, XMLDataControlledField } = require('../factory/xmlFactory');
-const DataValues = require('../values/dataValues');
+const { StringXMLField, ArrayXMLField, BooleanXMLField, XMLDataControlledField } = require('@ah/core').Types;
+const { DataValues } = require('@ah/core').Values;
 
 module.exports = {
     active: new BooleanXMLField('active', 'Active')

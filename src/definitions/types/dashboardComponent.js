@@ -1,6 +1,5 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, ArrayXMLField, DoubleXMLField, BooleanXMLField, IntegerXMLField } = require('../../factory/xmlFactory');
-const DataValues = require('../../values/dataValues');
-const MetadataTypes = require('../../values/metadataTypes');
+const { StringXMLField, ObjectXMLField, EnumXMLField, ArrayXMLField, DoubleXMLField, BooleanXMLField, IntegerXMLField } = require('@ah/core').Types;
+const { MetadataTypes, DataValues } = require('@ah/core').Values;
 
 module.exports = function (type, dashboardComponentName, dashboardComponentLabel, minApi) {
     return new type(dashboardComponentName, dashboardComponentLabel)

@@ -1,4 +1,4 @@
-const { StringXMLField, IntegerXMLField, EnumXMLField } = require('../factory/xmlFactory');
+const { StringXMLField, IntegerXMLField, EnumXMLField } = require('@ah/core').Types;
 
 module.exports = {
     creationAgeInSeconds: new IntegerXMLField('creationAgeInSeconds', 'Creation Age In Seconds')

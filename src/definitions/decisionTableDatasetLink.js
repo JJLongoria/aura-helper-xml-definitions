@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, BooleanXMLField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField, ObjectXMLField, BooleanXMLField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = {
     decisionTableName: new StringXMLField('decisionTableName', 'Decision Table Name')

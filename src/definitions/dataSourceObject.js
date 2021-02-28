@@ -1,5 +1,5 @@
-const { StringXMLField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = {
     dataSource: new StringXMLField('dataSource', 'Data Source')

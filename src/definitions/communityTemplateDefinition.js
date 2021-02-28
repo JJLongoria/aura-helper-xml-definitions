@@ -1,4 +1,4 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('../factory/xmlFactory');
+const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@ah/core').Types;
 const NavigationLinkSetType = require('../definitions/types/navigationLinkSet');
 
 module.exports = {

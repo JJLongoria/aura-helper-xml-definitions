@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('../factory/xmlFactory');
-const DataValues = require('../values/dataValues');
+const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@ah/core').Types;
+const { DataValues } = require('@ah/core').Values;
 const CriteriaItemType = require('./types/criteriaItem');
 const ApprovalActionType = require('./types/approvalAction');
 

@@ -1,4 +1,4 @@
-const { EnumXMLField, BooleanXMLField } = require('../factory/xmlFactory');
+const { EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
 
 
 module.exports = {

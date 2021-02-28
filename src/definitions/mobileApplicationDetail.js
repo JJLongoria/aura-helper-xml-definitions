@@ -1,4 +1,4 @@
-const { StringXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('../factory/xmlFactory');
+const { StringXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
 
 module.exports = {
     applicationBinaryFile: new StringXMLField('applicationBinaryFile', 'Application Binary File')

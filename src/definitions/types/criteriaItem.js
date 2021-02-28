@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, XMLDependencyField } = require('../../factory/xmlFactory');
-const DataValues = require('../../values/dataValues');
+const { StringXMLField, ObjectXMLField, XMLDependencyField } = require('@ah/core').Types;
+const { DataValues } = require('@ah/core').Values;
 const FilterItemType = require('./filterItem');
 
 module.exports = function (criteriaName, criteriaLabel, minApi) {

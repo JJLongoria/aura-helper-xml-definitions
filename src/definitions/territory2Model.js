@@ -1,7 +1,4 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, DoubleXMLField, EnumXMLField, BooleanXMLField, DateTimeXMLField, XMLDataControlledField, XMLDependencyField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
-const DataValues = require('../values/dataValues');
-const Validator = require('../utils/validator');
+const { StringXMLField, ArrayXMLField } = require('@ah/core').Types;
 
 module.exports = {
     customFields: new ArrayXMLField('customFields', 'Custom Fields')

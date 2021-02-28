@@ -1,4 +1,4 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, BooleanXMLField } = require('../factory/xmlFactory');
+const { StringXMLField, ArrayXMLField, IntegerXMLField, BooleanXMLField } = require('@ah/core').Types;
 
 module.exports = {
     doesMinimizeWidgetOnAccept: new BooleanXMLField('doesMinimizeWidgetOnAccept', 'Does Minimize Widget On Accept')

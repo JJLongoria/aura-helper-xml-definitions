@@ -1,6 +1,5 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('../factory/xmlFactory');
-const DataValues = require('../values/dataValues');
-
+const { StringXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@ah/core').Types;
+const { DataValues } = require('@ah/core').Values;
 module.exports = {
     actionName: new EnumXMLField('actionName', 'Action Name')
         .setMinApi(18)

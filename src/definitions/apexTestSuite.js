@@ -1,4 +1,4 @@
-const { ArrayXMLField } = require('../factory/xmlFactory');
+const { ArrayXMLField } = require('@ah/core').Types;
 
 
 module.exports = {

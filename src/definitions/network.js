@@ -1,6 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField, DoubleXMLField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
-const DataValues = require('../values/dataValues');
+const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField, DoubleXMLField } = require('@ah/core').Types;
+const { MetadataTypes, DataValues } = require('@ah/core').Values;
 const NetworkBranding = require('./networkBranding');
 
 module.exports = {

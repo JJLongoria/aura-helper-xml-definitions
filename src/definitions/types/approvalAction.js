@@ -1,4 +1,4 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField } = require('../../factory/xmlFactory');
+const { ObjectXMLField } = require('@ah/core').Types;
 const WorkflowActionReferenceType = require('./workflowActionReference')
 
 module.exports = function (criteriaName, criteriaLabel, minApi) {

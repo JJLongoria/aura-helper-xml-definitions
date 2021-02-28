@@ -1,4 +1,4 @@
-const { StringXMLField, IntegerXMLField } = require('../factory/xmlFactory');
+const { StringXMLField, IntegerXMLField } = require('@ah/core').Types;
 
 module.exports = {
     activeVersionNumber: new IntegerXMLField('activeVersionNumber', 'Active Version Number')

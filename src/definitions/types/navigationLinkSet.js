@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, BooleanXMLField, XMLDependencyField, EnumXMLField } = require('../../factory/xmlFactory');
-const DataValues = require('../../values/dataValues');
+const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, BooleanXMLField, XMLDependencyField, EnumXMLField } = require('@ah/core').Types;
+const { DataValues } = require('@ah/core').Values;
 
 module.exports = function (navigationLinkSetName, navigationLinkSetLabel, minApi, maxApi) {
     return new ObjectXMLField(navigationLinkSetName, navigationLinkSetLabel)

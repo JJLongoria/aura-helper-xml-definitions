@@ -1,12 +1,8 @@
-const Datatypes = require('./src/values/datatypes');
-const MetadataTypes = require('./src/values/metadataTypes');
-const XMLFactory = require('./src/factory/xmlFactory');
+const { MetadataTypes, DataTypes } = require('@ah/core').Values;
 
 function getDefinition(type, apiVersion) {
     try {
         const typeDefinition = require('./src/definitions/' + transformTypeName(type));
-        if (!typeDefinition)
-            return undefined;
         return processType(typeDefinition, apiVersion);
     } catch (error) {
         return undefined;
@@ -95,7 +91,7 @@ function processEntity(entityData, apiVersion) {
             }
         }
         if (entityData.allowedValues) {
-            if (entityData.datatype && entityData.datatype === Datatypes.ARRAY) {
+            if (entityData.datatype && entityData.datatype === DataTypes.ARRAY) {
                 let allowedValues = [];
                 for (let allowedValue of entityData.allowedValues) {
                     let entityProcessed = processEntity(allowedValue);
@@ -140,5 +136,4 @@ module.exports = {
     getAllDefinitions: getAllDefinitions,
     getAllRawDefinitions: getAllRawDefinitions,
     resolveDefinitionReference: resolveDefinitionReference,
-    XMLFactory: XMLFactory
 }

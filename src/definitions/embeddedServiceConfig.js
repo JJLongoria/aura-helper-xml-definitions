@@ -1,5 +1,5 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = {
     areGuestUsersAllowed: new BooleanXMLField('areGuestUsersAllowed', 'Are Guest Users Allowed')

@@ -1,4 +1,4 @@
-const { StringXMLField, DateTimeXMLField } = require('../factory/xmlFactory');
+const { StringXMLField, DateTimeXMLField } = require('@ah/core').Types;
 
 module.exports = {
     expirationDate: new DateTimeXMLField('expirationDate', 'Expiration Date')

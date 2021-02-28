@@ -1,4 +1,4 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField } = require('../../factory/xmlFactory');
+const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
 
 module.exports = function (type, shortcutName, shortcutLabel, minApi, maxApi) {
     return new type(shortcutName, shortcutLabel)

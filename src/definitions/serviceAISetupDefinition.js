@@ -1,5 +1,5 @@
-const { StringXMLField, EnumXMLField } = require('../factory/xmlFactory');
-const DataValues = require('../values/dataValues');
+const { StringXMLField, EnumXMLField } = require('@ah/core').Types;
+const { DataValues } = require('@ah/core').Values;
 
 module.exports = {
     appSourceType: new EnumXMLField('appSourceType', 'App Source Type')

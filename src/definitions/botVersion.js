@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, DoubleXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('../factory/xmlFactory');
-const DataValues = require('../values/dataValues');
+const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@ah/core').Types;
+const { DataValues } = require('@ah/core').Values;
 const BotInvocationType = require('./types/botInvocation');
 const BotMessageType = require('./types/botMessage');
 const BotNavigationType = require('./types/botNavigation');

@@ -1,5 +1,5 @@
-const { ArrayXMLField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
+const { ArrayXMLField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = {
     customTabListAdditionalFields: new ArrayXMLField('customTabListAdditionalFields', 'Custom Tab List Additional Fields')

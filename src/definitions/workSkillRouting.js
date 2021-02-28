@@ -1,8 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, DoubleXMLField, EnumXMLField, BooleanXMLField, DateTimeXMLField, XMLDataControlledField, XMLDependencyField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
-const DataValues = require('../values/dataValues');
-const Validator = require('../utils/validator');
-const FilterItemType = require('./types/filterItem');
+const { StringXMLField, ArrayXMLField, IntegerXMLField, BooleanXMLField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = {
     isActive: new BooleanXMLField('isActive', 'Is Active')

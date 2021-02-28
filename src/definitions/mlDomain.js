@@ -1,4 +1,4 @@
-const { StringXMLField } = require('../factory/xmlFactory');
+const { StringXMLField } = require('@ah/core').Types;
 const MLIntentType = require('./types/mlIntent');
 const MLSlotType = require('./types/mlSlot');
 

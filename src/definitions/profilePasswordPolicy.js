@@ -1,5 +1,5 @@
-const { StringXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = {
     forgotPasswordRedirect: new BooleanXMLField('forgotPasswordRedirect', 'Forgot Password Redirect')
