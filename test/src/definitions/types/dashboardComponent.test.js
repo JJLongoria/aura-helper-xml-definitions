@@ -1,5 +1,5 @@
 const DashboardComponentType = require('../../../../src/definitions/types/dashboardComponent');
-const { ArrayXMLField } = require('../../../../src/factory/xmlFactory');
+const { ArrayXMLField } = require('@ah/core').Types;
 
 describe('Testing src/definitions/types/dashboardComponent.js', () => {
     test('Testing Definition', () => {

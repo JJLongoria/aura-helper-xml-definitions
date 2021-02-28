@@ -1,4 +1,4 @@
-const { StringXMLField, IntegerXMLField, BooleanXMLField } = require('../factory/xmlFactory');
+const { StringXMLField, IntegerXMLField, BooleanXMLField } = require('@ah/core').Types;
 
 module.exports = {
     batchSize: new IntegerXMLField('batchSize', 'Batch Size')

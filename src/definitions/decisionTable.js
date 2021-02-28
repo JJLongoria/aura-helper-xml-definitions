@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, DateTimeXMLField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField, ObjectXMLField, EnumXMLField, DateTimeXMLField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = {
     decisionTableParameters: new ObjectXMLField('decisionTableParameters', 'Decision Table Parameters')

@@ -1,5 +1,5 @@
-const { StringXMLField, IntegerXMLField, EnumXMLField, ArrayXMLField } = require('../factory/xmlFactory');
-const DataValues = require('../values/dataValues');
+const { StringXMLField, IntegerXMLField, EnumXMLField, ArrayXMLField } = require('@ah/core').Types;
+const { DataValues } = require('@ah/core').Values;
 
 module.exports = {
     defaultCurrency: new StringXMLField('defaultCurrency', 'Default Currency')

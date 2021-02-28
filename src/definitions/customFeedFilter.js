@@ -1,5 +1,5 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = {
     criteria: new ArrayXMLField('criteria', 'Criteria')

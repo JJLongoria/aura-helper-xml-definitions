@@ -1,6 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
-const DataValues = require('../values/dataValues');
+const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField } = require('@ah/core').Types;
+const { MetadataTypes, DataValues } = require('@ah/core').Values;
 const SharedTo = require('./sharedTo');
 
 module.exports = {

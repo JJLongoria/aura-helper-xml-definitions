@@ -1,4 +1,4 @@
-const { StringXMLField, DoubleXMLField, EnumXMLField } = require('../factory/xmlFactory');
+const { StringXMLField, DoubleXMLField, EnumXMLField } = require('@ah/core').Types;
 const PackageVerionsItemType = require('./types/packageVersion');
 
 module.exports = {

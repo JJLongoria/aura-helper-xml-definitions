@@ -1,5 +1,4 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, BooleanXMLField } = require('../factory/xmlFactory');
-
+const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, BooleanXMLField } = require('@ah/core').Types;
 
 module.exports = {
     actionPlanTemplateItem: new ObjectXMLField('actionPlanTemplateItem', 'Action Plan Template Item')

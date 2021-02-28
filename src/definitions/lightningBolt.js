@@ -1,5 +1,5 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = {
     category: new EnumXMLField('category', 'Category')

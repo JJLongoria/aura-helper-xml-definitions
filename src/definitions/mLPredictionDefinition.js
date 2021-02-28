@@ -1,5 +1,5 @@
-const { StringXMLField, EnumXMLField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField, EnumXMLField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 const MLFilterType = require('./types/mLFilter');
 
 module.exports = {

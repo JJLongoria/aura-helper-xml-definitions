@@ -1,4 +1,4 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, ArrayXMLField } = require('../../factory/xmlFactory');
+const { StringXMLField, ObjectXMLField, EnumXMLField, ArrayXMLField } = require('@ah/core').Types;
 
 module.exports = function (botNavigationName, botNavigationLabel, minApi) {
     return new ObjectXMLField(botNavigationName, botNavigationLabel)

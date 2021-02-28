@@ -1,6 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('../factory/xmlFactory');
-const DataValues = require('../values/dataValues');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@ah/core').Types;
+const { MetadataTypes, DataValues } = require('@ah/core').Values;
 const FilterItemType = require('./types/filterItem');
 const PicklistValuesType = require('./types/picklistValues');
 

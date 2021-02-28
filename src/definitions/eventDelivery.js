@@ -1,4 +1,4 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('../factory/xmlFactory');
+const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@ah/core').Types;
 
 module.exports = {
     eventParameters: new ArrayXMLField('eventParameters', 'Event Parameters')

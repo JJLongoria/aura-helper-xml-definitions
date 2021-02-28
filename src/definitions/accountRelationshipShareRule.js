@@ -1,7 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, DoubleXMLField, EnumXMLField, BooleanXMLField, DateTimeXMLField, XMLDataControlledField, XMLDependencyField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
-const DataValues = require('../values/dataValues');
-const Validator = require('../utils/validator');
+const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, DoubleXMLField, EnumXMLField, BooleanXMLField, DateTimeXMLField, XMLDataControlledField, XMLDependencyField } = require('@ah/core').Types;
+const { MetadataTypes, DataValues, Validator } = require('@ah/core').Values;
 
 module.exports = {
     accessLevel: new EnumXMLField('accessLevel', 'Access Level')

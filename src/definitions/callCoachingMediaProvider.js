@@ -1,4 +1,4 @@
-const { BooleanXMLField } = require('../factory/xmlFactory');
+const { BooleanXMLField } = require('@ah/core').Types;
 
 module.exports = {
     isActive: new BooleanXMLField('isActive', 'Is Active')

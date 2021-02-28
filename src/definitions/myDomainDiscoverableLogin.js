@@ -1,5 +1,5 @@
-const { StringXMLField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = {
     apexHandler: new StringXMLField('apexHandler', 'Apex Handler')

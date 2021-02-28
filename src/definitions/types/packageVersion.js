@@ -1,4 +1,4 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField } = require('../../factory/xmlFactory');
+const { StringXMLField, ArrayXMLField, IntegerXMLField } = require('@ah/core').Types;
 
 
 module.exports = function (pkgVersionsName, pkgVersionsLabel, minApi) {

@@ -1,4 +1,4 @@
-const { StringXMLField } = require('../factory/xmlFactory');
+const { StringXMLField } = require('@ah/core').Types;
 
 module.exports = {
     contrastInvertedColor: new StringXMLField('contrastInvertedColor', 'Contrast Inverted Color')

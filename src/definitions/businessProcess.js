@@ -1,4 +1,4 @@
-const { StringXMLField, BooleanXMLField } = require('../factory/xmlFactory');
+const { StringXMLField, BooleanXMLField } = require('@ah/core').Types;
 const PicklistValuesType = require('./types/picklistValues');
 
 module.exports = {

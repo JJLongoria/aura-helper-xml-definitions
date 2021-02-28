@@ -1,6 +1,5 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('../factory/xmlFactory');
-const DataValues = require('../values/dataValues');
-
+const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@ah/core').Types;
+const { DataValues } = require('@ah/core').Values;
 module.exports = {
     actionLinkTemplates: new ArrayXMLField('actionLinkTemplates', 'Action Link Templates')
         .setMinApi(33)

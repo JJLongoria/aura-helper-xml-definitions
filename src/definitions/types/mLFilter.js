@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, IntegerXMLField } = require('../../factory/xmlFactory');
-const MetadataTypes = require('../../values/metadataTypes');
+const { StringXMLField, ObjectXMLField, EnumXMLField, IntegerXMLField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = function (filterName, filterLabel, minApi) {
     return new ObjectXMLField(filterName, filterLabel)

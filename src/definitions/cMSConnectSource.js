@@ -1,5 +1,5 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, XMLDependencyField } = require('../factory/xmlFactory');
-const DataValues = require('../values/dataValues');
+const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, XMLDependencyField } = require('@ah/core').Types;
+const { DataValues } = require('@ah/core').Values;
 
 module.exports = {
     cmsConnectAsset: new ArrayXMLField('', '')

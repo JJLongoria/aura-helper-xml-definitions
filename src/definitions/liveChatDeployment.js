@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, IntegerXMLField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField, ObjectXMLField, IntegerXMLField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = {
     brandingImage: new StringXMLField('brandingImage', 'Branding Image')

@@ -1,5 +1,4 @@
-const { StringXMLField, EnumXMLField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField, EnumXMLField } = require('@ah/core').Types;
 
 module.exports = {
     assetIcon: new EnumXMLField('assetIcon', 'Asset Icon')

@@ -1,5 +1,5 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('../factory/xmlFactory');
-const DataValues = require('../values/dataValues');
+const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@ah/core').Types;
+const { DataValues } = require('@ah/core').Values;
 
 module.exports = {
     description: new StringXMLField('description', 'Description')

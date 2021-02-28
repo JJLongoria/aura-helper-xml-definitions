@@ -1,4 +1,4 @@
-const { StringXMLField, IntegerXMLField, BooleanXMLField, DateTimeXMLField } = require('../factory/xmlFactory');
+const { StringXMLField, IntegerXMLField, BooleanXMLField, DateTimeXMLField } = require('@ah/core').Types;
 
 module.exports = {
     caSigned: new BooleanXMLField('CaSigned', 'caSigned')

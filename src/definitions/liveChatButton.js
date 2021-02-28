@@ -1,6 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('../factory/xmlFactory');
-const DataValues = require('../values/dataValues');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
+const { MetadataTypes, DataValues } = require('@ah/core').Values;
 
 module.exports = {
     animation: new EnumXMLField('animation', 'Animation')

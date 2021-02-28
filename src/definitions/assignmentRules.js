@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('../factory/xmlFactory');
-const DataValues = require('../values/dataValues');
+const { StringXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@ah/core').Types;
+const { MetadataTypes, DataValues } = require('@ah/core').Values;
 const FilterItemType = require('./types/filterItem');
-const MetadataTypes = require('../values/metadataTypes');
 
 module.exports = {
     assignmentRule: new ArrayXMLField('assignmentRule', 'Assignment Rule')

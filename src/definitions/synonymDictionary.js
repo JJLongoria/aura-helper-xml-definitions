@@ -1,5 +1,5 @@
-const { ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('../factory/xmlFactory');
-const DataValues = require('../values/dataValues');
+const { ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
+const { DataValues } = require('@ah/core').Values;
 
 module.exports = {
     groups: new ObjectXMLField('groups', 'Groups')

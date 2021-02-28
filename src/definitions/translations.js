@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField, ObjectXMLField, ArrayXMLField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = {
     customApplications: new ArrayXMLField('customApplications', 'Custom Applications')

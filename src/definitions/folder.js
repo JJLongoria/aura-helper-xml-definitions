@@ -1,4 +1,4 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField } = require('../factory/xmlFactory');
+const { StringXMLField, ObjectXMLField, EnumXMLField } = require('@ah/core').Types;
 const SharedTo = require('./sharedTo');
 
 module.exports = {

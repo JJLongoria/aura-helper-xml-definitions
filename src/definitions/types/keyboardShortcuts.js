@@ -1,4 +1,4 @@
-const { ObjectXMLField, ArrayXMLField } = require('../../factory/xmlFactory');
+const { ObjectXMLField, ArrayXMLField } = require('@ah/core').Types;
 const CustomShortcutType = require('./customShortcut');
 const DefaultShortcutType = require('./defaultShortcut');
 

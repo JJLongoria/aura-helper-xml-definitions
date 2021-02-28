@@ -1,6 +1,5 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
-const DataValues = require('../values/dataValues');
+const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@ah/core').Types;
+const { MetadataTypes, DataValues } = require('@ah/core').Values;
 
 module.exports = {
     accessMappings: new ArrayXMLField('accessMappings', 'Access Mappings')

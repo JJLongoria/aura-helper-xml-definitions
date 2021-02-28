@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField } = require('../factory/xmlFactory');
-const DataValues = require('../values/dataValues');
+const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField } = require('@ah/core').Types;
+const { DataValues } = require('@ah/core').Values;
 const CustomField = require('./customField');
 
 

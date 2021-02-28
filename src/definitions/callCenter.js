@@ -1,4 +1,4 @@
-const { StringXMLField, ArrayXMLField } = require('../factory/xmlFactory');
+const { StringXMLField, ArrayXMLField } = require('@ah/core').Types;
 
 module.exports = {
     adapterUrl: new StringXMLField('adapterUrl', 'Adapter URL')

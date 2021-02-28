@@ -1,5 +1,5 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDataControlledField } = require('../factory/xmlFactory');
-const MetadataTypes = require('../values/metadataTypes');
+const { StringXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDataControlledField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = {
     apiAccessLevel: new EnumXMLField('apiAccessLevel', 'API Access Level')

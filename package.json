@@ -24,6 +24,9 @@
   ],
   "author": "Juan José Longoria López (Kanko) <juanjoselongoria@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "@ah/core": "file:../ah-core"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.20",
     "jest": "^26.6.3"

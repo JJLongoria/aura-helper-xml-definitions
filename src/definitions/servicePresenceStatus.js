@@ -1,4 +1,4 @@
-const { StringXMLField, ObjectXMLField } = require('../factory/xmlFactory');
+const { StringXMLField, ObjectXMLField } = require('@ah/core').Types;
 
 module.exports = {
     channels: new ObjectXMLField('channels', 'Channels')

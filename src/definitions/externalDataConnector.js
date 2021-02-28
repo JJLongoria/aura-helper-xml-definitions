@@ -1,4 +1,4 @@
-const { StringXMLField, EnumXMLField } = require('../factory/xmlFactory');
+const { StringXMLField, EnumXMLField } = require('@ah/core').Types;
 
 module.exports = {
     dataConnectionStatus: new EnumXMLField('dataConnectionStatus', 'Data Connection Status')
