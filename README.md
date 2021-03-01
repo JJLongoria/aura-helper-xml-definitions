@@ -1,5 +1,5 @@
 # **Aura Helper XML Definitions Library**
-Libraries to get any Salesforce Metadata XML Files Definition to process files Metadata files properly. Yoy can get all Raw definitions, a Rat definition for a specific type or get All or specific definitions for a specific api version. For example, yo can get all Salesforce XML Definitions for API 45.0 or get the Custom Object XML File Definition for API 35.0.
+Libraries to get any Salesforce Metadata XML Files Definition to process Metadata files properly. Yoy can get all Raw definitions, a Rat definition for a specific type or get All or specific definitions for a specific api version. For example, yo can get all Salesforce XML Definitions for API 45.0 or get the Custom Object XML File Definition for API 35.0.
 
 The **difference** between the **XML definition** and the **raw XML definition** is that the raw definition *is not processed*, it returns the entire XML information. The XML definitions return the XML definition processed for a *specific API version*, omitting everything that does not correspond to the indicated version.
 
