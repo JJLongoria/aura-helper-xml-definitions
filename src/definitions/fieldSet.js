@@ -35,5 +35,6 @@ module.exports = {
     label: new StringXMLField('label', 'Label')
         .setMinApi(21)
         .setEditable()
-        .setRequired(),
+        .setRequired()
+        .setMetadataType(MetadataTypes.FIELD_SET),
 }

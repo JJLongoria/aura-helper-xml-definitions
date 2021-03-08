@@ -93,7 +93,8 @@ module.exports = {
     fullName: new StringXMLField('fullName', 'Full Name')
         .setMinApi(10)
         .setEditable()
-        .setUnique(),
+        .setUnique()
+        .setMetadataType(MetadataTypes.CUSTOM_FIELD),
     globalPicklist: new StringXMLField('globalPicklist', 'Global Picklist')
         .setMinApi(37)
         .setMaxApi(37)

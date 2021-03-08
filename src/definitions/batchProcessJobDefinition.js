@@ -71,7 +71,7 @@ module.exports = {
         .setMinApi(51)
         .setEditable()
         .setRequired()
-        .setMetadataType(MetadataTypes.FLOWS),
+        .setMetadataType(MetadataTypes.FLOW),
     flowInputVariable: new StringXMLField('flowInputVariable', 'Flow Input Variable')
         .setMinApi(51)
         .setEditable()

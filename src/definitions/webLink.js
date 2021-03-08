@@ -36,7 +36,8 @@ module.exports = {
         .setMinApi(12)
         .setEditable()
         .setRequired()
-        .setUnique(),
+        .setUnique()
+        .setMetadataType(MetadataTypes.WEBLINK),
     hasMenubar: new BooleanXMLField('hasMenubar', 'Has Menu Bar')
         .setMinApi(12)
         .setEditable()

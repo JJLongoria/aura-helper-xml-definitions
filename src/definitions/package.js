@@ -20,7 +20,6 @@ module.exports = {
         .setEditable(),
     objectPermissions: new ArrayXMLField('objectPermissions', 'Object Permissions')
         .setMinApi(10)
-        .setMetadataType(MetadataTypes.CUSTOM_OBJECT)
         .setEditable()
         .setMergeable()
         .setFieldKey('object')
@@ -52,6 +51,7 @@ module.exports = {
         )
         .addField('object', new StringXMLField('object', 'Object')
             .setUnique()
+            .setMetadataType(MetadataTypes.CUSTOM_OBJECT)
         )
         .addField('viewAllRecords', new BooleanXMLField('viewAllRecords', 'View All Records')
             .setEditable()

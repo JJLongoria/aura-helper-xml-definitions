@@ -26,5 +26,6 @@ module.exports = {
         .setMinApi(12)
         .setEditable()
         .setRequired()
-        .setUnique(),
+        .setUnique()
+        .setMetadataType(MetadataTypes.VALIDATION_RULE),
 }

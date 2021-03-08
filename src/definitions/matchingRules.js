@@ -2,10 +2,9 @@ const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@ah/core').Type
 const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = {
-    matchingRule: new ArrayXMLField('', '')
+    matchingRules: new ArrayXMLField('matchingRules', 'Matching Rules')
         .setMinApi(33)
         .setEditable()
-        .setMetadataType(MetadataTypes.MATCHING_RULE)
         .addField('booleanFilter', new StringXMLField('booleanFilter', 'Boolean Filter')
             .setMinApi(33)
             .setEditable()
@@ -18,6 +17,12 @@ module.exports = {
             .setMinApi(33)
             .setEditable()
             .setRequired()
+        )
+        .addField('fullname', new StringXMLField('fullname', 'Full Name')
+            .setMinApi(33)
+            .setEditable()
+            .setRequired()
+            .setMetadataType(MetadataTypes.MATCHING_RULE)
         )
         .addField('matchingRuleItems', new ArrayXMLField('matchingRuleItems', 'Matching Rule Items')
             .setEditable()

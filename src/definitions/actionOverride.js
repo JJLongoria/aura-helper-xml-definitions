@@ -1,10 +1,11 @@
 const { StringXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@ah/core').Types;
-const { DataValues } = require('@ah/core').Values;
+const { DataValues, MetadataTypes } = require('@ah/core').Values;
 module.exports = {
     actionName: new EnumXMLField('actionName', 'Action Name')
         .setMinApi(18)
         .setEditable()
         .setRequired()
+        .setMetadataType(MetadataTypes.ACTION_OVERRIDE)
         .addEnumValue('Accept', 'accept')
         .addEnumValue('Clone', 'clone')
         .addEnumValue('Delete', 'delete')

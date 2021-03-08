@@ -22,7 +22,8 @@ module.exports = {
         .setMinApi(12)
         .setEditable()
         .setRequired()
-        .setUnique(),
+        .setUnique()
+        .setMetadataType(MetadataTypes.RECORD_TYPE),
     label: new StringXMLField('label', 'Label')
         .setMinApi(12)
         .setEditable()
