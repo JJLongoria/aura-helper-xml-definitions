@@ -2,6 +2,7 @@ const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLF
 const { MetadataTypes, DataValues } = require('@ah/core').Values;
 const ActionOverride = require('./actionOverride');
 const BusinessProcess = require('./businessProcess');
+const CompractLayout = require('./compactLayout');
 const CustomField = require('./customField');
 const FieldSet = require('./fieldSet');
 const HistoryRetentionPolicy = require('./historyRetentionPolicy');
@@ -20,7 +21,6 @@ module.exports = {
     actionOverrides: new ArrayXMLField('actionOverrides', 'ActionOverrides')
         .setMinApi(18)
         .setEditable()
-        .setMetadataType(MetadataTypes.ACTION_OVERRIDE)
         .setFields(ActionOverride),
     allowInChatterGroups: new BooleanXMLField('allowInChatterGroups', 'Allow In Chatter Groups')
         .setMinApi(34)
@@ -28,7 +28,6 @@ module.exports = {
     businessProcesses: new ArrayXMLField('businessProcesses', 'Business Processes')
         .setMinApi(17)
         .setEditable()
-        .setMetadataType(MetadataTypes.BUSINESS_PROCESS)
         .setFields(BusinessProcess),
     compactLayoutAssignment: new StringXMLField('compactLayoutAssignment', 'Compact Layout Assignment')
         .setMinApi(29)
@@ -37,8 +36,7 @@ module.exports = {
     compactLayouts: new ArrayXMLField('compactLayouts', 'Compact Layouts')
         .setMinApi(29)
         .setEditable()
-        .setMetadataType(MetadataTypes.COMPACT_LAYOUT)
-        .setFields(BusinessProcess),
+        .setFields(CompractLayout),
     customHelp: new StringXMLField('customHelp', 'Custom Help')
         .setMinApi(14)
         .setEditable()

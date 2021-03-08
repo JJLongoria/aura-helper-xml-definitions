@@ -1,4 +1,5 @@
 const { StringXMLField, BooleanXMLField } = require('@ah/core').Types;
+const { MetadataTypes } = require('@ah/core').Values;
 const PicklistValuesType = require('./types/picklistValues');
 
 module.exports = {
@@ -8,7 +9,8 @@ module.exports = {
     fullName: new StringXMLField('fullName', 'Full Name')
         .setMinApi(17)
         .setEditable()
-        .setRequired(),
+        .setRequired()
+        .setMetadataType(MetadataTypes.BUSINESS_PROCESS),
     isActive: new BooleanXMLField('isActive', 'Is Active')
         .setMinApi(17)
         .setEditable(),

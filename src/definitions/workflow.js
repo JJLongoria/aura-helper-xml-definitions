@@ -11,7 +11,7 @@ module.exports = {
         .addField('ccEmails', new ArrayXMLField('ccEmails', 'CC Emails')
             .setEditable()
         )
-        .addField('description', new ArrayXMLField('description', 'Description')
+        .addField('description', new StringXMLField('description', 'Description')
             .setMinApi(16)
             .setEditable()
             .setRequired()

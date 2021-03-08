@@ -56,7 +56,8 @@ module.exports = {
     fullName: new StringXMLField('fullName', 'Full Name')
         .setMinApi(17)
         .setEditable()
-        .setRequired(),
+        .setRequired()
+        .setMetadataType(MetadataTypes.LISTVIEW),
     label: new StringXMLField('label', 'Label')
         .setMinApi(17)
         .setEditable()
