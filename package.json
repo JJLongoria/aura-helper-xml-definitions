@@ -40,6 +40,10 @@
     "type": "git",
     "url": "https://github.com/JJLongoria/aura-helper-xml-definitions"
   },
+  "bugs": {
+		"url": "https://github.com/JJLongoria/aura-helper-xml-definitions/issues",
+		"email": "juanjoselongoria@gmail.com"
+	},
   "dependencies": {
     "@ah/core": "file:../ah-core"
   },
