@@ -9,7 +9,7 @@ module.exports = {
         .addField('active', new BooleanXMLField('active', 'Active')
             .setEditable()
         )
-        .addField('fullname', new BooleanXMLField('fullname', 'Full Name')
+        .addField('fullName', new BooleanXMLField('fullName', 'Full Name')
             .setEditable()
             .setRequired()
             .setUnique()

@@ -18,7 +18,7 @@ module.exports = {
             .setEditable()
             .setRequired()
         )
-        .addField('fullname', new StringXMLField('fullname', 'Full Name')
+        .addField('fullName', new StringXMLField('fullName', 'Full Name')
             .setMinApi(33)
             .setEditable()
             .setRequired()

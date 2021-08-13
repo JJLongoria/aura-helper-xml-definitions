@@ -91,18 +91,18 @@ module.exports = {
         .setEditable()
         .setRequired()
         .setUnique(),
-    operationsOnInsert: new EnumXMLField('operationsOnInsert', 'Operations On Insert')
+    operationsOnInsert: new ArrayXMLField('operationsOnInsert', 'Operations On Insert')
         .setMinApi(51)
         .setEditable()
         .setRequired()
-        .addEnumValue('Alert', 'alert')
-        .addEnumValue('Report', 'report'),
-    operationsOnUpdate: new EnumXMLField('operationsOnUpdate', 'Operations On Update')
+        .addAllowedValue('Alert', 'alert')
+        .addAllowedValue('Report', 'report'),
+    operationsOnUpdate: new ArrayXMLField('operationsOnUpdate', 'Operations On Update')
         .setMinApi(51)
         .setEditable()
         .setRequired()
-        .addEnumValue('Alert', 'alert')
-        .addEnumValue('Report', 'report'),
+        .addAllowedValue('Alert', 'alert')
+        .addAllowedValue('Report', 'report'),
     securityOption: new EnumXMLField('securityOption', 'Security Option')
         .setMinApi(51)
         .setEditable()

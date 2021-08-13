@@ -89,7 +89,7 @@ module.exports = {
         .setFieldKey('flow')
         .addField('flow', new StringXMLField('flow', 'Flow')
             .setEditable()
-            .setMetadataType(MetadataTypes.FLOWS)
+            .setMetadataType(MetadataTypes.FLOW)
         )
         .addField('flowType', new EnumXMLField('flowType', 'Flow Type')
             .setEditable()

@@ -12,10 +12,9 @@ module.exports = {
         .setMinApi(10)
         .setEditable()
         .setMetadataType(MetadataTypes.AURA_DEFINITION_BUNDLE),
-    customObject: new StringXMLField('customObject', 'Custom Object')
+    customObject: new BooleanXMLField('customObject', 'Custom Object')
         .setMinApi(10)
-        .setEditable()
-        .setMetadataType(MetadataTypes.CUSTOM_OBJECT),
+        .setEditable(),
     description: new StringXMLField('description', 'Description')
         .setMinApi(10)
         .setEditable(),
@@ -62,7 +61,7 @@ module.exports = {
     url: new StringXMLField('url', 'URL')
         .setMinApi(10)
         .setEditable(),
-    encodingKey: new EnumXMLField('encodingKey', 'Encoding Key')
+    urlEncodingKey: new EnumXMLField('urlEncodingKey', 'URL Encoding Key')
         .setMinApi(10)
         .setEditable()
         .setRequired()
