@@ -36,6 +36,10 @@
   ],
   "author": "Juan José Longoria López (Kanko) <juanjoselongoria@gmail.com>",
   "license": "GPLv3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JJLongoria/aura-helper-xml-definitions"
+  },
   "dependencies": {
     "@ah/core": "file:../ah-core"
   },
