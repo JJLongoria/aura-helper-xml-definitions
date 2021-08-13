@@ -76,6 +76,9 @@ module.exports = {
     externalDeveloperName: new StringXMLField('externalDeveloperName', 'External Developer Name')
         .setMinApi(32)
         .setEditable(),
+    externalId: new BooleanXMLField('externalId', 'External Id')
+        .setMinApi(10)
+        .setEditable(),
     fieldManageability: new EnumXMLField('fieldManageability', 'Field Manageability')
         .setMinApi(10)
         .setEditable()
@@ -305,6 +308,7 @@ module.exports = {
             .addField('value', new ArrayXMLField('value', 'Value')
                 .setEditable()
                 .setFieldKey('fullName')
+                .setSortOrder(undefined)
                 .addField('default', new BooleanXMLField('default', 'Default')
                     .setEditable()
                 )
@@ -320,7 +324,6 @@ module.exports = {
         )
         .addField('valueSettings', new ArrayXMLField('valueSettings', 'Value Settings')
             .setEditable()
-            .setFieldKey('controllingFieldValue')
             .addField('controllingFieldValue', new ArrayXMLField('controllingFieldValue', 'Controlling Field Value')
                 .setEditable()
             )

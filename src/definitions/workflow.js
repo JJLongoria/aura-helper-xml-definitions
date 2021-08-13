@@ -326,7 +326,7 @@ module.exports = {
             .addField('timeLength', new StringXMLField('timeLength', 'Time Length')
                 .setEditable()
             )
-            .addField('type', new EnumXMLField('type', 'Type')
+            .addField('workflowTimeTriggerUnit', new EnumXMLField('workflowTimeTriggerUnit', 'Workflow Time Trigger Unit')
                 .setEditable()
                 .setRequired()
                 .addEnumValue('Hours', 'Hours')

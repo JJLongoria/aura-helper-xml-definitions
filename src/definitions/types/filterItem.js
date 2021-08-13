@@ -6,6 +6,7 @@ module.exports = function (filterItemName, filterItemLabel, minApi) {
         .setMinApi(minApi)
         .setEditable()
         .setFieldKey('field')
+        .setSortOrder(undefined)
         .addField('field', new StringXMLField('field', 'Field')
             .setEditable()
         )

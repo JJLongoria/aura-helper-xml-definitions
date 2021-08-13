@@ -1,6 +1,6 @@
 const { StringXMLField, ObjectXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
 const { MetadataTypes } = require('@ah/core').Values;
-const { Validator } = require('@ah/core').Utils;
+const { Validator } = require('@ah/core').CoreUtils;
 
 module.exports = {
     attributes: new ObjectXMLField('attributes', 'Attributes')

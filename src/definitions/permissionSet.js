@@ -215,7 +215,7 @@ module.exports = {
         .setEditable()
         .addField('tab', new StringXMLField('tab', 'Tab')
             .setUnique()
-            .setMetadataType(MetadataTypes.TAB)
+            .setMetadataType(MetadataTypes.CUSTOM_TAB)
         )
         .addField('visibility', new EnumXMLField('visibility', 'visibility')
             .setEditable()

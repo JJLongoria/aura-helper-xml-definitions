@@ -1,4 +1,4 @@
-const { StringXMLField, ObjectXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
+const { StringXMLField, ObjectXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, ArrayXMLField } = require('@ah/core').Types;
 
 module.exports = {
     available: new BooleanXMLField('available', 'Available')
@@ -13,12 +13,18 @@ module.exports = {
         .setMinApi(12)
         .setEditable()
         .setRequired(),
-    bottomLine: new EnumXMLField('bottomLine', 'Bottom Line')
+    bottomLine: new ObjectXMLField('bottomLine', 'Bottom Line')
         .setMinApi(12)
         .setEditable()
         .setRequired()
-        .addEnumValue('Color', 'color')
-        .addEnumValue('Height', 'height'),
+        .addField('color', new StringXMLField('color', 'Color')
+            .setEditable()
+            .setRequired()
+        )
+        .addField('height', new StringXMLField('height', 'Height')
+            .setEditable()
+            .setRequired()
+        ),
     description: new StringXMLField('description', 'Description')
         .setMinApi(12)
         .setEditable(),

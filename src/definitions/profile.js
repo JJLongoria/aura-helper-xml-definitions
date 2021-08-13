@@ -1,6 +1,6 @@
 const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDataControlledField } = require('@ah/core').Types;
 const { MetadataTypes, DataValues } = require('@ah/core').Values;
-const { Validator } = require('@ah/core').Utils;
+const { Validator } = require('@ah/core').CoreUtils;
 
 module.exports = {
     description: new StringXMLField('description', 'Description')
@@ -440,7 +440,7 @@ module.exports = {
         .setEditable()
         .addField('tab', new StringXMLField('tab', 'Tab')
             .setUnique()
-            .setMetadataType(MetadataTypes.TAB)
+            .setMetadataType(MetadataTypes.CUSTOM_TAB)
         )
         .addField('visibility', new EnumXMLField('visibility', 'visibility')
             .setEditable()
