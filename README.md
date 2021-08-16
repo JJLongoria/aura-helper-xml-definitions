@@ -6,8 +6,7 @@ The **difference** between the **XML definition** and the **raw XML definition**
 ### **Support up to API 51.0**
 
 # [**XMLDefinitions Class**](#xmldefinitions-class)
-Class with static methods to get the XML Definitions for one Metadata Type
-or get all XML Definitions for all types and specific Salesforce API Version. Also you can get a XML Raw definitions and Resolve Recursive definitions on some files. 
+Class with static methods to get the XML Definitions for one Metadata Type or get all XML Definitions for all types and specific Salesforce API Version. Also you can get a XML Raw definitions and Resolve Recursive definitions on some files. 
 
 # [**Methods**](#xmldefinitions-methods)
   - [**getDefinition(type, apiVersion)**](#getdefinitiontype-apiversion)
@@ -43,6 +42,7 @@ Method to get the Metadata Type's XML definition for an API Version.
    
 ### **Return:**
 Return the XML definition for the selected type and API version. If the type exists, but is not available in the selected API, return an empty object. If type not exists, return undefined.
+- Object
     
 ### **Examples:**
 **Get the Profile XML definition for API 45.0**
@@ -67,6 +67,7 @@ Method to get the Metadata Type's XML RAW definition
       - String 
 ### **Return:**
 Return the XML raw definition for the selected type. If type not exists, return undefined
+- Object
 
 ### **Examples:**
 **Get the ConnectedApp XML raw definition**
@@ -92,6 +93,7 @@ Method to get all XML Definitions for all Metadata Types for an specific API Ver
     - String | Number 
 ### **Return:**
 Return an Object with all XML definitions for the selected API version. The object has the Type as key and the XML definition as value. If not exists any definition for the selected API return an empty object
+- Object
 
 ### **Examples:**
 **Get All XML Definitions for API 43.0**
@@ -112,6 +114,7 @@ Method to get all XML RAW Definitions for all Metadata Types
 
 ### **Return:**
 Return an Object with all XML raw definitions. The object has the Type as key and the XML definition as value
+- Object
 
 ### **Examples:**
 **Get All XML raw definitions**
@@ -138,6 +141,7 @@ Method to resolve the recursive reference from some XML Definition files
    
 ### **Return:**
 Returns the XML Definition to the selected XML field
+- Object
     
 ### **Examples:**
 Resolve the recursive definition references on an object like Bot Steps on Bot XML Definition
