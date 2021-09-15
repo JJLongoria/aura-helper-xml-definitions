@@ -56,6 +56,7 @@ module.exports = {
     fullName: new StringXMLField('fullName', 'Full Name')
         .setMinApi(17)
         .setEditable()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setRequired()
         .setMetadataType(MetadataTypes.LISTVIEW),
     label: new StringXMLField('label', 'Label')
@@ -74,5 +75,7 @@ module.exports = {
     sharedTo: new ObjectXMLField('sharedTo', 'Shared To')
         .setMinApi(17)
         .setEditable()
+        .setFieldKey('allCustomerPortalUsers')
+        .setSortOrder(undefined)
         .setFields(SharedTo)
 }

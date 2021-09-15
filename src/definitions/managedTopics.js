@@ -4,6 +4,8 @@ module.exports = {
     ManagedTopic: new ObjectXMLField('ManagedTopic', 'Managed Topic')
         .setMinApi()
         .setEditable()
+        .setFieldKey('name')
+        .setSortOrder(undefined)
         .addField('name', new StringXMLField('name', 'Name')
             .setEditable()
         )

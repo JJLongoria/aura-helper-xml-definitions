@@ -8,6 +8,7 @@ module.exports = {
         .setMinApi(24)
         .setEditable()
         .setRequired()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
     name: new StringXMLField('name', 'Name')
         .setMinApi(24)

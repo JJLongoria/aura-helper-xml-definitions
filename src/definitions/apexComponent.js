@@ -16,6 +16,7 @@ module.exports = {
     fullName: new StringXMLField('fullName', 'Full Name')
         .setMinApi(12)
         .setEditable()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
     label: new StringXMLField('label', 'Label')
         .setMinApi(12)

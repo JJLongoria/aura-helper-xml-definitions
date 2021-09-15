@@ -5,6 +5,8 @@ module.exports = {
     groups: new ObjectXMLField('groups', 'Groups')
         .setMinApi(29)
         .setEditable()
+        .setFieldKey('languages')
+        .setSortOrder(undefined)
         .addField('languages', new EnumXMLField('languages', 'Languages')
             .setEditable()
             .setRequired()

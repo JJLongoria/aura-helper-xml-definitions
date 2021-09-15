@@ -27,5 +27,6 @@ module.exports = {
         .setEditable()
         .setRequired()
         .setUnique()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setMetadataType(MetadataTypes.VALIDATION_RULE),
 }

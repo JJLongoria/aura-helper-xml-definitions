@@ -16,6 +16,7 @@ module.exports = {
     fullName: new StringXMLField('fullName', 'Full Name')
         .setMinApi(11)
         .setEditable()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
     availableInTouch: new BooleanXMLField('availableInTouch', 'Available In Touch')
         .setMinApi(11)

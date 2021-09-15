@@ -15,6 +15,8 @@ module.exports = {
     platformCachePartitionTypes: new ArrayXMLField('platformCachePartitionTypes', 'Platform Cache Partition Types')
         .setMinApi(35)
         .setEditable()
+        .setFieldKey('cacheType')
+        .setSortOrder(undefined)
         .addField('allocatedCapacity', new IntegerXMLField('allocatedCapacity', 'Allocated Capacity')
             .setEditable()
             .setRequired()

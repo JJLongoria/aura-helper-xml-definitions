@@ -35,6 +35,8 @@ module.exports = {
     webStoreType: new ArrayXMLField('webStoreType', 'Web Store Type')
         .setMinApi(49)
         .setEditable()
+        .setFieldKey('webStoreType')
+        .setSortOrder(undefined)
         .addField('webStoreType', new EnumXMLField('webStoreType', 'Web Store Type')
             .setEditable()
             .setDefaultValue('B2B')

@@ -14,6 +14,7 @@ module.exports = {
         .setMinApi(10)
         .setEditable()
         .setRequired()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
     namespacePrefix: new StringXMLField('namespacePrefix', 'Namespace Prefix')
         .setMinApi(10)
@@ -80,6 +81,8 @@ module.exports = {
     types: new ArrayXMLField('types', 'Types')
         .setMinApi(10)
         .setEditable()
+        .setFieldKey('name')
+        .setSortOrder(undefined)
         .addField('members', new ArrayXMLField('members', 'Members')
             .setEditable()
         )

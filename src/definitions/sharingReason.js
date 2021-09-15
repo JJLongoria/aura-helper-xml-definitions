@@ -6,6 +6,7 @@ module.exports = {
         .setMinApi(14)
         .setEditable()
         .setRequired()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique()
         .setMetadataType(MetadataTypes.SHARING_REASON),
     label: new StringXMLField('label', 'Label')

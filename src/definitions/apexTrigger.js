@@ -14,6 +14,7 @@ module.exports = {
     fullName: new StringXMLField('fullName', 'Full Name')
         .setMinApi(10)
         .setEditable()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
     packageVersions: PackageVerionsItemType('packageVersions', 'Package Versions', 10),
     status: new EnumXMLField('status', 'Status')

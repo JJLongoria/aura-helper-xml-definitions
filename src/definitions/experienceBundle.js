@@ -4,6 +4,8 @@ module.exports = {
     experienceResources: new ArrayXMLField('experienceResources', 'Experience Resources')
         .setMinApi(46)
         .setEditable()
+        .setFieldKey('experienceResource')
+        .setSortOrder(undefined)
         .addField('experienceResource', new ArrayXMLField('experienceResource', 'Experience Resource')
             .setEditable()
             .setFieldKey('fileName')

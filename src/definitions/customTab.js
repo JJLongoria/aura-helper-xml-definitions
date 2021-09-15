@@ -6,6 +6,8 @@ module.exports = {
     actionOverrides: new ArrayXMLField('actionOverrides', 'ActionOverrides')
         .setMinApi(37)
         .setEditable()
+        .setFieldKey('actionName')
+        .setSortOrder(undefined)
         .setMetadataType(MetadataTypes.ACTION_OVERRIDE)
         .setFields(ActionOverride),
     auraComponent: new StringXMLField('auraComponent', 'Aura Component')
@@ -29,6 +31,7 @@ module.exports = {
         .setMinApi(10)
         .setEditable()
         .setRequired()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
     hasSidebar: new BooleanXMLField('hasSidebar', 'Has Sidebar')
         .setMinApi(10)

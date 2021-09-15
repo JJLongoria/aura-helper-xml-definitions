@@ -96,6 +96,7 @@ module.exports = {
     fullName: new StringXMLField('fullName', 'Full Name')
         .setMinApi(10)
         .setEditable()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique()
         .setMetadataType(MetadataTypes.CUSTOM_FIELD),
     globalPicklist: new StringXMLField('globalPicklist', 'Global Picklist')
@@ -130,6 +131,8 @@ module.exports = {
     lookupFilter: new ObjectXMLField('lookupFilter', 'Lookup Filter')
         .setMinApi(30)
         .setEditable()
+        .setFieldKey('active')
+        .setSortOrder(undefined)
         .addField('active', new BooleanXMLField('active', 'Active')
             .setEditable()
         )
@@ -253,6 +256,9 @@ module.exports = {
     trackHistory: new BooleanXMLField('trackHistory', 'Track History')
         .setMinApi(30)
         .setEditable(),
+    trackTrending: new BooleanXMLField('trackTrending', 'Track Trending')
+        .setMinApi(29)
+        .setEditable(),
     trueValueIndexed: new BooleanXMLField('trueValueIndexed', 'True Value Indexed')
         .setMinApi(14)
         .setEditable(),
@@ -302,6 +308,8 @@ module.exports = {
         )
         .addField('valueSetDefinition', new ObjectXMLField('valueSetDefinition', 'Value Set Definition')
             .setEditable()
+            .setFieldKey('value')
+            .setSortOrder(undefined)
             .addField('sorted', new BooleanXMLField('sorted', 'Sorted')
                 .setEditable()
             )
@@ -314,6 +322,7 @@ module.exports = {
                 )
                 .addField('fullName', new StringXMLField('fullName', 'Full Name')
                     .setUnique()
+                    .addMatchPattern(/^[^\d\s_](\w| )+$/)
                     .setEditable()
                 )
                 .addField('label', new StringXMLField('label', 'Label')
@@ -324,6 +333,7 @@ module.exports = {
         )
         .addField('valueSettings', new ArrayXMLField('valueSettings', 'Value Settings')
             .setEditable()
+            .setFieldKey('valueName')
             .addField('controllingFieldValue', new ArrayXMLField('controllingFieldValue', 'Controlling Field Value')
                 .setEditable()
             )

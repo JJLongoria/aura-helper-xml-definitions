@@ -35,8 +35,12 @@ module.exports = function (intentName, intentApi, minApi) {
         )
         .addField('mlSlotClassValues', new ArrayXMLField('mlSlotClassValues', 'Machine Learning Slot Class Values')
             .setEditable()
+            .setFieldKey('value')
+            .setSortOrder(undefined)
             .addField('synonymGroup', new ObjectXMLField('synonymGroup', 'synonymGroup')
                 .setEditable()
+                .setFieldKey('languages')
+                .setSortOrder(undefined)
                 .addField('languages', new EnumXMLField('languages', 'Languages')
                     .setEditable()
                     .setRequired()
@@ -50,4 +54,4 @@ module.exports = function (intentName, intentApi, minApi) {
                 .setEditable()
             )
         )
-} 
+}

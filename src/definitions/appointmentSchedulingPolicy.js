@@ -55,7 +55,7 @@ module.exports = {
         .setMinApi(47)
         .setEditable()
         .setRequired(),
-    shouldUsePrimaryMembers: new BooleanXMLField('shouldRespectVisitingHours', 'Should Use Primary Members')
+    shouldUsePrimaryMembers: new BooleanXMLField('shouldUsePrimaryMembers', 'Should Use Primary Members')
         .setMinApi(47)
         .setEditable()
         .setRequired(),

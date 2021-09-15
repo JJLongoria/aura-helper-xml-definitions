@@ -21,6 +21,8 @@ module.exports = {
     actionOverrides: new ArrayXMLField('actionOverrides', 'ActionOverrides')
         .setMinApi(18)
         .setEditable()
+        .setFieldKey('actionName')
+        .setSortOrder(undefined)
         .setFields(ActionOverride),
     allowInChatterGroups: new BooleanXMLField('allowInChatterGroups', 'Allow In Chatter Groups')
         .setMinApi(34)
@@ -28,6 +30,7 @@ module.exports = {
     businessProcesses: new ArrayXMLField('businessProcesses', 'Business Processes')
         .setMinApi(17)
         .setEditable()
+        .setFieldKey('fullName')
         .setFields(BusinessProcess),
     compactLayoutAssignment: new StringXMLField('compactLayoutAssignment', 'Compact Layout Assignment')
         .setMinApi(29)
@@ -36,6 +39,7 @@ module.exports = {
     compactLayouts: new ArrayXMLField('compactLayouts', 'Compact Layouts')
         .setMinApi(29)
         .setEditable()
+        .setFieldKey('fullName')
         .setFields(CompractLayout),
     customHelp: new StringXMLField('customHelp', 'Custom Help')
         .setMinApi(14)
@@ -150,6 +154,7 @@ module.exports = {
         .setMinApi(10)
         .setEditable()
         .setRequired()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
     gender: new EnumXMLField('gender', 'Gender')
         .setMinApi(10)
@@ -161,6 +166,8 @@ module.exports = {
     historyRetentionPolicy: new ObjectXMLField('historyRetentionPolicy', 'History Retention Policy')
         .setMinApi(10)
         .setEditable()
+        .setFieldKey('archiveAfterMonths')
+        .setSortOrder(undefined)
         .setFields(HistoryRetentionPolicy),
     indexes: new ArrayXMLField('indexes', 'Indexes')
         .setMinApi(10)
@@ -193,6 +200,8 @@ module.exports = {
     profileSearchLayouts: new ObjectXMLField('profileSearchLayouts', 'Profile Search Layouts')
         .setMinApi(47)
         .setEditable()
+        .setFieldKey('profileName')
+        .setSortOrder(undefined)
         .setFields(ProfileSearchLayouts),
     publishBehavior: new EnumXMLField('publishBehavior', 'Publish Behavior')
         .setMinApi(46)
@@ -213,6 +222,8 @@ module.exports = {
     searchLayouts: new ObjectXMLField('searchLayouts', 'Search Layouts')
         .setMinApi(10)
         .setEditable()
+        .setFieldKey('customTabListAdditionalFields')
+        .setSortOrder(undefined)
         .setFields(SearchLayouts),
     sharingModel: new EnumXMLField('sharingModel', 'Sharing Model')
         .setMinApi(31)

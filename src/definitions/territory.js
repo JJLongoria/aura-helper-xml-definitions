@@ -27,6 +27,7 @@ module.exports = {
         .setMinApi(24)
         .setEditable()
         .setRequired()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
     mayForecastManagerShare: new BooleanXMLField('mayForecastManagerShare', 'May Forecast Manager Share')
         .setMinApi(24)

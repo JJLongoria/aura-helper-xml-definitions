@@ -5,6 +5,7 @@ module.exports = {
         .setMinApi(12)
         .setEditable()
         .setRequired()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
     narrowComponents: new ArrayXMLField('narrowComponents', 'Narrow Components')
         .setMinApi(12)

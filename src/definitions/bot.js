@@ -24,10 +24,13 @@ module.exports = {
     botVersions: new ObjectXMLField('botVersions', 'Bot Versions')
         .setMinApi(43)
         .setEditable()
+        .setFieldKey('entryDialog')
+        .setSortOrder(undefined)
         .setFields(BotVersion),
     contextVariables: new ObjectXMLField('contextVariables', 'Context Variables')
         .setMinApi(45)
         .setEditable()
+        .setFieldKey('developerName')
         .addField('contextVariableMappings', new ObjectXMLField('contextVariableMappings', 'Context Variable Mappings')
             .setEditable()
             .setFieldKey('fieldName')

@@ -4,6 +4,8 @@ module.exports = {
     channels: new ObjectXMLField('channels', 'Channels')
         .setMinApi(44)
         .setEditable()
+        .setFieldKey('channel')
+        .setSortOrder(undefined)
         .addField('channel', new StringXMLField('channel', 'Channel')
             .setEditable()
         ),

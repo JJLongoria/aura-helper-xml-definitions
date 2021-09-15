@@ -21,6 +21,8 @@ module.exports = {
     ruleItems: new ArrayXMLField('ruleItems', 'Rule Items')
         .setMinApi(32)
         .setEditable()
+        .setFieldKey('field')
+        .setSortOrder(undefined)
         .addField('field', new StringXMLField('field', 'Field')
             .setEditable()
         )

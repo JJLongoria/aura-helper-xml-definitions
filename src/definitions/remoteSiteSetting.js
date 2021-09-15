@@ -9,6 +9,7 @@ module.exports = {
     fullName: new StringXMLField('fullName', 'Full Name')
         .setMinApi(19)
         .setRequired()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
     isActive: new BooleanXMLField('isActive', 'Is Active')
         .setMinApi(19)

@@ -36,6 +36,7 @@ module.exports = {
         .setMinApi(13)
         .setEditable()
         .setRequired()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
     hasMenubar: new BooleanXMLField('hasMenubar', 'Has Menu Bar')
         .setMinApi(13)

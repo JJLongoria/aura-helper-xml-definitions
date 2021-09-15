@@ -63,6 +63,8 @@ module.exports = {
         .addField('successActions', WorkflowActionReferenceType('successActions', 'Success Actions', 27))
         .addField('timeTriggers', new ArrayXMLField('timeTriggers', 'Time Triggers')
             .setEditable()
+            .setFieldKey('actions')
+            .setSortOrder(undefined)
             .addField('actions', WorkflowActionReferenceType('actions', 'Actions', 27))
             .addField('timeLength', new IntegerXMLField('timeLength', 'Time Length')
                 .setEditable()

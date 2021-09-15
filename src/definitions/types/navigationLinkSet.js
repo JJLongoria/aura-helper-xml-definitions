@@ -6,6 +6,8 @@ module.exports = function (navigationLinkSetName, navigationLinkSetLabel, minApi
         .setMinApi(minApi)
         .setMaxApi(maxApi)
         .setEditable()
+        .setFieldKey('navigationMenuItem')
+        .setSortOrder(undefined)
         .addField('navigationMenuItem', new ArrayXMLField('navigationMenuItem', 'Navigation Menu Item')
             .setEditable()
             .setFieldKey('label')

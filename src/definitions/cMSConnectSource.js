@@ -2,7 +2,7 @@ const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, XMLDepende
 const { DataValues } = require('@ah/core').Values;
 
 module.exports = {
-    cmsConnectAsset: new ArrayXMLField('', '')
+    cmsConnectAsset: new ArrayXMLField('cmsConnectAsset', 'CMS Connect Asset')
         .setMinApi(43)
         .setEditable()
         .setFieldKey('assetPath')
@@ -21,7 +21,7 @@ module.exports = {
     cmsConnectLanguage: new ArrayXMLField('cmsConnectLanguage', 'CMS Connect Language')
         .setMinApi(43)
         .setEditable()
-        .setSortOrder('language')
+        .setFieldKey('language')
         .addField('cmsLanguage', new StringXMLField('cmsLanguage', 'CMS Language')
             .setEditable()
         )
@@ -29,7 +29,7 @@ module.exports = {
             .setEditable()
             .setEnumValues(DataValues.SF_LANGUAGES)
         ),
-    cmsConnectPersonalization: new ArrayXMLField('', '')
+    cmsConnectPersonalization: new ArrayXMLField('cmsConnectPersonalization', 'CMS Connect Personalization')
         .setMinApi(43)
         .setEditable()
         .setFieldKey('connectorPage')

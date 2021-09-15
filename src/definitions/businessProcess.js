@@ -10,6 +10,7 @@ module.exports = {
         .setMinApi(17)
         .setEditable()
         .setRequired()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setMetadataType(MetadataTypes.BUSINESS_PROCESS),
     isActive: new BooleanXMLField('isActive', 'Is Active')
         .setMinApi(17)

@@ -24,6 +24,8 @@ module.exports = {
     entitiesAndFields: new ArrayXMLField('entitiesAndFields', 'Entities And Fields')
         .setMinApi(36)
         .setEditable()
+        .setFieldKey('entityName')
+        .setSortOrder(undefined)
         .addField('entityName', new StringXMLField('entityName', 'Entity Name')
             .setEditable()
             .setRequired()

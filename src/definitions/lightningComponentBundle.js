@@ -1,13 +1,15 @@
 const { StringXMLField, ObjectXMLField, ArrayXMLField, DoubleXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
 
 module.exports = {
-    apiVersion: new DoubleXMLField('LightningComponentBundle', 'Lightning Component Bundle')
+    apiVersion: new DoubleXMLField('apiVersion', 'API Version')
         .setMinApi(45)
         .setEditable()
         .setRequired(),
     capabilities: new ArrayXMLField('capabilities', 'Capabilities')
         .setMinApi(48)
         .setEditable()
+        .setFieldKey('capability')
+        .setSortOrder(undefined)
         .addField('capability', new EnumXMLField('capability', 'Capability')
             .setRequired()
             .setEditable()
@@ -26,8 +28,12 @@ module.exports = {
     lwcResources: new ArrayXMLField('lwcResources', 'LWC Resources')
         .setMinApi(45)
         .setEditable()
+        .setFieldKey('lwcResource')
+        .setSortOrder(undefined)
         .addField('lwcResource', new ObjectXMLField('lwcResource', 'LWC Resource')
             .setEditable()
+            .setFieldKey('filePath')
+            .setSortOrder(undefined)
             .addField('filePath', new StringXMLField('filePath', 'File Path')
                 .setEditable()
                 .setRequired()
@@ -50,6 +56,8 @@ module.exports = {
     targets: new ArrayXMLField('targets', 'Targets')
         .setMinApi(45)
         .setEditable()
+        .setFieldKey('target')
+        .setSortOrder(undefined)
         .addField('target', new EnumXMLField('target', 'Target')
             .setEditable()
             .addEnumValue('Lightning App Page', 'lightning__AppPage')

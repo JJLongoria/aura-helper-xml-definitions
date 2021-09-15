@@ -22,6 +22,8 @@ module.exports = {
         .setMinApi(47)
         .setEditable()
         .setRequired()
+        .setFieldKey('value')
+        .setSortOrder(undefined)
         .addField('priority', new IntegerXMLField('priority', 'Priority')
             .setEditable()
             .setRequired()

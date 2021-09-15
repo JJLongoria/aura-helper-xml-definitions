@@ -8,6 +8,7 @@ module.exports = {
     fullName: new StringXMLField('fullName', 'Full Name')
         .setMinApi(16)
         .setEditable()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
     groupColumn: new StringXMLField('groupColumn', 'Group Column')
         .setMinApi(16)

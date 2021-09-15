@@ -13,6 +13,8 @@ module.exports = {
     requiredSessionLevel: new ObjectXMLField('requiredSessionLevel', 'Required Session Level')
         .setMinApi()
         .setEditable()
+        .setFieldKey('SessionSecurityLevel')
+        .setSortOrder(undefined)
         .addField('SessionSecurityLevel', new EnumXMLField('SessionSecurityLevel', 'Session Security Level')
             .setEditable()
             .addEnumValue('High Assurance', 'HIGH_ASSURANCE')

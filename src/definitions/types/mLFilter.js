@@ -5,6 +5,8 @@ module.exports = function (filterName, filterLabel, minApi) {
     return new ObjectXMLField(filterName, filterLabel)
         .setMinApi(minApi)
         .setEditable()
+        .setFieldKey('filterName')
+        .setSortOrder(undefined)
         .addField('filterName', new StringXMLField('filterName', 'Filter Name')
             .setEditable()
             .setRequired()

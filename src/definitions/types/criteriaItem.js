@@ -6,6 +6,8 @@ module.exports = function (criteriaName, criteriaLabel, minApi) {
     return new ObjectXMLField(criteriaName, criteriaLabel)
         .setMinApi(minApi)
         .setEditable()
+        .setFieldKey('booleanFilter')
+        .setSortOrder(undefined)
         .addField('booleanFilter', new StringXMLField('booleanFilter', 'Boolean Filter')
             .setEditable()
             .addDependencyField(new XMLDependencyField('formula', [DataValues.NOT_NULL], DataValues.NOT_AVAILABLE))

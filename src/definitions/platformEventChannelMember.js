@@ -5,6 +5,8 @@ module.exports = {
     enrichedFields: new ArrayXMLField('enrichedFields', 'Enriched Fields')
         .setMinApi(51)
         .setEditable()
+        .setFieldKey('name')
+        .setSortOrder(undefined)
         .addField('name', new StringXMLField('name', 'Name')
             .setEditable()
         ),

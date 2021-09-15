@@ -5,7 +5,7 @@ module.exports = {
     briefcaseRules: new ArrayXMLField('briefcaseRules', 'Briefcase Rules')
         .setMinApi(50)
         .setEditable()
-        .setFieldKey('targetEntity')
+        .setFieldKey('briefcaseRuleFilters')
         .addField('briefcaseRuleFilters', new ArrayXMLField('briefcaseRuleFilters', 'Briefcase Rule Filters')
             .setEditable()
             .setRequired()

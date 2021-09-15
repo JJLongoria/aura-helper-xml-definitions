@@ -12,6 +12,8 @@ module.exports = {
     managedContentNodeTypes: new ArrayXMLField('managedContentNodeTypes', 'Managed Content Node Types')
         .setMinApi(47)
         .setEditable()
+        .setFieldKey('nodeName')
+        .setSortOrder(undefined)
         .addField('helpText', new StringXMLField('helpText', 'Help Text')
             .setEditable()
         )

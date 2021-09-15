@@ -22,6 +22,8 @@ module.exports = {
     pathAssistantSteps: new ArrayXMLField('pathAssistantSteps', 'Path Assistant Steps')
         .setMinApi(34)
         .setEditable()
+        .setFieldKey('picklistValueName')
+        .setSortOrder(undefined)
         .addField('fieldNames', new ArrayXMLField('fieldNames', 'Field Names')
             .setEditable()
         )
