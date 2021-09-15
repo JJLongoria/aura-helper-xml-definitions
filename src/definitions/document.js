@@ -13,6 +13,7 @@ module.exports = {
         .setMinApi(10)
         .setEditable()
         .setRequired()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
     internalUseOnly: new BooleanXMLField('internalUseOnly', 'Internal Use Only')
         .setMinApi(10)

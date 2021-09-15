@@ -4,6 +4,8 @@ module.exports = {
     dataFlowDirection: new ObjectXMLField('dataFlowDirection', 'Data Flow Direction')
         .setMinApi(41)
         .setEditable()
+        .setFieldKey('FeatureParameterDataFlowDirection')
+        .setSortOrder(undefined)
         .addField('FeatureParameterDataFlowDirection', new EnumXMLField('FeatureParameterDataFlowDirection', 'Feature Parameter Data Flow Direction')
             .setEditable()
             .addEnumValue('License Management Org To Subscriber', 'LmoToSubscriber')

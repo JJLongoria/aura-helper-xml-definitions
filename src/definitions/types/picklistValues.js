@@ -8,6 +8,7 @@ module.exports = function (picklistName, picklistLabel, minApi) {
         .setFieldKey('fullName')
         .addField('fullName', new StringXMLField('fullName', 'Full Name')
             .setEditable()
+            .addMatchPattern(/^[^\d\s_](\w| )+$/)
             .setUnique()
         )
         .addField('controllingFieldValues', new StringXMLField('controllingFieldValues', 'Controlling Field Values')

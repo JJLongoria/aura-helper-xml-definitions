@@ -5,6 +5,8 @@ module.exports = {
     accessMappings: new ArrayXMLField('accessMappings', 'Access Mappings')
         .setMinApi(30)
         .setEditable()
+        .setFieldKey('object')
+        .setSortOrder(undefined)
         .addField('accessLevel', new EnumXMLField('accessLevel', 'Access Level')
             .setEditable()
             .setRequired()

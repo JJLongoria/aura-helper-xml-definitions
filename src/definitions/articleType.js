@@ -7,6 +7,8 @@ module.exports = {
     articleTypeChannelDisplay: new ObjectXMLField('articleTypeChannelDisplay', 'Article Type Channel Display')
         .setMinApi(19)
         .setEditable()
+        .setFieldKey('articleTypeTemplates')
+        .setSortOrder(undefined)
         .addField('articleTypeTemplates', new ArrayXMLField('articleTypeTemplates', 'Article Type Templates')
             .setEditable()
             .setFieldKey('page')

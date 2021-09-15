@@ -54,6 +54,7 @@ module.exports = {
         .setMinApi(17)
         .setEditable()
         .setRequired()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
     isOptional: new BooleanXMLField('isOptional', 'Is Optional')
         .setMinApi(17)

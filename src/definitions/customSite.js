@@ -181,7 +181,7 @@ module.exports = {
     siteRedirectMappings: new ArrayXMLField('siteRedirectMappings', 'Site Redirect Mappings')
         .setMinApi(20)
         .setEditable()
-        .setFieldKey('url')
+        .setFieldKey('source')
         .addField('action', new EnumXMLField('action', 'Action')
             .setEditable()
             .addEnumValue('Permanent', 'Permanent')

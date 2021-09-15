@@ -4,6 +4,8 @@ module.exports = {
     customFields: new ArrayXMLField('customFields', 'Custom Fields')
         .setMinApi(32)
         .setEditable()
+        .setFieldKey('name')
+        .setSortOrder(undefined)
         .addField('name', new StringXMLField('name', 'Name')
             .setEditable()
             .setRequired()

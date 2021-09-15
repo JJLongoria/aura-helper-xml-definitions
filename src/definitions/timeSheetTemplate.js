@@ -30,6 +30,8 @@ module.exports = {
     timeSheetTemplateAssignments: new ArrayXMLField('timeSheetTemplateAssignments', 'Time Sheet Template Assignments')
         .setMinApi(46)
         .setEditable()
+        .setFieldKey('assignedTo')
+        .setSortOrder(undefined)
         .addField('assignedTo', new StringXMLField('assignedTo', 'Assigned To')
             .setEditable()
             .setMetadataType(MetadataTypes.PROFILE)

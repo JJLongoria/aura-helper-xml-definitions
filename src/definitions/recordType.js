@@ -22,6 +22,7 @@ module.exports = {
         .setMinApi(12)
         .setEditable()
         .setRequired()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique()
         .setMetadataType(MetadataTypes.RECORD_TYPE),
     label: new StringXMLField('label', 'Label')
@@ -31,6 +32,7 @@ module.exports = {
     picklistValues: new ArrayXMLField('picklistValues', 'Picklist Values')
         .setMinApi(12)
         .setEditable()
+        .setFieldKey('picklist')
         .addField('picklist', new StringXMLField('picklist', 'Picklist')
             .setEditable()
             .setRequired()
@@ -38,6 +40,7 @@ module.exports = {
         .addField('values', new ArrayXMLField('values', 'Values')
             .setEditable()
             .setRequired()
+            .setFieldKey('fullName')
             .addField('default', new BooleanXMLField('default', 'Default')
                 .setEditable()
                 .setRequired()

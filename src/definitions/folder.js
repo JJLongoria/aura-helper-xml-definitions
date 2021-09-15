@@ -13,6 +13,7 @@ module.exports = {
     folderShares: new ObjectXMLField('folderShares', 'Folder Shares')
         .setMinApi(28)
         .setEditable()
+        .setFieldKey('sharedTo')
         .addField('accessLevel', new EnumXMLField('accessLevel', 'Access Level')
             .setEditable()
             .setRequired()
@@ -51,6 +52,7 @@ module.exports = {
         .setMinApi(11)
         .setEditable()
         .setRequired()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
     name: new StringXMLField('name', 'Name')
         .setMinApi(11)
@@ -65,5 +67,7 @@ module.exports = {
     sharedTo: new ObjectXMLField('sharedTo', 'Shared To')
         .setMinApi(11)
         .setEditable()
+        .setFieldKey('allCustomerPortalUsers')
+        .setSortOrder(undefined)
         .setFields(SharedTo)
 }

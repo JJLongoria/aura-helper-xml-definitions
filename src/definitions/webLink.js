@@ -37,6 +37,7 @@ module.exports = {
         .setEditable()
         .setRequired()
         .setUnique()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setMetadataType(MetadataTypes.WEBLINK),
     hasMenubar: new BooleanXMLField('hasMenubar', 'Has Menu Bar')
         .setMinApi(12)

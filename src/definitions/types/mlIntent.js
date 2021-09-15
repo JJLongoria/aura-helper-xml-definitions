@@ -18,15 +18,19 @@ module.exports = function (intentName, intentApi, minApi) {
         )
         .addField('mlIntentUtterances', new ArrayXMLField('mlIntentUtterances', 'Machine Learning Intent Utterances')
             .setEditable()
+            .setFieldKey('utterance')
+            .setSortOrder(undefined)
             .addField('utterance', new StringXMLField('utterance', 'Utterance')
                 .setEditable()
             )
         )
         .addField('relatedMlIntents', new ArrayXMLField('relatedMlIntents', 'Related Machine Learning Intents')
             .setEditable()
+            .setFieldKey('relatedMlIntent')
+            .setSortOrder(undefined)
             .addField('relatedMlIntent', new StringXMLField('relatedMlIntent', 'Related Machine Learning Intent')
                 .setEditable()
             )
         )
 
-} 
+}

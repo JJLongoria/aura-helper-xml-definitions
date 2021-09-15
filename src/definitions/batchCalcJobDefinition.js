@@ -153,7 +153,7 @@ module.exports = {
         .addField('description', new StringXMLField('description', 'Description')
             .setEditable()
         )
-        .addField('Filter Condition', new StringXMLField('filterCondition', 'filterCondition')
+        .addField('filterCondition', new StringXMLField('filterCondition', 'filterCondition')
             .setEditable()
             .setRequired()
             .addDependencyField(new XMLDependencyField('isDynamicFilter', true, DataValues.NULL))

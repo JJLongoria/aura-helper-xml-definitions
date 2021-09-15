@@ -25,6 +25,8 @@ module.exports = {
         .setMinApi(50)
         .setEditable()
         .setReserved()
+        .setFieldKey('field')
+        .setSortOrder(undefined)
         .addField('entity', new StringXMLField('entity', 'Entity')
             .setEditable()
             .setRequired()

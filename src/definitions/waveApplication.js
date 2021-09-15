@@ -19,6 +19,8 @@ module.exports = {
     shares: new ObjectXMLField('shares', 'Shares')
         .setMinApi(28)
         .setEditable()
+        .setFieldKey('sharedTo')
+        .setSortOrder(undefined)
         .addField('accessLevel', new EnumXMLField('accessLevel', 'Access Level')
             .setEditable()
             .setRequired()

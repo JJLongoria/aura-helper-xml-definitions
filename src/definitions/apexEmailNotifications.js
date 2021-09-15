@@ -5,6 +5,7 @@ module.exports = {
     apexEmailNotification: new ObjectXMLField('apexEmailNotification', 'Apex Email Notification')
         .setMinApi(49)
         .setEditable()
+        .setFieldKey('email')
         .addField('email', new StringXMLField('email', 'Email')
             .setEditable()
             .addDependencyField(new XMLDependencyField('user', DataValues.NOT_NULL, DataValues.NOT_AVAILABLE))

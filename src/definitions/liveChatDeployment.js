@@ -17,6 +17,8 @@ module.exports = {
     domainWhiteList: new ObjectXMLField('domainWhiteList', 'Domain White List')
         .setMinApi(28)
         .setEditable()
+        .setFieldKey('domain')
+        .setSortOrder(undefined)
         .addField('domain', new StringXMLField('domain', 'Domain')
             .setEditable()
         ),

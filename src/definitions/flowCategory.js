@@ -8,6 +8,7 @@ module.exports = {
     flowCategoryItems: new ArrayXMLField('flowCategoryItems', 'Flow Category Items')
         .setMinApi(43)
         .setEditable()
+        .setFieldKey('flow')
         .addField('flow', new StringXMLField('flow', 'Flow')
             .setEditable()
             .setRequired()

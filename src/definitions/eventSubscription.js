@@ -9,6 +9,7 @@ module.exports = {
         .setMinApi(41)
         .setMaxApi(45)
         .setEditable()
+        .setFieldKey('parameterName')
         .addField('parameterName', new StringXMLField('parameterName', 'Parameter Name')
             .setEditable()
             .setRequired()

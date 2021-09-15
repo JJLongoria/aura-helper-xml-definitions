@@ -40,6 +40,8 @@ module.exports = {
     reputationLevels: new ObjectXMLField('reputationLevels', 'Reputation Levels')
         .setMinApi(28)
         .setEditable()
+        .setFieldKey('ideaReputationLevels')
+        .setSortOrder(undefined)
         .addField('chatterAnswersReputationLevels', new ArrayXMLField('chatterAnswersReputationLevels', 'Chatter Answers Reputation Levels')
             .setMinApi(28)
             .setEditable()

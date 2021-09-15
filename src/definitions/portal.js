@@ -38,6 +38,7 @@ module.exports = {
         .setMinApi(15)
         .setEditable()
         .setRequired()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
     headerDocument: new StringXMLField('headerDocument', 'Header Document')
         .setMinApi(15)

@@ -23,4 +23,5 @@ module.exports = {
         .setEditable()
         .setRequired()
         .setUnique()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
 }

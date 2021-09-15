@@ -54,6 +54,7 @@ module.exports = {
         .setMinApi(12)
         .setEditable()
         .setRequired()
+        .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
     letterhead: new StringXMLField('letterhead', 'Letterhead')
         .setMinApi(12)

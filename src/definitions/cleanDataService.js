@@ -2,7 +2,7 @@ const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXML
 const { MetadataTypes } = require('@ah/core').Values;
 
 module.exports = {
-    cleanRules: new ArrayXMLField()
+    cleanRules: new ArrayXMLField('cleanRules', 'Clean Rules')
         .setMinApi(51)
         .setEditable()
         .setRequired()

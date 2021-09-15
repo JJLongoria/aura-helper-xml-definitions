@@ -5,6 +5,8 @@ module.exports = {
         .setMinApi(45)
         .setMaxApi(46)
         .setEditable()
+        .setFieldKey('selectedEntity')
+        .setSortOrder(undefined)
         .addField('selectedEntity', new StringXMLField('selectedEntity', 'Selected Entity')
             .setEditable()
         ),

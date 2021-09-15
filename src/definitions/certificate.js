@@ -1,7 +1,7 @@
 const { StringXMLField, IntegerXMLField, BooleanXMLField, DateTimeXMLField } = require('@ah/core').Types;
 
 module.exports = {
-    caSigned: new BooleanXMLField('CaSigned', 'caSigned')
+    caSigned: new BooleanXMLField('caSigned', 'CA Signed')
         .setMinApi(36)
         .setEditable()
         .setRequired(),

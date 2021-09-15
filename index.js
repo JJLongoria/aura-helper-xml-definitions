@@ -106,7 +106,7 @@ function processEntity(entityData, apiVersion) {
     let result;
     if (!isReserved(entityData) && isApiAvailable(entityData, apiVersion)) {
         result = entityData;
-        if (entityData.fieldDependencies) {
+        if (entityData.fieldDependencies && entityData.fieldDependencies.length > 0) {
             let fieldDependencies = [];
             for (let fieldDependency of entityData.fieldDependencies) {
                 let entityProcessed = processEntity(fieldDependency, apiVersion);
@@ -115,7 +115,7 @@ function processEntity(entityData, apiVersion) {
             }
             entityData.fieldDependencies = fieldDependencies;
         }
-        if (entityData.controlledFields) {
+        if (entityData.controlledFields && entityData.controlledFields.length > 0) {
             let controlledFields = [];
             for (let controlledField of entityData.controlledFields) {
                 let entityProcessed = processEntity(controlledField, apiVersion);
@@ -131,7 +131,7 @@ function processEntity(entityData, apiVersion) {
                     entityData.fields[key] = entityProcessed;
             }
         }
-        if (entityData.allowedValues) {
+        if (entityData.allowedValues && entityData.allowedValues.length > 0) {
             if (entityData.datatype && entityData.datatype === DataTypes.ARRAY) {
                 let allowedValues = [];
                 for (let allowedValue of entityData.allowedValues) {
@@ -142,7 +142,7 @@ function processEntity(entityData, apiVersion) {
                 entityData.allowedValues = allowedValues;
             }
         }
-        if (entityData.values) {
+        if (entityData.values && entityData.values.length > 0) {
             let values = [];
             for (let value of entityData.values) {
                 let entityProcessed = processEntity(value, apiVersion);

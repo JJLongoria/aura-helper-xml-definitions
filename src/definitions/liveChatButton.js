@@ -27,6 +27,8 @@ module.exports = {
     deployments: new ObjectXMLField('deployments', 'Deployments')
         .setMinApi(28)
         .setEditable()
+        .setFieldKey('deployment')
+        .setSortOrder(undefined)
         .addField('deployment', new ArrayXMLField('deployment', 'Deployment')
             .setEditable()
             .setMetadataType(MetadataTypes.LIVE_CHAT_DEPLOYMENT)
@@ -138,6 +140,8 @@ module.exports = {
     skills: new ObjectXMLField('skills', 'Skills')
         .setMinApi(28)
         .setEditable()
+        .setFieldKey('skill')
+        .setSortOrder(undefined)
         .addField('skill', new ArrayXMLField('skill', 'Skill')
             .setEditable()
         ),

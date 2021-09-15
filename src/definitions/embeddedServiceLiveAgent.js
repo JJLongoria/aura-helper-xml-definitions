@@ -17,6 +17,8 @@ module.exports = {
     embeddedServiceQuickActions: new ObjectXMLField('embeddedServiceQuickActions', 'Embedded Service Quick Actions')
         .setMinApi(38)
         .setEditable()
+        .setFieldKey('quickActionDefinition')
+        .setSortOrder(undefined)
         .addField('embeddedServiceLiveAgent', new StringXMLField('embeddedServiceLiveAgent', 'Embedded Service LiveAgent')
             .setEditable()
             .setMetadataType(MetadataTypes.EMBEDDED_SERVICE_LIVE_AGENT)

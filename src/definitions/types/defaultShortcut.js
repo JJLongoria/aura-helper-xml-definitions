@@ -5,6 +5,8 @@ module.exports = function (type, shortcutName, shortcutLabel, minApi, maxApi) {
         .setMinApi(minApi)
         .setMaxApi(maxApi)
         .setEditable()
+        .setFieldKey('keyCommand')
+        .setSortOrder(undefined)
         .addField('action', new StringXMLField('action', 'Action')
             .setEditable()
             .setRequired()
