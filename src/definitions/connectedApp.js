@@ -83,7 +83,7 @@ module.exports = {
     ipRanges: new ObjectXMLField('ipRanges', 'IP Ranges')
         .setMinApi(29)
         .setEditable()
-        .setFieldKey('startAddress+endAddress')
+        .setFieldKey(['startAddress', 'endAddress'])
         .setSortOrder(['startAddress', 'endAddress'])
         .addField('description', new StringXMLField('description', 'Description')
             .setMinApi(31)

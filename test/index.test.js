@@ -34,7 +34,7 @@ function validateDefinition(definition, parentKey, fieldKey) {
         if (definition.fields) {
             if (!definition.fieldKey && !definition.definitionRef)
                 throw new Error('Not fieldKey found on definition with key => ' + parentKey + '.');
-            else if (definition.fieldKey && definition.fieldKey.indexOf('+') === -1 && !definition.definitionRef && !definition.fields[definition.fieldKey])
+            else if (definition.fieldKey && !Array.isArray(definition.fieldKey) && !definition.definitionRef && !definition.fields[definition.fieldKey])
                 throw new Error('The fieldKey ' + definition.fieldKey + ' not exists as field on definition with key => ' + parentKey + '.');
             for (const key of Object.keys(definition.fields)) {
                 validateDefinition(definition.fields[key], parentKey + '>' + key, key);
