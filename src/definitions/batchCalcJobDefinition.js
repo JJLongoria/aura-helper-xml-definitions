@@ -204,7 +204,7 @@ module.exports = {
         )
         .addField('joinKeys', new ArrayXMLField('joinKeys', 'Join Keys')
             .setEditable()
-            .setFieldKey('primarySourceFieldName+secondarySourceFieldName')
+            .setFieldKey(['primarySourceFieldNam', 'secondarySourceFieldName'])
             .setSortOrder(['primarySourceFieldName', 'secondarySourceFieldName'])
             .addField('primarySourceFieldName', new StringXMLField('primarySourceFieldName', 'Primary Source Field Name')
                 .setEditable()
