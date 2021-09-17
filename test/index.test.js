@@ -9,6 +9,8 @@ describe('Testing index.js', () => {
         let getRawDefinitionResult2 = Index.getRawDefinition('Profiles');
         let getAllDefinitionsResult = Index.getAllDefinitions(45);
         let getAllRawDefinitionsResult = Index.getAllRawDefinitions();
+        let metadataTypes = Index.getMetadataTypes(getRawDefinitionResult1);
+        console.log(metadataTypes);
         for (const definitionType of Object.keys(getAllRawDefinitionsResult)) {
             const XMLDefinition = getAllRawDefinitionsResult[definitionType];
             for (const fieldKey of Object.keys(XMLDefinition)) {

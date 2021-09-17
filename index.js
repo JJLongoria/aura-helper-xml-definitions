@@ -25,7 +25,7 @@ class XMLDefinitions {
             return undefined;
         }
     }
-    
+
     /**
      * Method to get the Metadata Type's XML RAW definition  
      * @param {String} type Metadata Type API Name to get the XML RAW definition
@@ -38,7 +38,7 @@ class XMLDefinitions {
             return undefined;
         }
     }
-    
+
     /**
      * Method to get all XML Definitions for all Metadata Types for an specific API Version
      * @param {String | Number} apiVersion API Version number to get the XML Definitions
@@ -55,7 +55,7 @@ class XMLDefinitions {
         }
         return result;
     }
-    
+
     /**
      * Method to get all XML RAW Definitions for all Metadata Types
      * @returns Return an Object with all XML raw definitions. The object has the Type as key and the XML definition as value
@@ -63,7 +63,7 @@ class XMLDefinitions {
     static getAllRawDefinitions() {
         return require('./src/definitions');
     }
-    
+
     /**
      * Method to resolve the recursive reference from some XML Definition files
      * @param {Object} typeDefinition XML file Definition
@@ -88,8 +88,36 @@ class XMLDefinitions {
         return subFieldDefinition;
     }
 
+    /**
+     * Method to get all Metadata Types referenced into a XML Definition
+     * @param {Object} XMLDefinition XML Definition to get all Metadata Types
+     * 
+     * @returns {Array<String>} Return a List with all Metadata Object Names
+     */
+    static getMetadataTypes(XMLDefinition) {
+        let types = [];
+        for (const fieldKey of Object.keys(XMLDefinition)) {
+            const field = XMLDefinition[fieldKey];
+            types = types.concat(getMetadataFromField(field));
+        }
+        return types;
+    }
+
 }
 module.exports = XMLDefinitions;
+
+function getMetadataFromField(fieldDefinition) {
+    let types = [];
+    if (fieldDefinition.metadataType && !types.includes(fieldDefinition.metadataType))
+        types.push(fieldDefinition.metadataType);
+    if (fieldDefinition.fields && Object.keys(fieldDefinition.fields).length > 0) {
+        for (const fieldKey of Object.keys(fieldDefinition.fields)) {
+            const field = fieldDefinition.fields[fieldKey];
+            types = types.concat(getMetadataFromField(field));
+        }
+    }
+    return types;
+}
 
 function processType(typeDefinition, apiVersion) {
     apiVersion = ProjectUtils.getApiAsNumber(apiVersion);
