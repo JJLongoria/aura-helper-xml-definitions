@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, IntegerXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { StringXMLField, ObjectXMLField, EnumXMLField, IntegerXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = function (filterName, filterLabel, minApi) {
     return new ObjectXMLField(filterName, filterLabel)

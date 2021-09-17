@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { StringXMLField, ObjectXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = {
     customApplications: new ArrayXMLField('customApplications', 'Custom Applications')

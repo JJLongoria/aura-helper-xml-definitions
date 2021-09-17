@@ -1,5 +1,5 @@
-const { StringXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { StringXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = {
     dataSource: new StringXMLField('dataSource', 'Data Source')

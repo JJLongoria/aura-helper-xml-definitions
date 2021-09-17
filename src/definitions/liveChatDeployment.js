@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, IntegerXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { StringXMLField, ObjectXMLField, IntegerXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = {
     brandingImage: new StringXMLField('brandingImage', 'Branding Image')

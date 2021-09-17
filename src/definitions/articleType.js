@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField } = require('@ah/core').Types;
-const { DataValues } = require('@ah/core').Values;
+const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+const { DataValues } = require('@aurahelper/core').Values;
 const CustomField = require('./customField');
 
 

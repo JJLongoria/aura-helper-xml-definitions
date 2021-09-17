@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { StringXMLField, ObjectXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = {
     assignments: new ObjectXMLField('assignments', 'Assignments')

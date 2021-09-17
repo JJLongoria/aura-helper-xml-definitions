@@ -1,5 +1,5 @@
 const DefaultShortcutType = require('../../../../src/definitions/types/defaultShortcut');
-const { ArrayXMLField } = require('@ah/core').Types;
+const { ArrayXMLField } = require('@aurahelper/core').Types;
 
 describe('Testing src/definitions/types/defaultShortcut.js', () => {
     test('Testing Definition', () => {

@@ -1,4 +1,4 @@
-const { StringXMLField, ArrayXMLField } = require('@ah/core').Types;
+const { StringXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     adapterUrl: new StringXMLField('adapterUrl', 'Adapter URL')

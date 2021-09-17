@@ -1,4 +1,4 @@
-const { StringXMLField, IntegerXMLField, BooleanXMLField, DateTimeXMLField } = require('@ah/core').Types;
+const { StringXMLField, IntegerXMLField, BooleanXMLField, DateTimeXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     caSigned: new BooleanXMLField('caSigned', 'CA Signed')

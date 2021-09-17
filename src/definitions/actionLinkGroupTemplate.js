@@ -1,5 +1,5 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@ah/core').Types;
-const { DataValues } = require('@ah/core').Values;
+const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
+const { DataValues } = require('@aurahelper/core').Values;
 module.exports = {
     actionLinkTemplates: new ArrayXMLField('actionLinkTemplates', 'Action Link Templates')
         .setMinApi(33)

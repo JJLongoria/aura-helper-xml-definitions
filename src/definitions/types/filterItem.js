@@ -1,4 +1,4 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@ah/core').Types;
+const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
 
 
 module.exports = function (filterItemName, filterItemLabel, minApi) {

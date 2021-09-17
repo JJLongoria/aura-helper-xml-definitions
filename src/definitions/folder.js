@@ -1,4 +1,4 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField } = require('@ah/core').Types;
+const { StringXMLField, ObjectXMLField, EnumXMLField } = require('@aurahelper/core').Types;
 const SharedTo = require('./sharedTo');
 
 module.exports = {

@@ -1,4 +1,4 @@
-const { EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
+const { EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
 
 
 module.exports = {

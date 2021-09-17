@@ -1,4 +1,4 @@
-const { StringXMLField, IntegerXMLField } = require('@ah/core').Types;
+const { StringXMLField, IntegerXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     archiveAfterMonths: new IntegerXMLField('archiveAfterMonths', 'Archive After Months')

@@ -1,4 +1,4 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@ah/core').Types;
+const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     eventParameters: new ArrayXMLField('eventParameters', 'Event Parameters')

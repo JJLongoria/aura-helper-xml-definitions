@@ -1,4 +1,4 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField } = require('@ah/core').Types;
+const { StringXMLField, ArrayXMLField, IntegerXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     customHelpMenuItems: new ArrayXMLField('customHelpMenuItems', 'Custom Help Menu Items')

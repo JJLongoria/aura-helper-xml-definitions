@@ -1,4 +1,4 @@
-const { StringXMLField, DoubleXMLField } = require('@ah/core').Types;
+const { StringXMLField, DoubleXMLField } = require('@aurahelper/core').Types;
 const PackageVerionsItemType = require('./types/packageVersion');
 
 module.exports = {

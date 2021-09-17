@@ -1,5 +1,5 @@
-const { StringXMLField, ArrayXMLField, XMLDependencyField, EnumXMLField } = require('@ah/core').Types;
-const { MetadataTypes, DataValues } = require('@ah/core').Values;
+const { StringXMLField, ArrayXMLField, XMLDependencyField, EnumXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
 
 
 module.exports = function (actionReferenceName, actionReferenceLabel, minApi) {

@@ -1,4 +1,4 @@
-const { StringXMLField, DateTimeXMLField } = require('@ah/core').Types;
+const { StringXMLField, DateTimeXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     developerName: new StringXMLField('developerName', 'Developer Name')

@@ -1,4 +1,4 @@
-const { StringXMLField, BooleanXMLField, DoubleXMLField, IntegerXMLField, EnumXMLField } = require('@ah/core').Types;
+const { StringXMLField, BooleanXMLField, DoubleXMLField, IntegerXMLField, EnumXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     capacityPercentage: new DoubleXMLField('capacityPercentage', 'Capacity Percentage')

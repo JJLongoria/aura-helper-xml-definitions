@@ -1,5 +1,5 @@
-const { StringXMLField, BooleanXMLField, XMLDependencyField } = require('@ah/core').Types;
-const { DataValues } = require('@ah/core').Values;
+const { StringXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
+const { DataValues } = require('@aurahelper/core').Values;
 
 module.exports = {
     content: new StringXMLField('content', 'Content')

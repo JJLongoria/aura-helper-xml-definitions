@@ -1,4 +1,4 @@
-const { StringXMLField, BooleanXMLField } = require('@ah/core').Types;
+const { StringXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     activateRSS: new BooleanXMLField('activateRSS', 'Activate RSS')

@@ -1,5 +1,5 @@
-const { IntegerXMLField, EnumXMLField, StringXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { IntegerXMLField, EnumXMLField, StringXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = {
     entity: new EnumXMLField('entity', 'Entity')

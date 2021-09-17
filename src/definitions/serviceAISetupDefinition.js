@@ -1,5 +1,5 @@
-const { StringXMLField, EnumXMLField } = require('@ah/core').Types;
-const { DataValues } = require('@ah/core').Values;
+const { StringXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+const { DataValues } = require('@aurahelper/core').Values;
 
 module.exports = {
     appSourceType: new EnumXMLField('appSourceType', 'App Source Type')

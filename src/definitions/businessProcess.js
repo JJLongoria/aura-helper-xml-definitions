@@ -1,5 +1,5 @@
-const { StringXMLField, BooleanXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { StringXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 const PicklistValuesType = require('./types/picklistValues');
 
 module.exports = {

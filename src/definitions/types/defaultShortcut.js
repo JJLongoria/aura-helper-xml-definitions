@@ -1,4 +1,4 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
+const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
 
 module.exports = function (type, shortcutName, shortcutLabel, minApi, maxApi) {
     return new type(shortcutName, shortcutLabel)

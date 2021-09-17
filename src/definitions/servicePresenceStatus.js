@@ -1,4 +1,4 @@
-const { StringXMLField, ObjectXMLField } = require('@ah/core').Types;
+const { StringXMLField, ObjectXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     channels: new ObjectXMLField('channels', 'Channels')

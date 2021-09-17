@@ -1,4 +1,4 @@
-const { StringXMLField, IntegerXMLField, EnumXMLField } = require('@ah/core').Types;
+const { StringXMLField, IntegerXMLField, EnumXMLField } = require('@aurahelper/core').Types;
 
 
 module.exports = {

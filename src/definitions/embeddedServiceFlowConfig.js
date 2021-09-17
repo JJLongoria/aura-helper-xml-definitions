@@ -1,4 +1,4 @@
-const { BooleanXMLField } = require('@ah/core').Types;
+const { BooleanXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     enabled: new BooleanXMLField('enabled', 'Enabled')

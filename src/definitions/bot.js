@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { StringXMLField, ObjectXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 const MLIntentType = require('./types/mlIntent');
 const MLSlotType = require('./types/mlSlot');
 const BotVersion = require('./botVersion');

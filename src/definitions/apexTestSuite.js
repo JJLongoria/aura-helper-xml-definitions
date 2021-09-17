@@ -1,4 +1,4 @@
-const { ArrayXMLField } = require('@ah/core').Types;
+const { ArrayXMLField } = require('@aurahelper/core').Types;
 
 
 module.exports = {

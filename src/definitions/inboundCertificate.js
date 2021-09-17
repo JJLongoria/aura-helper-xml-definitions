@@ -1,4 +1,4 @@
-const { StringXMLField, DateTimeXMLField } = require('@ah/core').Types;
+const { StringXMLField, DateTimeXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     expirationDate: new DateTimeXMLField('expirationDate', 'Expiration Date')

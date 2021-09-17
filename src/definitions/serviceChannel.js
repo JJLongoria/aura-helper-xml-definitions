@@ -1,4 +1,4 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, BooleanXMLField } = require('@ah/core').Types;
+const { StringXMLField, ArrayXMLField, IntegerXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     doesMinimizeWidgetOnAccept: new BooleanXMLField('doesMinimizeWidgetOnAccept', 'Does Minimize Widget On Accept')

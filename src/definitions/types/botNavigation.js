@@ -1,4 +1,4 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, ArrayXMLField } = require('@ah/core').Types;
+const { StringXMLField, ObjectXMLField, EnumXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
 
 module.exports = function (botNavigationName, botNavigationLabel, minApi) {
     return new ObjectXMLField(botNavigationName, botNavigationLabel)

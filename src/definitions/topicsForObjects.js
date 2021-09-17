@@ -1,5 +1,5 @@
-const { StringXMLField, EnumXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { StringXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = {
     enableTopics: new EnumXMLField('enableTopics', 'Enable Topics')

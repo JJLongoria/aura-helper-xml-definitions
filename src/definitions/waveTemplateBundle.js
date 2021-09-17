@@ -1,4 +1,4 @@
-const { StringXMLField, EnumXMLField } = require('@ah/core').Types;
+const { StringXMLField, EnumXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     assetIcon: new EnumXMLField('assetIcon', 'Asset Icon')

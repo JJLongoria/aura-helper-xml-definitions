@@ -1,5 +1,5 @@
-const { MetadataTypes, DataTypes } = require('@ah/core').Values;
-const { ProjectUtils } = require('@ah/core').CoreUtils;
+const { MetadataTypes, DataTypes } = require('@aurahelper/core').Values;
+const { ProjectUtils } = require('@aurahelper/core').CoreUtils;
 
 /**
  * Class with static methods to get the XML Definitions for one Metadata Type

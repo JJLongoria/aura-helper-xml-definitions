@@ -1,4 +1,4 @@
-const { ObjectXMLField, ArrayXMLField } = require('@ah/core').Types;
+const { ObjectXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
 const CustomShortcutType = require('./customShortcut');
 const DefaultShortcutType = require('./defaultShortcut');
 
