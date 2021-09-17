@@ -1,5 +1,5 @@
-const { ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
-const { DataValues } = require('@ah/core').Values;
+const { ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+const { DataValues } = require('@aurahelper/core').Values;
 
 module.exports = {
     groups: new ObjectXMLField('groups', 'Groups')

@@ -1,4 +1,4 @@
-const { StringXMLField } = require('@ah/core').Types;
+const { StringXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     fileNameWildcard: new StringXMLField('fileNameWildcard', 'File Name Wildcard')

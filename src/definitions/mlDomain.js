@@ -1,4 +1,4 @@
-const { StringXMLField } = require('@ah/core').Types;
+const { StringXMLField } = require('@aurahelper/core').Types;
 const MLIntentType = require('./types/mlIntent');
 const MLSlotType = require('./types/mlSlot');
 

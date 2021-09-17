@@ -1,4 +1,4 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, BooleanXMLField } = require('@ah/core').Types;
+const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     actionPlanTemplateItem: new ObjectXMLField('actionPlanTemplateItem', 'Action Plan Template Item')

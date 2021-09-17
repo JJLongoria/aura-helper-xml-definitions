@@ -1,4 +1,4 @@
-const { EnumXMLField, StringXMLField, ArrayXMLField, ObjectXMLField } = require('@ah/core').Types;
+const { EnumXMLField, StringXMLField, ArrayXMLField, ObjectXMLField } = require('@aurahelper/core').Types;
 
 module.exports = function (intentName, intentApi, minApi) {
     return new ArrayXMLField(intentName, intentApi)

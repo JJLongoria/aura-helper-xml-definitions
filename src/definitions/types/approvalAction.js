@@ -1,4 +1,4 @@
-const { ObjectXMLField } = require('@ah/core').Types;
+const { ObjectXMLField } = require('@aurahelper/core').Types;
 const WorkflowActionReferenceType = require('./workflowActionReference')
 
 module.exports = function (criteriaName, criteriaLabel, minApi) {

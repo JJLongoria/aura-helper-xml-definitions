@@ -1,5 +1,5 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = {
     areHeadersIncludedInFile: new BooleanXMLField('areHeadersIncludedInFile', 'Are Headers Included In File')

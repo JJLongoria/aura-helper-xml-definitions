@@ -1,5 +1,5 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
-const { MetadataTypes, DataValues } = require('@ah/core').Values;
+const { StringXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
 
 module.exports = {
     authProvider: new StringXMLField('authProvider', 'Auth Provider')

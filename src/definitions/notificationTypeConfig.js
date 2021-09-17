@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, BooleanXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { StringXMLField, ObjectXMLField, ArrayXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = {
     notificationTypeSettings: new ArrayXMLField('notificationTypeSettings', 'Notification Type Settings')

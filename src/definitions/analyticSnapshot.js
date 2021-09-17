@@ -1,5 +1,5 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@ah/core').Types;
-const { DataValues } = require('@ah/core').Values;
+const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+const { DataValues } = require('@aurahelper/core').Values;
 
 module.exports = {
     description: new StringXMLField('description', 'Description')

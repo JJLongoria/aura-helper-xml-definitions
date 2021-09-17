@@ -1,6 +1,7 @@
 {
-  "name": "@ah/xml-definitions",
+  "name": "@aurahelper/xml-definitions",
   "productName": "Aura Helper SalesForce XML Definitions",
+  "displayName": "Aura Helper Framework SalesForce XML Definitions",
   "version": "1.0.0",
   "description": "Powerfull Libraries to get the XML Definitions of ALL XML Salesforce Metadata Files. Support All API Versions up to API 51.0. You can get the definition of one or more XML files for a specific version of Salesforce. For Example: You can get the XML Definition of the Profile or Custom Object XML File on API Version 35.0",
   "main": "index.js",
@@ -27,7 +28,7 @@
     "Apex",
     "force.com",
     "DevOps",
-		"devops",
+    "devops",
     "sf-xml-definitions",
     "SF XML Definitions",
     "SF XML",
@@ -41,14 +42,14 @@
     "url": "https://github.com/JJLongoria/aura-helper-xml-definitions"
   },
   "bugs": {
-		"url": "https://github.com/JJLongoria/aura-helper-xml-definitions/issues",
-		"email": "juanjoselongoria@gmail.com"
-	},
-  "dependencies": {
-    "@ah/core": "file:../ah-core"
+    "url": "https://github.com/JJLongoria/aura-helper-xml-definitions/issues",
+    "email": "juanjoselongoria@gmail.com"
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
     "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "@aurahelper/core": "^1.0.0"
   }
 }

@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, ArrayXMLField, DoubleXMLField, BooleanXMLField, IntegerXMLField } = require('@ah/core').Types;
-const { MetadataTypes, DataValues } = require('@ah/core').Values;
+const { StringXMLField, ObjectXMLField, EnumXMLField, ArrayXMLField, DoubleXMLField, BooleanXMLField, IntegerXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
 
 module.exports = function (type, dashboardComponentName, dashboardComponentLabel, minApi) {
     return new type(dashboardComponentName, dashboardComponentLabel)

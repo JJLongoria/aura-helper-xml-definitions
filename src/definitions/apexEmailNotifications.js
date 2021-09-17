@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, XMLDependencyField } = require('@ah/core').Types;
-const { DataValues } = require('@ah/core').Values;
+const { StringXMLField, ObjectXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
+const { DataValues } = require('@aurahelper/core').Values;
 
 module.exports = {
     apexEmailNotification: new ObjectXMLField('apexEmailNotification', 'Apex Email Notification')

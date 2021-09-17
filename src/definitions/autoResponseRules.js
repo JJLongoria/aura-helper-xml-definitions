@@ -1,5 +1,5 @@
-const { StringXMLField, ArrayXMLField, BooleanXMLField, XMLDependencyField } = require('@ah/core').Types;
-const { MetadataTypes, DataValues } = require('@ah/core').Values;
+const { StringXMLField, ArrayXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
+const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
 const FilterItemType = require('./types/filterItem');
 
 module.exports = {

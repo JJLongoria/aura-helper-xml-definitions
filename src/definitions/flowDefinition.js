@@ -1,4 +1,4 @@
-const { StringXMLField, IntegerXMLField } = require('@ah/core').Types;
+const { StringXMLField, IntegerXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     activeVersionNumber: new IntegerXMLField('activeVersionNumber', 'Active Version Number')

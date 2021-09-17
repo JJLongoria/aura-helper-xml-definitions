@@ -1,6 +1,6 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDataControlledField } = require('@ah/core').Types;
-const { MetadataTypes, DataValues } = require('@ah/core').Values;
-const { Validator } = require('@ah/core').CoreUtils;
+const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDataControlledField } = require('@aurahelper/core').Types;
+const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
+const { Validator } = require('@aurahelper/core').CoreUtils;
 
 module.exports = {
     description: new StringXMLField('description', 'Description')

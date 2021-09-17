@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, DoubleXMLField, EnumXMLField, BooleanXMLField, DateTimeXMLField, TimeXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, DoubleXMLField, EnumXMLField, BooleanXMLField, DateTimeXMLField, TimeXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 function referenceOrValue(valueName, valueLabel) {
     return new ObjectXMLField(valueName, valueLabel)

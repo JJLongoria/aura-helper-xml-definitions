@@ -1,5 +1,5 @@
-const { ArrayXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { ArrayXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = {
     customTabListAdditionalFields: new ArrayXMLField('customTabListAdditionalFields', 'Custom Tab List Additional Fields')

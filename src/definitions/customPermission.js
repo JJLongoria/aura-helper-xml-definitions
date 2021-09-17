@@ -1,5 +1,5 @@
-const { StringXMLField, ArrayXMLField, BooleanXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { StringXMLField, ArrayXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = {
     connectedApp: new StringXMLField('connectedApp', 'Connected App')

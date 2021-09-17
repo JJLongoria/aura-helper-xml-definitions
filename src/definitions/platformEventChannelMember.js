@@ -1,5 +1,5 @@
-const { StringXMLField, ArrayXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { StringXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = {
     enrichedFields: new ArrayXMLField('enrichedFields', 'Enriched Fields')

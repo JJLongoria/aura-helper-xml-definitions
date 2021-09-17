@@ -1,4 +1,6 @@
-## [1.0.0 - 02/02/2021]
+# Change Log
+All notable changes to this project will be documented in this file.
+## [1.0.0 - 2021-09-18]
 ### Added
 - Added definitions of ALL Salesforce Metadata Files from API 1.0 to API 51.0
 - Added method to get all XML definitions for an API Version

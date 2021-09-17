@@ -1,5 +1,5 @@
-const { StringXMLField, IntegerXMLField, EnumXMLField, ArrayXMLField } = require('@ah/core').Types;
-const { DataValues } = require('@ah/core').Values;
+const { StringXMLField, IntegerXMLField, EnumXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
+const { DataValues } = require('@aurahelper/core').Values;
 
 module.exports = {
     defaultCurrency: new StringXMLField('defaultCurrency', 'Default Currency')

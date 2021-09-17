@@ -1,4 +1,4 @@
-const { StringXMLField } = require('@ah/core').Types;
+const { StringXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     contrastInvertedColor: new StringXMLField('contrastInvertedColor', 'Contrast Inverted Color')

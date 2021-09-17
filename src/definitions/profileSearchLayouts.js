@@ -1,5 +1,5 @@
-const { ArrayXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { ArrayXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = {
     profileName: new ArrayXMLField('profileName', 'Profile Name')

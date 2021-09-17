@@ -1,5 +1,5 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, XMLDependencyField } = require('@ah/core').Types;
-const { DataValues } = require('@ah/core').Values;
+const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
+const { DataValues } = require('@aurahelper/core').Values;
 
 module.exports = {
     cmsConnectAsset: new ArrayXMLField('cmsConnectAsset', 'CMS Connect Asset')

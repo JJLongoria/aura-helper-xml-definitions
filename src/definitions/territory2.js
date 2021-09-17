@@ -1,5 +1,5 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { StringXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = {
     accountAccessLevel: new EnumXMLField('accountAccessLevel', 'Account Access Level')

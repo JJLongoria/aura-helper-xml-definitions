@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, DateTimeXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { StringXMLField, ObjectXMLField, EnumXMLField, DateTimeXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = {
     decisionTableParameters: new ObjectXMLField('decisionTableParameters', 'Decision Table Parameters')

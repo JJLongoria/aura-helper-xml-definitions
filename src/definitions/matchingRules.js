@@ -1,5 +1,5 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = {
     matchingRules: new ArrayXMLField('matchingRules', 'Matching Rules')

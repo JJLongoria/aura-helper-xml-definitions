@@ -1,5 +1,5 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
-const { MetadataTypes } = require('@ah/core').Values;
+const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = {
     attributeNameIdFormat: new StringXMLField('attributeNameIdFormat', 'Attribute Name Id Format')

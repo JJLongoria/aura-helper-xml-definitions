@@ -1,4 +1,4 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
+const { StringXMLField, ObjectXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     dataFlowDirection: new ObjectXMLField('dataFlowDirection', 'Data Flow Direction')

@@ -1,4 +1,4 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@ah/core').Types;
+const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
 const NavigationLinkSetType = require('../definitions/types/navigationLinkSet');
 
 module.exports = {

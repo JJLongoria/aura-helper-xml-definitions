@@ -1,5 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@ah/core').Types;
-const { MetadataTypes, DataValues } = require('@ah/core').Values;
+const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
 
 module.exports = {
     animation: new EnumXMLField('animation', 'Animation')

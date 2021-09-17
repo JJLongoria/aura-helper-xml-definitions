@@ -1,4 +1,4 @@
-const { StringXMLField, IntegerXMLField, BooleanXMLField } = require('@ah/core').Types;
+const { StringXMLField, IntegerXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
 
 module.exports = {
     batchSize: new IntegerXMLField('batchSize', 'Batch Size')
