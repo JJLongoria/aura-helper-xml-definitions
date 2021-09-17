@@ -47,14 +47,14 @@ Return the XML definition for the selected type and API version. If the type exi
 ### **Examples:**
 **Get the Profile XML definition for API 45.0**
 
-    const XMLDefinitions = require('@ah/xml-definitions');
+    const XMLDefinitions = require('@aurahelper/xml-definitions');
 
     const ProfileDefinition = XMLDefinitions.getDefinition('Profile', 45);
     console.log(ProfileDefinition);
 
 **Get the CustomObject XML definition for API 33.0**
 
-    const XMLDefinitions = require('@ah/xml-definitions');
+    const XMLDefinitions = require('@aurahelper/xml-definitions');
 
     const CustomObjectDefinition = XMLDefinitions.getDefinition('CustomObject', 33);
     console.log(CustomObjectDefinition);    
@@ -72,14 +72,14 @@ Return the XML raw definition for the selected type. If type not exists, return 
 ### **Examples:**
 **Get the ConnectedApp XML raw definition**
 
-    const XMLDefinitions = require('@ah/xml-definitions');
+    const XMLDefinitions = require('@aurahelper/xml-definitions');
 
     const ConnectedAppDefinition = XMLDefinitions.getRawDefinition('ConnectedApp');
     console.log(ConnectedAppDefinition);
 
 **Get the CustomField XML raw definition**
 
-    const XMLDefinitions = require('@ah/xml-definitions');
+    const XMLDefinitions = require('@aurahelper/xml-definitions');
 
     const CustomFieldDefinition = XMLDefinitions.getRawDefinition('CustomField');
     console.log(CustomFieldDefinition);
@@ -98,7 +98,7 @@ Return an Object with all XML definitions for the selected API version. The obje
 ### **Examples:**
 **Get All XML Definitions for API 43.0**
 
-    const XMLDefinitions = require('@ah/xml-definitions');
+    const XMLDefinitions = require('@aurahelper/xml-definitions');
 
     const AllDefinitions = XMLDefinitions.getAllDefinitions(43);
 
@@ -119,7 +119,7 @@ Return an Object with all XML raw definitions. The object has the Type as key an
 ### **Examples:**
 **Get All XML raw definitions**
 
-    const XMLDefinitions = require('@ah/xml-definitions');
+    const XMLDefinitions = require('@aurahelper/xml-definitions');
 
     const AllRawDefinitions = XMLDefinitions.getAllRawDefinitions();
 
@@ -146,7 +146,7 @@ Returns the XML Definition to the selected XML field
 ### **Examples:**
 Resolve the recursive definition references on an object like Bot Steps on Bot XML Definition
 
-    const XMLDefinitions = require('@ah/xml-definitions');
+    const XMLDefinitions = require('@aurahelper/xml-definitions');
 
     const BotDefinition = XMLDefinitions.getDefinition('Bot', 50);
     ...
