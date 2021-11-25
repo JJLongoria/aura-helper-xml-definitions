@@ -45,68 +45,69 @@ Method to get the Metadata Type's XML definition for an API Version.
 
 ### **Parameters:**
   - **type**: Metadata Type API Name to get the XML definition
-    - String 
+    - `String` 
   - **apiVersion**: API Version number to get the version definition
-    - String | Number
+    - `String` | `Number`
    
 ### **Return:**
 Return the XML definition for the selected type and API version. If the type exists, but is not available in the selected API, return an empty object. If type not exists, return undefined.
-- Object
+- `Object`
     
 ### **Examples:**
 **Get the Profile XML definition for API 45.0**
-
+```javascript
     const XMLDefinitions = require('@aurahelper/xml-definitions');
 
     const ProfileDefinition = XMLDefinitions.getDefinition('Profile', 45);
     console.log(ProfileDefinition);
-
+```
 **Get the CustomObject XML definition for API 33.0**
-
+```javascript
     const XMLDefinitions = require('@aurahelper/xml-definitions');
 
     const CustomObjectDefinition = XMLDefinitions.getDefinition('CustomObject', 33);
     console.log(CustomObjectDefinition);    
+```
 ---
 ## [**getRawDefinition(type)**](#getrawdefinitiontype)
 Method to get the Metadata Type's XML RAW definition
 
 ### **Parameters:**
   - **type**: Metadata Type API Name to get the XML definition
-      - String 
+      - `String` 
 ### **Return:**
 Return the XML raw definition for the selected type. If type not exists, return undefined
-- Object
+- `Object`
 
 ### **Examples:**
 **Get the ConnectedApp XML raw definition**
-
+```javascript
     const XMLDefinitions = require('@aurahelper/xml-definitions');
 
     const ConnectedAppDefinition = XMLDefinitions.getRawDefinition('ConnectedApp');
     console.log(ConnectedAppDefinition);
-
+```
 **Get the CustomField XML raw definition**
-
+```javascript
     const XMLDefinitions = require('@aurahelper/xml-definitions');
 
     const CustomFieldDefinition = XMLDefinitions.getRawDefinition('CustomField');
     console.log(CustomFieldDefinition);
-
+```
 ---
 ## [**getAllDefinitions(apiVersion)**](#getalldefinitionsapiversion)
 Method to get all XML Definitions for all Metadata Types for an specific API Version.
 
 ### **Parameters:**
   - **apiVersion**: API Version number to get the version definition
-    - String | Number 
+    - `String` | `Number` 
 ### **Return:**
 Return an Object with all XML definitions for the selected API version. The object has the Type as key and the XML definition as value. If not exists any definition for the selected API return an empty object
-- Object
+- `Object`
 
 ### **Examples:**
 **Get All XML Definitions for API 43.0**
-
+```javascript
     const XMLDefinitions = require('@aurahelper/xml-definitions');
 
     const AllDefinitions = XMLDefinitions.getAllDefinitions(43);
@@ -116,18 +117,18 @@ Return an Object with all XML definitions for the selected API version. The obje
 
     console.log(CustomObjectDefinition);
     console.log(SkilDefinition);
-
+```
 ---
 ## [**getAllRawDefinitions()**](#getallrawdefinitions)
 Method to get all XML RAW Definitions for all Metadata Types
 
 ### **Return:**
 Return an Object with all XML raw definitions. The object has the Type as key and the XML definition as value
-- Object
+- `Object`
 
 ### **Examples:**
 **Get All XML raw definitions**
-
+```javascript
     const XMLDefinitions = require('@aurahelper/xml-definitions');
 
     const AllRawDefinitions = XMLDefinitions.getAllRawDefinitions();
@@ -137,24 +138,25 @@ Return an Object with all XML raw definitions. The object has the Type as key an
 
     console.log(CustomFieldRawDefinition);
     console.log(WorkflowRawDefinition);
-
+```
 ---
 ## [**resolveDefinitionReference(xmlDefinition, subFieldDefinition)**](#resolvedefinitionreferencexmldefinition-subfielddefinition)
 Method to resolve the recursive reference from some XML Definition files
 
 ### **Parameters:**
   - **typeDefinition**: XML file Definition
-    -  Object 
+    -  `Object` 
   - **subFieldDefinition**: XML Field definition to resolve
-    - Object 
+    - `Object` 
    
 ### **Return:**
 Returns the XML Definition to the selected XML field
-- Object
+- `Object`
     
 ### **Examples:**
 Resolve the recursive definition references on an object like Bot Steps on Bot XML Definition
 
+```javascript
     const XMLDefinitions = require('@aurahelper/xml-definitions');
 
     const BotDefinition = XMLDefinitions.getDefinition('Bot', 50);
@@ -164,4 +166,5 @@ Resolve the recursive definition references on an object like Bot Steps on Bot X
     if(botStep.definitionRef){
         let botStepResolvedDefinition = XMLDefinitions.resolveDefinitionReference(BotDefinition, botStep);
     }
+```
 
