@@ -1,4 +1,13 @@
 # **Aura Helper XML Definitions Module**
+
+[![Version](https://img.shields.io/npm/v/@aurahelper/xml-definitions?logo=npm)](https://www.npmjs.com/package/@aurahelper/xml-definitions)
+[![Total Downloads](https://img.shields.io/npm/dt/@aurahelper/xml-definitions?logo=npm)](https://www.npmjs.com/package/@aurahelper/xml-definitions)
+[![Downloads/Month](https://img.shields.io/npm/dm/@aurahelper/xml-definitions?logo=npm)](https://www.npmjs.com/package/@aurahelper/xml-definitions)
+[![Issues](https://img.shields.io/github/issues/jjlongoria/aura-helper-xml-definitions)](https://github.com/JJLongoria/aura-helper-xml-definitions/issues)
+[![Known Vulnerabilities](https://snyk.io/test/github/JJLongoria/aura-helper-xml-definitions/badge.svg)](https://snyk.io/test/github/JJLongoria/aura-helper-xml-definitions)
+[![Code Size](https://img.shields.io/github/languages/code-size/jjlongoria/aura-helper-xml-definitions)](https://github.com/JJLongoria/aura-helper-xml-definitions)
+[![License](https://img.shields.io/github/license/jjlongoria/aura-helper-xml-definitions?logo=github)](https://github.com/JJLongoria/aura-helper-xml-definitions/blob/master/LICENSE)
+
 Module to get any Salesforce Metadata XML Files Definition to process Metadata files properly. Yoy can get all Raw definitions, a Raw definition for a specific type or get All or specific definitions for a specific api version. For example, yo can get all Salesforce XML Definitions for API 45.0 or get the Custom Object XML File Definition for API 35.0.
 
 The **difference** between the **XML definition** and the **raw XML definition** is that the raw definition *is not processed*, it returns the entire XML information. The XML definitions return the XML definition processed for a *specific API version*, omitting everything that does not correspond to the indicated version.
