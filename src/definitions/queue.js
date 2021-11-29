@@ -1,4 +1,4 @@
-const { StringXMLField, ArrayXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+const { StringXMLField, ArrayXMLField, BooleanXMLField, ObjectXMLField } = require('@aurahelper/core').Types;
 const { MetadataTypes } = require('@aurahelper/core').Values;
 
 module.exports = {
@@ -44,11 +44,11 @@ module.exports = {
                 .setMetadataType(MetadataTypes.ROLE)
             )
         )
-        .addField('roles', new ArrayXMLField('roles', 'Roles')
+        .addField('roles', new ObjectXMLField('roles', 'Roles')
             .setEditable()
             .setFieldKey('role')
             .setSortOrder(undefined)
-            .addField('role', new StringXMLField('role', 'Role')
+            .addField('role', new ArrayXMLField('role', 'Role')
                 .setEditable()
                 .setMetadataType(MetadataTypes.ROLE)
             )
