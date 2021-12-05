@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const NotificationTypeConfig = {
     notificationTypeSettings: new ArrayXMLField('notificationTypeSettings', 'Notification Type Settings')
         .setMinApi(48)
         .setEditable()
