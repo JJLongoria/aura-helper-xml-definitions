@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, ArrayXMLField, MetadataTypes, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const MatchingRules = {
     matchingRules: new ArrayXMLField('matchingRules', 'Matching Rules')
         .setMinApi(33)
         .setEditable()
