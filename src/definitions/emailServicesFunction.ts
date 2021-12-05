@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, ArrayXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const EmailServicesFunction = {
     apexClass: new StringXMLField('apexClass', 'Apex Class')
         .setMinApi(42)
         .setEditable()
