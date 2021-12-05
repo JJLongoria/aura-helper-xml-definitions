@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, ArrayXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const SharedTo = {
     allCustomerPortalUsers: new StringXMLField('allCustomerPortalUsers', 'All Customer Portal Users')
         .setMinApi(24)
         .setEditable(),
