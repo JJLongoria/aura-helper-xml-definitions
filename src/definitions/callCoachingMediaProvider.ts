@@ -1,6 +1,6 @@
-const { BooleanXMLField } = require('@aurahelper/core').Types;
+import { BooleanXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const CallCoachingMediaProvider = {
     isActive: new BooleanXMLField('isActive', 'Is Active')
         .setMinApi(49)
         .setEditable()
