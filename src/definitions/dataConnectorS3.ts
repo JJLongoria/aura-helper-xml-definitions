@@ -1,6 +1,6 @@
-const { StringXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const DataConnectorS3 ={
     fileNameWildcard: new StringXMLField('fileNameWildcard', 'File Name Wildcard')
         .setMinApi(50)
         .setEditable(),
