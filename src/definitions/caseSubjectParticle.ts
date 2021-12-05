@@ -1,7 +1,6 @@
-const { StringXMLField, IntegerXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, IntegerXMLField, EnumXMLField } from '@aurahelper/core';
 
-
-module.exports = {
+export const CaseSubjectParticle = {
     index: new IntegerXMLField('index', 'Index')
         .setMinApi(41)
         .setEditable()
