@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, EnumXMLField, ArrayXMLField, XMLDependencyField, DataValues, ObjectXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const Audience = {
     audienceName: new StringXMLField('audienceName', 'Audience Name')
         .setMinApi(44)
         .setEditable()
@@ -27,6 +26,11 @@ module.exports = {
                 .setEditable()
                 .setFieldKey('isEnabled')
                 .setSortOrder(undefined)
+                .addField('audienceDeveloperName', new StringXMLField('audienceDeveloperName', 'Audience Developer Name')
+                    .setEditable()
+                    .addDependencyField(new XMLDependencyField('type', ['Audience'], DataValues.AVAILABLE))
+                    .addDependencyField(new XMLDependencyField('type', ['Domain', 'Profile', 'FieldBased', 'Permission'], DataValues.NOT_AVAILABLE))
+                )
                 .addField('city', new StringXMLField('city', 'City')
                     .setEditable()
                     .addDependencyField(new XMLDependencyField('type', ['GeoLocation'], DataValues.AVAILABLE))
@@ -107,6 +111,7 @@ module.exports = {
                 .addEnumValue('Field Based', 'FieldBased')
                 .addEnumValue('Permission', 'Permission', 45)
                 .addEnumValue('Default', 'Default', 47)
+                .addEnumValue('Audience', 'Audience', 53)
             )
         ),
     criterion: new ArrayXMLField('criterion', 'Criterion')
