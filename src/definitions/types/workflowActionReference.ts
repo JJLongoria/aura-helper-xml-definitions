@@ -1,8 +1,7 @@
-const { StringXMLField, ArrayXMLField, XMLDependencyField, EnumXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
+import { ArrayXMLField, DataValues, EnumXMLField, MetadataTypes, StringXMLField, XMLDependencyField } from '@aurahelper/core';
 
 
-module.exports = function (actionReferenceName, actionReferenceLabel, minApi) {
+export function workflowActionReference(actionReferenceName: string, actionReferenceLabel: string, minApi?: string | number) {
     return new ArrayXMLField(actionReferenceName, actionReferenceLabel)
         .setMinApi(minApi)
         .setEditable()
