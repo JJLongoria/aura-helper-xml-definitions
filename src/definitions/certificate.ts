@@ -1,6 +1,6 @@
-const { StringXMLField, IntegerXMLField, BooleanXMLField, DateTimeXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, IntegerXMLField, DateTimeXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const Certificate = {
     caSigned: new BooleanXMLField('caSigned', 'CA Signed')
         .setMinApi(36)
         .setEditable()
