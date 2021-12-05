@@ -1,9 +1,8 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
-const FilterItemType = require('./types/filterItem');
-const PicklistValuesType = require('./types/picklistValues');
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, IntegerXMLField, ObjectXMLField } from '@aurahelper/core';
+import { filterItem } from './types/filterItem';
+import { picklistValues } from './types/picklistValues';
 
-module.exports = {
+export const CustomField = {
     businessOwnerGroup: new StringXMLField('businessOwnerGroup', 'Business Owner Group')
         .setMinApi(45)
         .setEditable(true)
@@ -145,7 +144,7 @@ module.exports = {
         .addField('errorMessage', new StringXMLField('errorMessage', 'Error Message')
             .setEditable()
         )
-        .addField('filterItems', FilterItemType('filterItems', 'Filter Items', 10))
+        .addField('filterItems', filterItem('filterItems', 'Filter Items', 10))
         .addField('infoMessage', new StringXMLField('infoMessage', 'Info Message')
             .setEditable()
         )
@@ -178,7 +177,7 @@ module.exports = {
             .setMinApi(14)
             .setEditable()
         )
-        .addField('picklistValues', PicklistValuesType('picklistValues', 'Picklist Values'))
+        .addField('picklistValues', picklistValues('picklistValues', 'Picklist Values'))
         .addField('restrictedPicklist', new BooleanXMLField('restrictedPicklist', 'Restricted Picklist')
             .setMinApi(37)
             .setEditable()
@@ -239,7 +238,7 @@ module.exports = {
         .setMinApi(10)
         .setEditable()
         .addDependencyField(new XMLDependencyField('summaryOperation', 'Count', DataValues.NOT_NULL)),
-    summaryFilterItems: FilterItemType('summaryFilterItems', 'Summary Filter Items', 10),
+    summaryFilterItems: filterItem('summaryFilterItems', 'Summary Filter Items', 10),
     summaryForeignKey: new StringXMLField('summaryForeignKey', 'Summary Foreign Key')
         .setMinApi(10)
         .setEditable(),
