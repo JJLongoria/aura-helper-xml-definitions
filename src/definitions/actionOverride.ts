@@ -1,6 +1,6 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { DataValues } = require('@aurahelper/core').Values;
-module.exports = {
+import { StringXMLField, BooleanXMLField, XMLDependencyField, EnumXMLField, DataValues } from '@aurahelper/core';
+
+export const ActionOverride = {
     actionName: new EnumXMLField('actionName', 'Action Name')
         .setMinApi(18)
         .setEditable()
