@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField, DoubleXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, ArrayXMLField, EnumXMLField, DoubleXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const EclairGeoData = {
     maps: new ArrayXMLField('maps', 'Maps')
         .setMinApi(39)
         .setEditable()
