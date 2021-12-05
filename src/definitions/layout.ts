@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, IntegerXMLField, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const Layout = {
     customButtons: new ArrayXMLField('customButtons', 'Custom Buttons')
         .setMinApi(12)
         .setEditable()
@@ -156,7 +155,7 @@ module.exports = {
                 .setMinApi(29)
                 .setEditable()
                 .setFieldKey('visualforcePage')
-            .setSortOrder(undefined)
+                .setSortOrder(undefined)
                 .addField('height', new IntegerXMLField('height', 'Height')
                     .setEditable()
                     .setRequired()
