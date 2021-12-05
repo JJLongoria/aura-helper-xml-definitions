@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, DateTimeXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, MetadataTypes, EnumXMLField, ObjectXMLField, DateTimeXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const DecisionTable = {
     decisionTableParameters: new ObjectXMLField('decisionTableParameters', 'Decision Table Parameters')
         .setMinApi(51)
         .setEditable()
