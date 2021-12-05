@@ -1,6 +1,6 @@
-const { EnumXMLField, StringXMLField, ArrayXMLField, ObjectXMLField } = require('@aurahelper/core').Types;
+import { ArrayXMLField,  StringXMLField, ObjectXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = function (intentName, intentApi, minApi) {
+export function mlSlot(intentName: string, intentApi: string, minApi?: number | string) {
     return new ArrayXMLField(intentName, intentApi)
         .setMinApi(minApi)
         .setEditable()
