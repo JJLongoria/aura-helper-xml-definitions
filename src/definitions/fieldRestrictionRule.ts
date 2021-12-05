@@ -1,4 +1,4 @@
-import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, IntegerXMLField, DoubleXMLField, ObjectXMLField } from '@aurahelper/core';
+import { StringXMLField, BooleanXMLField, ArrayXMLField, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
 
 export const FieldRestrictionRule = {
     active: new BooleanXMLField('active', 'Active')
