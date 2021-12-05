@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, DataValues, MetadataTypes, EnumXMLField, ObjectXMLField } from '@aurahelper/core';
 
-function objectCaseNameValue(minApi) {
+function objectCaseNameValue(minApi?: number | string) {
     return new ArrayXMLField('caseValues', 'Case Values')
         .setMinApi(minApi)
         .setEditable()
@@ -57,7 +56,7 @@ function objectCaseNameValue(minApi) {
         )
 }
 
-module.exports = {
+export const CustomObjectTranslation = {
     caseValues: objectCaseNameValue(14),
     fields: new ArrayXMLField('fields', 'Fields')
         .setMinApi(29)
