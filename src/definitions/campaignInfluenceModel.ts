@@ -1,7 +1,6 @@
-const { EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { BooleanXMLField, EnumXMLField } from '@aurahelper/core';
 
-
-module.exports = {
+export const CampaignIncluenceModel = {
     isActive: new BooleanXMLField('isActive', 'Is Active')
         .setMinApi(40)
         .setEditable(),
