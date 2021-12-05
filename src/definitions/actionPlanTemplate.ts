@@ -1,6 +1,6 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const ActionPlanTemplate = {
     actionPlanTemplateItem: new ObjectXMLField('actionPlanTemplateItem', 'Action Plan Template Item')
         .setMinApi(47)
         .setEditable()
