@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, BooleanXMLField, XMLDependencyField, EnumXMLField } = require('@aurahelper/core').Types;
-const { DataValues } = require('@aurahelper/core').Values;
+import { ArrayXMLField,  StringXMLField, IntegerXMLField, ObjectXMLField, BooleanXMLField, XMLDependencyField, EnumXMLField, DataValues } from '@aurahelper/core';
 
-module.exports = function (navigationLinkSetName, navigationLinkSetLabel, minApi, maxApi) {
+export function navigationLinkSet(navigationLinkSetName: string, navigationLinkSetLabel: string, minApi?: number | string, maxApi?: number | string) {
     return new ObjectXMLField(navigationLinkSetName, navigationLinkSetLabel)
         .setMinApi(minApi)
         .setMaxApi(maxApi)
