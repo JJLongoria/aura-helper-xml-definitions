@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes } from '@aurahelper/core';
 
-module.exports = {
+export const FieldSet = {
     availableFields: new ArrayXMLField('availableFields', 'Available Fields')
         .setMinApi(21)
         .setEditable()
