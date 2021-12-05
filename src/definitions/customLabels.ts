@@ -1,4 +1,4 @@
-import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
+import { StringXMLField, BooleanXMLField, ArrayXMLField, DataValues, MetadataTypes, EnumXMLField } from '@aurahelper/core';
 
 export const CustomLabels = {
     labels: new ArrayXMLField('labels', 'Labels')
