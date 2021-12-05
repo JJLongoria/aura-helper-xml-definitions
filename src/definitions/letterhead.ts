@@ -1,6 +1,6 @@
-const { StringXMLField, ObjectXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, EnumXMLField, IntegerXMLField, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const LetterHead = {
     available: new BooleanXMLField('available', 'Available')
         .setMinApi(12)
         .setEditable()
