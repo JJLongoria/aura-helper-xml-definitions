@@ -1,6 +1,6 @@
-const { BooleanXMLField } = require('@aurahelper/core').Types;
+import { BooleanXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const EmbeddedServiceFlowConfig = {
     enabled: new BooleanXMLField('enabled', 'Enabled')
         .setMinApi(45)
         .setEditable()

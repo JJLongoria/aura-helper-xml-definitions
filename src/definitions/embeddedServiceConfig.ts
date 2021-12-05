@@ -12,6 +12,12 @@ export const EmbeddedServiceConfig = {
     customMinimizedComponent: new StringXMLField('customMinimizedComponent', 'Custom Minimized Component')
         .setMinApi(43)
         .setEditable(),
+    deploymentFeature: new EnumXMLField('deploymentFeature', 'Deployment Feature')
+        .setMinApi(52)
+        .setEditable()
+        .addEnumValue('Live Agent', 'LiveAgent')
+        .addEnumValue('Flows', 'Flows')
+        .addEnumValue('Field Service', 'FieldService'),
     deploymentType: new EnumXMLField('deploymentType', 'Deployment Type')
         .setMinApi(51)
         .setEditable()
