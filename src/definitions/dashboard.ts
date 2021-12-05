@@ -1,7 +1,7 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const DashboardComponentType = require('./types/dashboardComponent');
+import { StringXMLField, BooleanXMLField, ArrayXMLField, EnumXMLField, IntegerXMLField, ObjectXMLField } from '@aurahelper/core';
+import { dashboardComponent } from './types/dashboardComponent';
 
-module.exports = {
+export const Dashboard = {
     backgroundEndColor: new StringXMLField('backgroundEndColor', 'Background End Color')
         .setMinApi(14)
         .setEditable()
@@ -119,7 +119,7 @@ module.exports = {
                 .setEditable()
                 .setRequired()
             )
-            .addField('dashboardComponent', DashboardComponentType(ObjectXMLField, 'dashboardComponent', 'Dashboard Component'))
+            .addField('dashboardComponent', dashboardComponent(ObjectXMLField, 'dashboardComponent', 'Dashboard Component'))
             .addField('rowIndex', new IntegerXMLField('rowIndex', 'Row Index')
                 .setEditable()
                 .setRequired()
@@ -172,7 +172,7 @@ module.exports = {
             .addEnumValue('Narrow', 'Narrow')
             .addEnumValue('Wide', 'Wide')
         )
-        .addField('components', DashboardComponentType(ArrayXMLField, 'components', 'Components')),
+        .addField('components', dashboardComponent(ArrayXMLField, 'components', 'Components')),
     middleSection: new ObjectXMLField('middleSection', 'Middle Section')
         .setMinApi(14)
         .setEditable()
@@ -186,7 +186,7 @@ module.exports = {
             .addEnumValue('Narrow', 'Narrow')
             .addEnumValue('Wide', 'Wide')
         )
-        .addField('components', DashboardComponentType(ArrayXMLField, 'components', 'Components')),
+        .addField('components', dashboardComponent(ArrayXMLField, 'components', 'Components')),
     numSubscriptions: new IntegerXMLField('numSubscriptions', 'Number of Subscriptions')
         .setMinApi(42)
         .setEditable(),
@@ -203,7 +203,7 @@ module.exports = {
             .addEnumValue('Narrow', 'Narrow')
             .addEnumValue('Wide', 'Wide')
         )
-        .addField('components', DashboardComponentType(ArrayXMLField, 'components', 'Components')),
+        .addField('components', dashboardComponent(ArrayXMLField, 'components', 'Components')),
     runningUser: new StringXMLField('runningUser', 'Running User')
         .setMinApi(14)
         .setEditable()
