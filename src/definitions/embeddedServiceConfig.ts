@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, MetadataTypes, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const EmbeddedServiceConfig = {
     areGuestUsersAllowed: new BooleanXMLField('areGuestUsersAllowed', 'Are Guest Users Allowed')
         .setMinApi(45)
         .setEditable(),
