@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
+import { ArrayXMLField,  StringXMLField } from '@aurahelper/core';
 
-module.exports = function (botMessageName, botMessageLabel, minApi) {
+export function botMessage(botMessageName: string, botMessageLabel: string, minApi?: number | string) {
     return new ArrayXMLField(botMessageName, botMessageLabel)
         .setMinApi(minApi)
         .setEditable()
