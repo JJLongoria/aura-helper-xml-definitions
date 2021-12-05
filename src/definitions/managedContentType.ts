@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const ManagedContentType = {
     description: new StringXMLField('description', 'Description')
         .setMinApi(47)
         .setEditable(),
