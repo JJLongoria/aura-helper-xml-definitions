@@ -1,7 +1,6 @@
-const { StringXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const CustomPageWebLink = {
     availability: new EnumXMLField('availability', 'Availability')
         .setMinApi(13)
         .setEditable()
