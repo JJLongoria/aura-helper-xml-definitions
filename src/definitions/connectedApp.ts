@@ -1,6 +1,4 @@
-const { StringXMLField, ObjectXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
-const { Validator } = require('@aurahelper/core').CoreUtils;
+import { StringXMLField, BooleanXMLField, MetadataTypes, EnumXMLField, IntegerXMLField, ObjectXMLField, CoreUtils } from '@aurahelper/core';
 
 module.exports = {
     attributes: new ObjectXMLField('attributes', 'Attributes')
@@ -93,14 +91,14 @@ module.exports = {
         .addField('endAddress', new StringXMLField('endAddress', 'End Address')
             .setRequired()
             .setEditable()
-            .addMatchPattern(Validator.getIpv4Regexp())
-            .addMatchPattern(Validator.getIpv6Regexp())
+            .addMatchPattern(CoreUtils.Validator.getIpv4Regexp())
+            .addMatchPattern(CoreUtils.Validator.getIpv6Regexp())
         )
         .addField('startAddress', new StringXMLField('startAddress', 'Start Address')
             .setRequired()
             .setEditable()
-            .addMatchPattern(Validator.getIpv4Regexp())
-            .addMatchPattern(Validator.getIpv6Regexp())
+            .addMatchPattern(CoreUtils.Validator.getIpv4Regexp())
+            .addMatchPattern(CoreUtils.Validator.getIpv6Regexp())
         ),
     label: new StringXMLField('label', 'Label')
         .setMinApi(29)
@@ -221,6 +219,7 @@ module.exports = {
             .addEnumValue('Lightning', 'Lightning', 51)
             .addEnumValue('Content', 'Content', 51)
             .addEnumValue('Lightning', 'Lightning', 51)
+            .addEnumValue('CDP Ingest', 'CDPIngest', 52)
         )
         .addField('singleLogoutUrl', new StringXMLField('singleLogoutUrl', 'Single Logout URL')
             .setEditable()
