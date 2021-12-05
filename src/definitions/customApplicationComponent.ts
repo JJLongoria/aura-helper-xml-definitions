@@ -1,6 +1,6 @@
-const { StringXMLField, IntegerXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const CustomApplicationComponent = {
     buttonIconUrl: new StringXMLField('buttonIconUrl', 'Button Icon URL')
         .setMinApi(25)
         .setEditable(),
