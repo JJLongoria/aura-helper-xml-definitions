@@ -1,6 +1,6 @@
-const { StringXMLField, ObjectXMLField, IntegerXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, IntegerXMLField, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const ManagedTopics = {
     ManagedTopic: new ObjectXMLField('ManagedTopic', 'Managed Topic')
         .setMinApi()
         .setEditable()
