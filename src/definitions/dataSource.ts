@@ -1,6 +1,6 @@
-const { StringXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const DataSource = {
     masterLabel: new StringXMLField('masterLabel', 'Master Label')
         .setMinApi(50)
         .setEditable()
