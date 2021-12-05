@@ -1,6 +1,6 @@
-const { StringXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const LightningExperienceTheme = {
     defaultBrandingSet: new StringXMLField('defaultBrandingSet', 'Default Branding Set')
         .setMinApi(42)
         .setEditable()
