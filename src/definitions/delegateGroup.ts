@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes } from '@aurahelper/core';
 
-module.exports = {
+export const Delegategroup = {
     customObjects: new ArrayXMLField('customObjects', 'Custom Objects')
         .setMinApi(36)
         .setEditable()
