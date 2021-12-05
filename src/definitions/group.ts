@@ -1,6 +1,6 @@
-const { StringXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const Group = {
     doesIncludeBosses: new BooleanXMLField('doesIncludeBosses', 'Does Include Bosses')
         .setMinApi(24)
         .setEditable(),
