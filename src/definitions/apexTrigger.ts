@@ -1,4 +1,4 @@
-import { StringXMLField, EnumXMLField, DoubleXMLField, ArrayXMLField } from '@aurahelper/core';
+import { StringXMLField, EnumXMLField, DoubleXMLField } from '@aurahelper/core';
 import { packageVersion } from './types/packageVersion';
 
 

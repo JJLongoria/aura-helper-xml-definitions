@@ -1,7 +1,6 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, EnumXMLField, MetadataTypes, BooleanXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const AppointmentSchedulingPolicy = {
     appointmentStartTimeInterval: new EnumXMLField('appointmentStartTimeInterval', 'Appointment Start Time Interval')
         .setMinApi(47)
         .setEditable()
