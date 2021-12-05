@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes, IntegerXMLField, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const Community = {
     active: new BooleanXMLField('active', 'Active')
         .setMinApi(27)
         .setEditable(),
