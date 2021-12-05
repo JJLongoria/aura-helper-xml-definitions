@@ -1,8 +1,7 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
-const KeyboardShortcutsType = require('./types/keyboardShortcuts');
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, IntegerXMLField, ObjectXMLField } from '@aurahelper/core';
+import { keyboardShortcut } from './types/keyboardShortcuts';
 
-module.exports = {
+export const CustomApplication = {
     actionOverrides: new ArrayXMLField('actionOverrides', 'Action Overrides')
         .setMinApi(38)
         .setEditable()
@@ -99,7 +98,7 @@ module.exports = {
         .addField('headerColor', new StringXMLField('headerColor', 'Header Color')
             .setEditable()
         )
-        .addField('keyboardShortcuts', KeyboardShortcutsType('keyboardShortcuts', 'Keyboard Shortcuts', 42))
+        .addField('keyboardShortcuts', keyboardShortcut('keyboardShortcuts', 'Keyboard Shortcuts', 42))
         .addField('listPlacement', new ObjectXMLField('listPlacement', 'List Placement')
             .setEditable()
             .setFieldKey('location')
