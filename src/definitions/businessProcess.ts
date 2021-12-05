@@ -1,8 +1,7 @@
-const { StringXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
-const PicklistValuesType = require('./types/picklistValues');
+import { StringXMLField, BooleanXMLField, MetadataTypes } from '@aurahelper/core';
+import { picklistValues } from './types/picklistValues';
 
-module.exports = {
+export const BusinessProcess = {
     description: new StringXMLField('description', 'Description')
         .setMinApi(17)
         .setEditable(),
@@ -18,5 +17,5 @@ module.exports = {
     namespacePrefix: new StringXMLField('namespacePrefix', 'Namespace Prefix')
         .setMinApi(17)
         .setEditable(),
-    values: PicklistValuesType('values', 'Values', 17)
+    values: picklistValues('values', 'Values', 17)
 }
