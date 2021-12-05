@@ -1,8 +1,7 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField, DoubleXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
-const NetworkBranding = require('./networkBranding');
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, IntegerXMLField, DoubleXMLField, ObjectXMLField } from '@aurahelper/core';
+import { NetworkBranding } from './networkBranding';
 
-module.exports = {
+export const Network = {
     allowedExtensions: new StringXMLField('allowedExtensions', 'Allowed Extensions')
         .setMinApi(36)
         .setEditable(),
