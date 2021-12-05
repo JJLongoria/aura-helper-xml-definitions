@@ -114,6 +114,8 @@ export const DiscoveryGoal = {
         .setMinApi(51)
         .setEditable(),
     modelCards: new ArrayXMLField('modelCards', 'Model Cards')
+        .setEditable()
+        .setMinApi(51)
         .addField('contactEmail', new StringXMLField('contactEmail', 'Contact Email')
             .setEditable()
         )
@@ -127,6 +129,8 @@ export const DiscoveryGoal = {
             .setEditable()
         ),
     outcome: new ObjectXMLField('outcome', 'Outcome')
+        .setMinApi(51)
+        .setEditable()
         .addField('field', new StringXMLField('field', 'Field')
             .setEditable()
         )
@@ -144,6 +148,7 @@ export const DiscoveryGoal = {
         ),
     predictionType: new EnumXMLField('predictionType', 'Prediction Type')
         .setEditable()
+        .setMinApi(51)
         .addEnumValue('Unknown', 'Unknown')
         .addEnumValue('Regression', 'Regression')
         .addEnumValue('Classification', 'Classification')
@@ -153,6 +158,7 @@ export const DiscoveryGoal = {
         .setEditable(),
     pushbackType: new EnumXMLField('pushbackType', 'Pushback Type')
         .setEditable()
+        .setMinApi(51)
         .addEnumValue('AI Record Insight', 'AiRecordInsight')
         .addEnumValue('Direct', 'Direct'),
     subscribedEntity: new StringXMLField('subscribedEntity', 'Subscribed Entity')

@@ -1,4 +1,4 @@
-import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, IntegerXMLField, DoubleXMLField, ObjectXMLField } from '@aurahelper/core';
+import { StringXMLField, MetadataTypes, EnumXMLField } from '@aurahelper/core';
 import { mlFilter } from './types/mLFilter';
 
 export const MLPredictionDefinition = {
