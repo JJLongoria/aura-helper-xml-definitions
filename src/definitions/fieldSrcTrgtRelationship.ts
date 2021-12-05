@@ -1,6 +1,6 @@
-const { StringXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const FieldSrcTrgtRelationship = {
     definitionCreationType: new StringXMLField('definitionCreationType', 'Definition Creation Type')
         .setMinApi(51)
         .setEditable(),
