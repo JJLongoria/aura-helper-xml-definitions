@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, ArrayXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const GlobalPicklist = {
     description: new StringXMLField('description', 'Description')
         .setMinApi(37)
         .setMaxApi(37)
