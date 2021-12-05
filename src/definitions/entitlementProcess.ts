@@ -1,9 +1,8 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
-const FilterItemType = require('./types/filterItem');
-const WorkflowActionReferenceType = require('./types/workflowActionReference')
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
+import { filterItem } from './types/filterItem';
+import { workflowActionReference } from './types/workflowActionReference';
 
-module.exports = {
+export const EntitlementProcess = {
     active: new BooleanXMLField('active', 'Active')
         .setMinApi(27)
         .setEditable(),
@@ -24,7 +23,7 @@ module.exports = {
     exitCriteriaBooleanFilter: new StringXMLField('exitCriteriaBooleanFilter', 'Exit Criteria Boolean Filter')
         .setMinApi(27)
         .setEditable(),
-    exitCriteriaFilterItems: FilterItemType('exitCriteriaFilterItems', 'Exit Criteria Filter Items', 27),
+    exitCriteriaFilterItems: filterItem('exitCriteriaFilterItems', 'Exit Criteria Filter Items', 27),
     exitCriteriaFormula: new StringXMLField('exitCriteriaFormula', 'Exit Criteria Formula')
         .setMinApi(27)
         .setEditable(),
@@ -43,7 +42,7 @@ module.exports = {
             .setMinApi(27)
             .setEditable()
         )
-        .addField('milestoneCriteriaFilterItems', FilterItemType('milestoneCriteriaFilterItems', 'Milestone Criteria Filter Items', 27))
+        .addField('milestoneCriteriaFilterItems', filterItem('milestoneCriteriaFilterItems', 'Milestone Criteria Filter Items', 27))
         .addField('milestoneCriteriaFormula', new StringXMLField('milestoneCriteriaFormula', 'Milestone Criteria Formula')
             .setMinApi(27)
             .setEditable()
@@ -60,12 +59,12 @@ module.exports = {
         .addField('minutesToComplete', new IntegerXMLField('minutesToComplete', 'Minutes To Complete')
             .setEditable()
         )
-        .addField('successActions', WorkflowActionReferenceType('successActions', 'Success Actions', 27))
+        .addField('successActions', workflowActionReference('successActions', 'Success Actions', 27))
         .addField('timeTriggers', new ArrayXMLField('timeTriggers', 'Time Triggers')
             .setEditable()
             .setFieldKey('actions')
             .setSortOrder(undefined)
-            .addField('actions', WorkflowActionReferenceType('actions', 'Actions', 27))
+            .addField('actions', workflowActionReference('actions', 'Actions', 27))
             .addField('timeLength', new IntegerXMLField('timeLength', 'Time Length')
                 .setEditable()
             )
