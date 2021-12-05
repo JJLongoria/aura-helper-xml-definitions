@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, ArrayXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const CustomHelpMenuSection = {
     customHelpMenuItems: new ArrayXMLField('customHelpMenuItems', 'Custom Help Menu Items')
         .setMinApi(45)
         .setMaxItems(15)
