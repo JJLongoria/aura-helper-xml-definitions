@@ -1,7 +1,7 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { ArrayXMLField,  StringXMLField, EnumXMLField } from '@aurahelper/core';
 
 
-module.exports = function (filterItemName, filterItemLabel, minApi) {
+export function filterItem(filterItemName: string, filterItemLabel: string, minApi?: number | string) {
     return new ArrayXMLField(filterItemName, filterItemLabel)
         .setMinApi(minApi)
         .setEditable()
@@ -31,4 +31,4 @@ module.exports = function (filterItemName, filterItemLabel, minApi) {
         .addField('valueField', new StringXMLField('valueField', 'Value Field')
             .setEditable()
         );
-} 
+}
