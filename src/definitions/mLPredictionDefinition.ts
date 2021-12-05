@@ -1,8 +1,7 @@
-const { StringXMLField, EnumXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
-const MLFilterType = require('./types/mLFilter');
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, IntegerXMLField, DoubleXMLField, ObjectXMLField } from '@aurahelper/core';
+import { mlFilter } from './types/mLFilter';
 
-module.exports = {
+export const MLPredictionDefinition = {
     aiApplicationDeveloperName: new StringXMLField('aiApplicationDeveloperName', 'AI Application Developer Name')
         .setMinApi(50)
         .setEditable()
@@ -15,9 +14,9 @@ module.exports = {
         .setEditable()
         .setRequired()
         .setUnique(),
-    negativeExpression: MLFilterType('negativeExpression', 'Negative Expression', 50)
+    negativeExpression: mlFilter('negativeExpression', 'Negative Expression', 50)
         .setReserved(),
-    positiveExpression: MLFilterType('positiveExpression', 'Positive Expression', 50)
+    positiveExpression: mlFilter('positiveExpression', 'Positive Expression', 50)
         .setReserved(),
     predictionField: new StringXMLField('predictionField', 'Prediction Field')
         .setMinApi(50)
