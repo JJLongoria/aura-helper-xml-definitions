@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, ArrayXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const BrandingSet = {
     brandingSetProperty: new ArrayXMLField('brandingSetProperty', 'Branding Set Property')
         .setMinApi(40)
         .setEditable()
