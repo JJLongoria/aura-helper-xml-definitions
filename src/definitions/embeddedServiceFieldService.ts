@@ -1,7 +1,6 @@
-const { StringXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, MetadataTypes } from '@aurahelper/core';
 
-module.exports = {
+export const EmbeddedServiceFieldService = {
     appointmentBookingFlowName: new StringXMLField('appointmentBookingFlowName', 'Appointment Booking Flow Name')
         .setMinApi(43)
         .setEditable(),
