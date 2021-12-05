@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, ArrayXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const ExperienceBundle = {
     experienceResources: new ArrayXMLField('experienceResources', 'Experience Resources')
         .setMinApi(46)
         .setEditable()
