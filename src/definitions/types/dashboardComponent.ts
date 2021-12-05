@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, ArrayXMLField, DoubleXMLField, BooleanXMLField, IntegerXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
+import { ArrayXMLField,  StringXMLField, IntegerXMLField, ObjectXMLField, BooleanXMLField, DoubleXMLField, EnumXMLField, DataValues, MetadataTypes } from '@aurahelper/core';
 
-module.exports = function (type, dashboardComponentName, dashboardComponentLabel, minApi) {
+export function (type: any, dashboardComponentName: string, dashboardComponentLabel: string, minApi?: number | string) {
     return new type(dashboardComponentName, dashboardComponentLabel)
         .setMinApi(minApi)
         .setEditable()
@@ -276,7 +275,7 @@ module.exports = function (type, dashboardComponentName, dashboardComponentLabel
         )
         .addField('report', new StringXMLField('report', 'Report')
             .setEditable()
-            .setMetadataType(MetadataTypes.REPORTS)
+            .setMetadataType(MetadataTypes.REPORT)
         )
         .addField('scontrol', new StringXMLField('scontrol', 'S-Control')
             .setEditable()
