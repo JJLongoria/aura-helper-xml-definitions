@@ -1,6 +1,6 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const CareSystemFieldMapping = {
     externalIdField: new StringXMLField('externalIdField', 'External Id Field')
         .setMinApi(49)
         .setEditable(),
