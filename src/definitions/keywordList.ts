@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, ArrayXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const KeywordList = {
     description: new StringXMLField('description', 'Description')
         .setMinApi(36)
         .setEditable(),
