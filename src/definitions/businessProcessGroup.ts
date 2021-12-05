@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, ArrayXMLField, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
 
-
-module.exports = {
+export const BusinessProcessGroup = {
     businessProcessDefinitions: new ArrayXMLField('businessProcessDefinitions', 'Business Process Definitions')
         .setMinApi(49)
         .setEditable()
