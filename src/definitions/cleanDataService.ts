@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const CleanDataService = {
     cleanRules: new ArrayXMLField('cleanRules', 'Clean Rules')
         .setMinApi(51)
         .setEditable()
