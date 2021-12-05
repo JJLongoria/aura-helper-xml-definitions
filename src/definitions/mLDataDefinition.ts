@@ -1,8 +1,7 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
-const MLFilterType = require('./types/mLFilter');
+import { StringXMLField, ArrayXMLField, MetadataTypes, EnumXMLField } from '@aurahelper/core';
+import { mlFilter } from './types/mLFilter';
 
-module.exports = {
+export const MLDataDefinition = {
     developerName: new StringXMLField('developerName', 'Developer Name')
         .setMinApi(50)
         .setEditable()
@@ -65,9 +64,9 @@ module.exports = {
         .setMinApi(50)
         .setEditable()
         .setReserved(),
-    scoringFilter: MLFilterType('scoringFilter', 'Scoring Filter', 50),
-    segmentFilter: MLFilterType('segmentFilter', 'Segment Filter', 50),
-    trainingFilter: MLFilterType('trainingFilter', 'Training Filter', 50),
+    scoringFilter: mlFilter('scoringFilter', 'Scoring Filter', 50),
+    segmentFilter: mlFilter('segmentFilter', 'Segment Filter', 50),
+    trainingFilter: mlFilter('trainingFilter', 'Training Filter', 50),
     type: new EnumXMLField('type', 'Type')
         .setEditable()
         .setRequired()
