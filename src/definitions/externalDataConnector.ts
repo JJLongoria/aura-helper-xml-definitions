@@ -1,6 +1,6 @@
-const { StringXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const ExternalDataConnector = {
     dataConnectionStatus: new EnumXMLField('dataConnectionStatus', 'Data Connection Status')
         .setMinApi(50)
         .setEditable()
