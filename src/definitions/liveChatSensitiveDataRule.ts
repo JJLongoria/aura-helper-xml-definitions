@@ -1,7 +1,6 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, XMLDependencyField, DataValues, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const LiveChatSensitiveDataRule = {
     actionType: new EnumXMLField('actionType', 'Action Type')
         .setMinApi(35)
         .setEditable()
