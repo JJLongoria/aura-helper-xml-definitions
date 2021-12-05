@@ -1,10 +1,9 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { DataValues } = require('@aurahelper/core').Values;
-const CriteriaItemType = require('./types/criteriaItem');
-const ApprovalActionType = require('./types/approvalAction');
+import { StringXMLField, BooleanXMLField, EnumXMLField, ArrayXMLField, XMLDependencyField, DataValues, ObjectXMLField } from '@aurahelper/core';
+import { approvalAction } from './types/approvalAction';
+import { criteriaItem } from './types/criteriaItem';
 
 
-module.exports = {
+export const ApprovalProcess = {
     active: new BooleanXMLField('active', 'Active')
         .setMinApi(28)
         .setEditable()
@@ -54,7 +53,7 @@ module.exports = {
         .addField('allowDelegate', new BooleanXMLField('allowDelegate', 'Allow Delegate')
             .setEditable()
         )
-        .addField('approvalActions', ApprovalActionType('approvalActions', 'Approval Actions'))
+        .addField('approvalActions', approvalAction('approvalActions', 'Approval Actions'))
         .addField('assignedApprover', new ObjectXMLField('assignedApprover', 'Assigned Approver')
             .setEditable()
             .setFieldKey('approver')
@@ -86,7 +85,7 @@ module.exports = {
         .addField('description', new StringXMLField('description', 'Description')
             .setEditable()
         )
-        .addField('entryCriteria', CriteriaItemType('entryCriteria', 'Entry Criteria'))
+        .addField('entryCriteria', criteriaItem('entryCriteria', 'Entry Criteria'))
         .addField('ifCriteriaNotMet', new EnumXMLField('ifCriteriaNotMet', 'If Criteria Not Met')
             .setEditable()
             .addEnumValue('Approve Record', 'ApproveRecord')
@@ -112,7 +111,7 @@ module.exports = {
                 .addEnumValue('Back To Previous', 'BackToPrevious')
             )
         )
-        .addField('rejectionActions', ApprovalActionType('rejectionActions', 'Rejection Actions')),
+        .addField('rejectionActions', approvalAction('rejectionActions', 'Rejection Actions')),
     description: new StringXMLField('description', 'Description')
         .setMinApi(28)
         .setEditable(),
@@ -122,16 +121,16 @@ module.exports = {
     enableMobileDeviceAccess: new BooleanXMLField('enableMobileDeviceAccess', 'Enable Mobile Device Access')
         .setMinApi(28)
         .setEditable(),
-    entryCriteria: CriteriaItemType('entryCriteria', 'Entry Criteria', 28),
-    finalApprovalActions: ApprovalActionType('finalApprovalActions', 'Final Approval Actions', 28),
+    entryCriteria: criteriaItem('entryCriteria', 'Entry Criteria', 28),
+    finalApprovalActions: approvalAction('finalApprovalActions', 'Final Approval Actions', 28),
     finalApprovalRecordLock: new BooleanXMLField('finalApprovalRecordLock', 'Final Approval Record Lock')
         .setMinApi(28)
         .setEditable(),
-    finalRejectionActions: ApprovalActionType('finalRejectionActions', 'Final Rejection Actions', 28),
+    finalRejectionActions: approvalAction('finalRejectionActions', 'Final Rejection Actions', 28),
     finalRejectionRecordLock: new BooleanXMLField('finalRejectionRecordLock', 'Final Rejection Record Lock')
         .setMinApi(28)
         .setEditable(),
-    initialSubmissionActions: ApprovalActionType('initialSubmissionActions', 'Initial Submission Actions', 28),
+    initialSubmissionActions: approvalAction('initialSubmissionActions', 'Initial Submission Actions', 28),
     label: new StringXMLField('label', 'Label')
         .setMinApi(28)
         .setEditable()
@@ -152,7 +151,7 @@ module.exports = {
     postTemplate: new StringXMLField('postTemplate', 'Post Template')
         .setMinApi(28)
         .setEditable(),
-    recallActions: ApprovalActionType('recallActions', 'Recall Actions', 28),
+    recallActions: approvalAction('recallActions', 'Recall Actions', 28),
     recordEditability: new EnumXMLField('recordEditability', 'Record Editability')
         .setMinApi(28)
         .setEditable()
