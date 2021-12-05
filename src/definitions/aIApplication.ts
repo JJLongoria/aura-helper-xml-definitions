@@ -1,6 +1,6 @@
-const { StringXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const AIApplication = {
     developerName: new StringXMLField('developerName', 'Developer Name')
         .setMinApi(50)
         .setUnique()
