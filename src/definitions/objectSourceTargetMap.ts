@@ -1,4 +1,4 @@
-import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, IntegerXMLField, DoubleXMLField, ObjectXMLField } from '@aurahelper/core';
+import { StringXMLField, BooleanXMLField, IntegerXMLField, ObjectXMLField } from '@aurahelper/core';
 
 export const ObjectSourceTargetMap = {
     creationType: new StringXMLField('creationType', 'Creation Type')
