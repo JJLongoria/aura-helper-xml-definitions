@@ -1,6 +1,6 @@
-const { StringXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField } from "@aurahelper/core";
 
-module.exports = {
+export const CorsWhitelistOrigin = {
     urlPattern: new StringXMLField('urlPattern', 'URL Pattern')
         .setMinApi(32)
         .setEditable()
