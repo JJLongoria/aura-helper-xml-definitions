@@ -1,7 +1,6 @@
-const { StringXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, MetadataTypes } from '@aurahelper/core';
 
-module.exports = {
+export const DataSourceObject = {
     dataSource: new StringXMLField('dataSource', 'Data Source')
         .setMinApi(50)
         .setEditable()
