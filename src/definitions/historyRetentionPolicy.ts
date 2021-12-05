@@ -1,6 +1,6 @@
-const { StringXMLField, IntegerXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const HistoryRetentionPolicy = {
     archiveAfterMonths: new IntegerXMLField('archiveAfterMonths', 'Archive After Months')
         .setMinApi(31)
         .setEditable()
