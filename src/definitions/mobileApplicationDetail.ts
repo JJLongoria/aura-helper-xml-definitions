@@ -1,6 +1,6 @@
-const { StringXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const MobileApplicationDetail = {
     applicationBinaryFile: new StringXMLField('applicationBinaryFile', 'Application Binary File')
         .setMinApi(47)
         .setEditable()
