@@ -1,10 +1,9 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { DataValues } = require('@aurahelper/core').Values;
-const BotInvocationType = require('./types/botInvocation');
-const BotMessageType = require('./types/botMessage');
-const BotNavigationType = require('./types/botNavigation');
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, ObjectXMLField, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
+import { botInvocation } from './types/botInvocation';
+import { botMessage } from './types/botMessage';
+import { botNavigation } from './types/botNavigation';
 
-module.exports = {
+export const BotVersion = {
     botDialogGroups: new ArrayXMLField('botDialogGroups', 'Bot Dialog Groups')
         .setMinApi(43)
         .setEditable()
@@ -34,10 +33,10 @@ module.exports = {
             .addField('booleanFilter', new StringXMLField('booleanFilter', 'Boolean Filter')
                 .setEditable()
             )
-            .addField('botInvocation', BotInvocationType('botInvocation', 'Bot Invocation')
+            .addField('botInvocation', botInvocation('botInvocation', 'Bot Invocation')
             )
-            .addField('botMessages', BotMessageType('botMessages', 'Bot Messages'))
-            .addField('botNavigation', BotNavigationType('botNavigation', 'Bot Navigation'))
+            .addField('botMessages', botMessage('botMessages', 'Bot Messages'))
+            .addField('botNavigation', botNavigation('botNavigation', 'Bot Navigation'))
             .addField('botStepConditions', new ArrayXMLField('botStepConditions', 'Bot Step Conditions')
                 .setEditable()
                 .setFieldKey('leftOperandType')
@@ -76,8 +75,8 @@ module.exports = {
                 .setEditable()
                 .setFieldKey('botInvocation')
                 .setSortOrder(undefined)
-                .addField('botInvocation', BotInvocationType('botInvocation', 'Bot Invocation'))
-                .addField('botMessages', BotMessageType('botMessages', 'Bot Messages'))
+                .addField('botInvocation', botInvocation('botInvocation', 'Bot Invocation'))
+                .addField('botMessages', botMessage('botMessages', 'Bot Messages'))
                 .addField('botQuickReplyOptions', new ArrayXMLField('botQuickReplyOptions', 'Bot Quick Reply Options')
                     .setEditable()
                     .setFieldKey('literalValue')
@@ -85,6 +84,12 @@ module.exports = {
                     .addField('literalValue', new StringXMLField('literalValue', 'Literal Value')
                         .setEditable()
                         .setRequired()
+                    )
+                    .addField('quickReplyOptionIdentifier', new StringXMLField('quickReplyOptionIdentifier', 'Quick Reply Option Identifier')
+                        .setEditable()
+                        .setRequired()
+                        .setMinApi(53)
+                        .setMaxLength(255)
                     )
                 )
                 .addField('botVariableOperands', new ArrayXMLField('botVariableOperands', 'Bot Variable Operands')
@@ -119,7 +124,7 @@ module.exports = {
                         .addEnumValue('Context Variable', 'ContextVariable')
                     )
                 )
-                .addField('invalidInputBotNavigation', BotNavigationType('invalidInputBotNavigation', 'Invalid Input Bot Navigation'))
+                .addField('invalidInputBotNavigation', botNavigation('invalidInputBotNavigation', 'Invalid Input Bot Navigation'))
                 .addField('optionalCollect', new BooleanXMLField('optionalCollect', 'Optional Collect')
                     .setMinApi(48)
                     .setEditable()
@@ -137,7 +142,7 @@ module.exports = {
                     .addEnumValue('Menu', 'Menu')
                     .addEnumValue('Buttons', 'Buttons')
                 )
-                .addField('retryMessages', BotMessageType('retryMessages', 'Retry Messages', 48))
+                .addField('retryMessages', botMessage('retryMessages', 'Retry Messages', 48))
                 .addField('sourceVariableName', new StringXMLField('sourceVariableName', 'Source Variable Name')
                     .setMinApi(47)
                     .setEditable()
@@ -153,6 +158,12 @@ module.exports = {
                     .addEnumValue('Set', 'Set')
                     .addEnumValue('Unset', 'Unset')
                     .addEnumValue('Collect', 'Collect')
+                )
+                .addField('variableOperationIdentifier', new StringXMLField('variableOperationIdentifier', 'Variable Operation Identifier')
+                    .setEditable()
+                    .setRequired()
+                    .setMinApi(53)
+                    .setMaxLength(255)
                 )
             )
             .addField('conversationRecordLookup', new ArrayXMLField('conversationRecordLookup', 'Conversation Record Lookup')
@@ -213,6 +224,11 @@ module.exports = {
                         .setRequired()
                     )
                 )
+            )
+            .addField('stepIdentifier', new StringXMLField('stepIdentifier', '')
+                .setEditable()
+                .setMinApi(53)
+                .setMaxLength(255)
             )
             .addField('type', new EnumXMLField('type', 'Type')
                 .setEditable()

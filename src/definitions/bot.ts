@@ -1,10 +1,9 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
-const MLIntentType = require('./types/mlIntent');
-const MLSlotType = require('./types/mlSlot');
-const BotVersion = require('./botVersion');
+import { StringXMLField, BooleanXMLField, ObjectXMLField, MetadataTypes, EnumXMLField } from '@aurahelper/core';
+import { BotVersion } from './botVersion';
+import { mlIntent } from './types/mlIntent';
+import { mlSlot } from './types/mlSlot';
 
-module.exports = {
+export const Bot = {
     botMlDomain: new ObjectXMLField('botMlDomain', 'Bot Machine Learning Domain')
         .setMinApi(44)
         .setEditable()
@@ -12,8 +11,8 @@ module.exports = {
         .addField('label', new StringXMLField('label', 'Label')
             .setEditable()
         )
-        .addField('mlIntents', MLIntentType('mlIntents', 'Machine Learning Intents'))
-        .addField('mlSlotClasses', MLSlotType('mlSlotClasses', 'Machine Learning Slot Classes'))
+        .addField('mlIntents', mlIntent('mlIntents', 'Machine Learning Intents'))
+        .addField('mlSlotClasses', mlSlot('mlSlotClasses', 'Machine Learning Slot Classes'))
         .addField('name', new StringXMLField('name', 'Name')
             .setEditable()
             .setRequired()
