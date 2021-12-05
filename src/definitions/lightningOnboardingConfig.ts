@@ -1,4 +1,4 @@
-const { StringXMLField, IntegerXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, IntegerXMLField } from '@aurahelper/core';
 
 module.exports = {
     collaborationGroup: new StringXMLField('collaborationGroup', 'Collaboration Group')
