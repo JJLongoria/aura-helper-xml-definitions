@@ -23,12 +23,12 @@ export const ApexPage = {
         .setEditable()
         .setUnique(),
     confirmationTokenRequired: new BooleanXMLField('confirmationTokenRequired', 'Confirmation Token Required')
-        .setMinApi(11)
+        .setMinApi(28)
         .setEditable()
         .setUnique(),
     label: new StringXMLField('label', 'Label')
         .setMinApi(11)
         .setEditable()
         .setRequired(),
-    packageVersions: packageVersion('packageVersions', 'Package Versions', 11),
+    packageVersions: packageVersion('packageVersions', 'Package Versions', 16),
 }

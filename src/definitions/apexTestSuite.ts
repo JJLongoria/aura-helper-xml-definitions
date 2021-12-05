@@ -1,7 +1,7 @@
-const { ArrayXMLField } = require('@aurahelper/core').Types;
+import { ArrayXMLField } from '@aurahelper/core';
 
 
-module.exports = {
+export const ApexTestSuite = {
     testClassName: new ArrayXMLField('testClassName', 'Test Class Name')
         .setMinApi(38)
         .setEditable()
