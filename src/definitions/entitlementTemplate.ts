@@ -1,6 +1,6 @@
-const { StringXMLField, IntegerXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const EntitlementTemplate = {
     businessHours: new StringXMLField('businessHours', 'Business Hours')
         .setMinApi(18)
         .setEditable(),
