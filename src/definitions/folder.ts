@@ -1,7 +1,7 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField } = require('@aurahelper/core').Types;
-const SharedTo = require('./sharedTo');
+import { StringXMLField, EnumXMLField, ObjectXMLField } from '@aurahelper/core';
+import { SharedTo } from './sharedTo';
 
-module.exports = {
+export const Folder = {
     accessType: new EnumXMLField('accessType', 'Access Type')
         .setMinApi(11)
         .setEditable()
