@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, ArrayXMLField, MetadataTypes, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const CustomFeedFilter = {
     criteria: new ArrayXMLField('criteria', 'Criteria')
         .setMinApi(35)
         .setEditable()
