@@ -1,8 +1,7 @@
-const { StringXMLField, ArrayXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
-const FilterItemType = require('./types/filterItem');
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes } from '@aurahelper/core';
+import { filterItem } from './types/filterItem';
 
-module.exports = {
+export const AutoResponseRules = {
     autoresponseRule: new ArrayXMLField('autoresponseRule', 'Auto Response Rule')
         .setMinApi(27)
         .setEditable()
@@ -25,7 +24,7 @@ module.exports = {
             .addField('booleanFilter', new StringXMLField('booleanFilter', 'Boolean Filter')
                 .setEditable()
             )
-            .addField('criteriaItems', FilterItemType('criteriaItems', 'Criteria Items')
+            .addField('criteriaItems', filterItem('criteriaItems', 'Criteria Items')
                 .addDependencyField(new XMLDependencyField('formula', DataValues.NOT_NULL, DataValues.NOT_AVAILABLE))
             )
             .addField('formula', new StringXMLField('formula', 'Formula')
