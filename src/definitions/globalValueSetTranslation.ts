@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, ArrayXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const GlobalValueSetTranslation = {
     valueTranslation: new ArrayXMLField('valueTranslation', 'Value Translation')
         .setMinApi(38)
         .setEditable()
