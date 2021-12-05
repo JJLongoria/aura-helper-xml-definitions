@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField } = require('@aurahelper/core').Types;
+import { ArrayXMLField,  StringXMLField, IntegerXMLField } from '@aurahelper/core';
 
-
-module.exports = function (pkgVersionsName, pkgVersionsLabel, minApi) {
+export function packageVersion(pkgVersionsName: string, pkgVersionsLabel: string, minApi?: number | string) {
     return new ArrayXMLField(pkgVersionsName, pkgVersionsLabel)
         .setMinApi(minApi)
         .setEditable()
