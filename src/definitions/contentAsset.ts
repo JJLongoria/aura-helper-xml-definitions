@@ -1,6 +1,6 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, ObjectXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const ContentAsset = {
     format: new EnumXMLField('format', 'Format')
         .setMinApi(38)
         .setEditable()
