@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const BatchProcessJobDefinition = {
     batchSize: new IntegerXMLField('batchSize', 'Batch Size')
         .setMinApi(51)
         .setEditable()
