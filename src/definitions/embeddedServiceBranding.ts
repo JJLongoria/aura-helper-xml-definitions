@@ -1,6 +1,6 @@
-const { StringXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const EmbeddedServiceBranding = {
     contrastInvertedColor: new StringXMLField('contrastInvertedColor', 'Contrast Inverted Color')
         .setMinApi(39)
         .setEditable(),
