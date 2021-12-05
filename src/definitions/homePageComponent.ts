@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const HomePageComponent = {
     body: new StringXMLField('body', 'Body')
         .setMinApi(12)
         .setEditable(),
@@ -17,14 +16,14 @@ module.exports = {
     links: new ArrayXMLField('links', 'Links')
         .setMinApi(12)
         .setEditable()
-        .addAllowedValue('ObjectWebLink')
-        .addAllowedValue('CustomPageWebLink'),
+        .addAllowedValue('Object Web Link', 'ObjectWebLink')
+        .addAllowedValue('Custom Page Web Link', 'CustomPageWebLink'),
     page: new StringXMLField('page', 'Page')
         .setMinApi(31)
         .setEditable()
         .setMetadataType(MetadataTypes.APEX_PAGE),
     pageComponentType: new EnumXMLField('pageComponentType', 'Page Component Type')
-        .setMinApi()
+        .setMinApi(31)
         .setEditable()
         .setRequired()
         .addEnumValue('Links', 'links')
