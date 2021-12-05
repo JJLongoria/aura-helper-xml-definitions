@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, ArrayXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const EventDelivery = {
     eventParameters: new ArrayXMLField('eventParameters', 'Event Parameters')
         .setMinApi(41)
         .setMaxApi(45)
