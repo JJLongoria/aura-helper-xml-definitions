@@ -1,8 +1,7 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
-const SharedTo = require('./sharedTo');
+import { StringXMLField, ArrayXMLField, DataValues, MetadataTypes, EnumXMLField, ObjectXMLField } from '@aurahelper/core';
+import { SharedTo } from './sharedTo';
 
-module.exports = {
+export const ListView = {
     booleanFilter: new StringXMLField('booleanFilter', 'Boolean Filter')
         .setMinApi(14)
         .setEditable(),
