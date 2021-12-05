@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, ArrayXMLField, MetadataTypes } from '@aurahelper/core';
 
-module.exports = {
+export const CompactLayout = {
     fields: new ArrayXMLField('fields', 'Fields')
         .setMinApi(29)
         .setEditable(),
