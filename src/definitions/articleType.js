@@ -3,7 +3,7 @@ const { DataValues } = require('@aurahelper/core').Values;
 const CustomField = require('./customField');
 
 
-module.exports = {
+export const ArticleType = {
     articleTypeChannelDisplay: new ObjectXMLField('articleTypeChannelDisplay', 'Article Type Channel Display')
         .setMinApi(19)
         .setEditable()
