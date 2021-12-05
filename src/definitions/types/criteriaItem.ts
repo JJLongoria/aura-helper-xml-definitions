@@ -1,8 +1,7 @@
-const { StringXMLField, ObjectXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { DataValues } = require('@aurahelper/core').Values;
-const FilterItemType = require('./filterItem');
+import { StringXMLField, ObjectXMLField, XMLDependencyField, DataValues } from '@aurahelper/core';
+import { filterItem } from './filterItem';
 
-module.exports = function (criteriaName, criteriaLabel, minApi) {
+export function criteriaItem(criteriaName: string, criteriaLabel: string, minApi?: number | string) {
     return new ObjectXMLField(criteriaName, criteriaLabel)
         .setMinApi(minApi)
         .setEditable()
@@ -12,7 +11,7 @@ module.exports = function (criteriaName, criteriaLabel, minApi) {
             .setEditable()
             .addDependencyField(new XMLDependencyField('formula', [DataValues.NOT_NULL], DataValues.NOT_AVAILABLE))
         )
-        .addField('criteriaItems', FilterItemType('criteriaItems', 'Criteria Items')
+        .addField('criteriaItems', filterItem('criteriaItems', 'Criteria Items')
         )
         .addField('formula', new StringXMLField('formula', 'Formula')
             .setEditable()
