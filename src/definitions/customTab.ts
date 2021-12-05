@@ -1,8 +1,7 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
-const ActionOverride = require('./actionOverride');
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
+import { ActionOverride } from './actionOverride';
 
-module.exports = {
+export const CustomTab = {
     actionOverrides: new ArrayXMLField('actionOverrides', 'ActionOverrides')
         .setMinApi(37)
         .setEditable()
@@ -45,7 +44,7 @@ module.exports = {
     lwcComponent: new StringXMLField('lwcComponent', 'LWC Component')
         .setMinApi(10)
         .setEditable()
-        .setMetadataType(MetadataTypes.LWC),
+        .setMetadataType(MetadataTypes.LIGHTNING_COMPONENT_BUNDLE),
     motif: new StringXMLField('motif', 'Motif')
         .setMinApi(10)
         .setEditable()
