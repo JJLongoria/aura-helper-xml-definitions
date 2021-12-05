@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, IntegerXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, IntegerXMLField, ObjectXMLField, EnumXMLField, MetadataTypes } from '@aurahelper/core';
 
-module.exports = function (filterName, filterLabel, minApi) {
+export function mlFilter(filterName: string, filterLabel: string, minApi?: number | string) {
     return new ObjectXMLField(filterName, filterLabel)
         .setMinApi(minApi)
         .setEditable()
