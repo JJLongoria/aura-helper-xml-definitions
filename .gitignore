@@ -1,2 +1,5 @@
 /node_modules
 /coverage
+dist
+src/test/assets/SFDXProject
+src/test/assets/folderToCreate
