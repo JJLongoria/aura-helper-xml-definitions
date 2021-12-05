@@ -1,7 +1,7 @@
-const { StringXMLField, DoubleXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const PackageVerionsItemType = require('./types/packageVersion');
+import { DoubleXMLField, BooleanXMLField, StringXMLField,  } from '@aurahelper/core';
+import { packageVersion } from './types/packageVersion';
 
-module.exports = {
+export const ApexPage = {
     apiVersion: new DoubleXMLField('apiVersion', 'API Version')
         .setMinApi(15)
         .setEditable()
@@ -30,5 +30,5 @@ module.exports = {
         .setMinApi(11)
         .setEditable()
         .setRequired(),
-    packageVersions: PackageVerionsItemType('packageVersions', 'Package Versions', 11),
+    packageVersions: packageVersion('packageVersions', 'Package Versions', 11),
 }
