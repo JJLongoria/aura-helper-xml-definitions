@@ -1,4 +1,4 @@
-import { StringXMLField, BooleanXMLField, ArrayXMLField, DataValues, MetadataTypes, EnumXMLField } from '@aurahelper/core';
+import { StringXMLField, BooleanXMLField, ArrayXMLField, DataValues, MetadataTypes, EnumXMLField, XMLDataControlledField } from '@aurahelper/core';
 
 export const MutingPermissionSet = {
     label: new StringXMLField('label', 'label'),

@@ -1,7 +1,6 @@
-const { StringXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, MetadataTypes } from '@aurahelper/core';
 
-module.exports = {
+export const MyDomainDiscoverableLogin = {
     apexHandler: new StringXMLField('apexHandler', 'Apex Handler')
         .setMinApi(48)
         .setEditable()
