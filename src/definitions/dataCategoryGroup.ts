@@ -1,6 +1,6 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, EnumXMLField, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const DataCategoryGroup = {
     active: new BooleanXMLField('active', 'Active')
         .setMinApi(18)
         .setEditable()
