@@ -1,6 +1,6 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const ChatterExtension = {
     compositionComponent: new StringXMLField('compositionComponent', 'Composition Component')
         .setMinApi(41)
         .setEditable()
