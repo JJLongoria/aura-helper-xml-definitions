@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, ArrayXMLField, } from '@aurahelper/core';
 
-module.exports = {
+export const HomePageLayout = {
     fullName: new StringXMLField('fullName', 'Full Name')
         .setMinApi(12)
         .setEditable()
