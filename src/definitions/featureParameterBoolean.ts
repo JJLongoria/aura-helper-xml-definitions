@@ -1,6 +1,6 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, EnumXMLField, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const FeatureParameterBoolean = {
     dataFlowDirection: new ObjectXMLField('dataFlowDirection', 'Data Flow Direction')
         .setMinApi(41)
         .setEditable()
