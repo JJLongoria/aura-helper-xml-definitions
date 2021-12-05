@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, ArrayXMLField, XMLDependencyField, DataValues, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const CMSConnectSource = {
     cmsConnectAsset: new ArrayXMLField('cmsConnectAsset', 'CMS Connect Asset')
         .setMinApi(43)
         .setEditable()
