@@ -1,7 +1,6 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, EnumXMLField, BooleanXMLField, MetadataTypes } from '@aurahelper/core';
 
-module.exports = {
+export const AnimationRule = {
     animationFrequency: new EnumXMLField('animationFrequency', 'Animation Frequency')
         .setMinApi(46)
         .setEditable()
