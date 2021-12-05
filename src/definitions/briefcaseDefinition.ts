@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, ArrayXMLField, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
 
-
-module.exports = {
+export const BriefcaseDefinition = {
     briefcaseRules: new ArrayXMLField('briefcaseRules', 'Briefcase Rules')
         .setMinApi(50)
         .setEditable()
