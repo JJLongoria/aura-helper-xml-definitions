@@ -1,6 +1,6 @@
-const { StringXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const NetworkBranding ={
     loginFooterText: new StringXMLField('loginFooterText', 'Login Footer Text')
         .setMinApi(41)
         .setEditable(),
