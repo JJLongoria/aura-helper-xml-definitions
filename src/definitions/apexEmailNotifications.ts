@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { DataValues } = require('@aurahelper/core').Values;
+import { DataValues, ObjectXMLField, StringXMLField, XMLDependencyField,  } from '@aurahelper/core';
 
-module.exports = {
+export const ApexEmailNotification = {
     apexEmailNotification: new ObjectXMLField('apexEmailNotification', 'Apex Email Notification')
         .setMinApi(49)
         .setEditable()
