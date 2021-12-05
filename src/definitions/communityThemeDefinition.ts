@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const CommunityThemeDefinition = {
     bundlesInfo: new ArrayXMLField('bundlesInfo', 'Bundles Info')
         .setMinApi(44)
         .setEditable()
