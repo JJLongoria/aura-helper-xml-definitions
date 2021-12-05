@@ -1,6 +1,6 @@
 import { StringXMLField, BooleanXMLField, EnumXMLField, IntegerXMLField, ObjectXMLField } from '@aurahelper/core';
 
-export const LetterHead = {
+export const Letterhead = {
     available: new BooleanXMLField('available', 'Available')
         .setMinApi(12)
         .setEditable()
