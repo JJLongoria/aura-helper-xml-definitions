@@ -1,6 +1,6 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const CspTrustedSite = {
     context: new EnumXMLField('context', 'Context')
         .setMinApi(44)
         .setEditable()
