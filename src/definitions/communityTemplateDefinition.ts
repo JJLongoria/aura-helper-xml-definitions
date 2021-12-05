@@ -1,7 +1,7 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const NavigationLinkSetType = require('../definitions/types/navigationLinkSet');
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
+import { navigationLinkSet } from './types/navigationLinkSet';
 
-module.exports = {
+export const CommunityTemplateDefinition = {
     baseTemplate: new EnumXMLField('baseTemplate', 'Base Template')
         .setMinApi(41)
         .setEditable()
@@ -62,7 +62,7 @@ module.exports = {
         .setMinApi(38)
         .setEditable()
         .setRequired(),
-    navigationLinkSet: NavigationLinkSetType('navigationLinkSet', 'Navigation Link Set', 37, 46),
+    navigationLinkSet: navigationLinkSet('navigationLinkSet', 'Navigation Link Set', 37, 46),
     pageSetting: new ArrayXMLField('pageSetting', 'Page Setting')
         .setMinApi(38)
         .setEditable()
