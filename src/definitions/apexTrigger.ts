@@ -1,8 +1,8 @@
-const { StringXMLField, DoubleXMLField, EnumXMLField } = require('@aurahelper/core').Types;
-const PackageVerionsItemType = require('./types/packageVersion');
+import { StringXMLField, EnumXMLField, DoubleXMLField, ArrayXMLField } from '@aurahelper/core';
+import { packageVersion } from './types/packageVersion';
 
 
-module.exports = {
+export const ApexTrigger = {
     apiVersion: new DoubleXMLField('apiVersion', 'API Version')
         .setMinApi(10)
         .setEditable()
@@ -16,7 +16,7 @@ module.exports = {
         .setEditable()
         .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
-    packageVersions: PackageVerionsItemType('packageVersions', 'Package Versions', 10),
+    packageVersions: packageVersion('packageVersions', 'Package Versions', 16),
     status: new EnumXMLField('status', 'Status')
         .setMinApi(10)
         .setEditable()
