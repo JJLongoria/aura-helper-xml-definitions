@@ -1,6 +1,6 @@
-const { StringXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const ExternalServiceRegistration = {
     description: new StringXMLField('description', 'Description')
         .setMinApi(39)
         .setEditable()
@@ -26,6 +26,9 @@ module.exports = {
         .setMinApi(39)
         .setEditable()
         .setRequired(),
+    serviceBinding: new StringXMLField('serviceBinding', 'Service Binding')
+        .setMinApi(53)
+        .setEditable(),
     status: new EnumXMLField('status', 'Status')
         .setMinApi(39)
         .setEditable()
