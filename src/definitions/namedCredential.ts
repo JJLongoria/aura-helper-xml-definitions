@@ -1,6 +1,6 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, IntegerXMLField, DoubleXMLField, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const NamedCredential = {
     awsAccessKey: new StringXMLField('awsAccessKey', 'AWS Access Key')
         .setMinApi(46)
         .setEditable(),
