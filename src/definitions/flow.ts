@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, DoubleXMLField, EnumXMLField, BooleanXMLField, DateTimeXMLField, TimeXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes, EnumXMLField, IntegerXMLField, DoubleXMLField, ObjectXMLField, DateTimeXMLField, TimeXMLField } from '@aurahelper/core';
 
-function referenceOrValue(valueName, valueLabel) {
+function referenceOrValue(valueName: string, valueLabel: string) {
     return new ObjectXMLField(valueName, valueLabel)
         .setRequired()
         .setFieldKey('stringValue')
@@ -42,7 +41,7 @@ function processMetadataValues() {
         .addField('value', referenceOrValue('value', 'Value'));
 }
 
-module.exports = {
+export const Flow = {
     actionCalls: new ArrayXMLField('actionCalls', 'Action Calls')
         .setMinApi(31)
         .setEditable()
@@ -67,6 +66,7 @@ module.exports = {
             .addEnumValue('Archive Knowledge Articles', 'archiveKnowledgeArticles', 45)
             .addEnumValue('Assign Knowledge Articles', 'assignKnowledgeArticles', 44)
             .addEnumValue('Cancel Cart Async Operation', 'cancelCartAsyncOperation', 49)
+            .addEnumValue('Calculation Cart Promotions Action', 'calcCartPromotionsAction', 52)
             .addEnumValue('Chat', 'chat', 49)
             .addEnumValue('Chatter Post', 'chatterPost', 49)
             .addEnumValue('Checkout Session Action', 'checkoutSessionAction', 49)
@@ -123,8 +123,10 @@ module.exports = {
             .addEnumValue('Add Rebate Member List', 'addRebateMemberList', 51)
             .addEnumValue('Calculate Rebate Amount And Upsert Payout', 'calculateRebateAmountAndUpsertPayout', 51)
             .addEnumValue('Get Benefit And Calculate Rebate Amount', 'getBenefitAndCalculateRebateAmount', 51)
+            .addEnumValue('Get Eligible Program Rebate Types', 'getEligibleProgramRebateTypes', 52)
             .addEnumValue('Generate Rebate Payout Periods', 'generateRebatePayoutPeriods', 51)
             .addEnumValue('Process Rebates Batch Calculation Job', 'processRebatesBatchCalculationJob', 51)
+            .addEnumValue('Process Program Rebate Type Products', 'processProgramRebateTypeProducts', 53)
             .addEnumValue('Rebates Process CSV', 'rebatesProcessCSV', 51)
             .addEnumValue('Upsert Custom Rebate Payout', 'upsertCustomRebatePayout', 51)
             .addEnumValue('Adjust Points', 'adjustPoints', 51)
@@ -138,11 +140,20 @@ module.exports = {
             .addEnumValue('Execute Member Benefit', 'executeMemberBenefit', 51)
             .addEnumValue('Get Tier', 'getTier', 51)
             .addEnumValue('Get Points Balance', 'getPointsBalance', 51)
+            .addEnumValue('Get Loyalty Promotion', 'getLoyaltyPromotion', 53)
+            .addEnumValue('Get Loyalty Promotion Based On Salesforce CDP', 'getLoyaltyPromotionBasedOnSalesforceCDP', 53)
+            .addEnumValue('Transfer Member Points To Groups', 'transferMemberPointsToGroups', 53)
+            .addEnumValue('Update Progress For Cumulative Promotion Usage', 'updateProgressForCumulativePromotionUsage', 53)
             .addEnumValue('Issue Voucher', 'issueVoucher', 51)
             .addEnumValue('Decision Table Action', 'decisionTableAction', 51)
             .addEnumValue('Refresh Decision Table', 'refreshDecisionTable', 51)
             .addEnumValue('Batch Job Action', 'batchJobAction', 51)
+            .addEnumValue('Submit Failed Records Batch Job', 'submitFailedRecordsBatchJob', 52)
             .addEnumValue('Data Processing Engine Action', 'dataProcessingEngineAction', 51)
+            .addEnumValue('Add Work Plans', 'addWorkPlans', 52)
+            .addEnumValue('Add Work Steps', 'addWorkSteps', 52)
+            .addEnumValue('Delete Work Plans', 'deleteWorkPlans', 52)
+            .addEnumValue('Generate Work Plans', 'generateWorkPlans', 52)
         )
         .addField('connector', new ObjectXMLField('connector', 'Connector')
             .setEditable()
@@ -659,6 +670,7 @@ module.exports = {
         .addEnumValue('Flow', 'Flow')
         .addEnumValue('Financial Service Cloud Mortgage Lending', 'FSCLending', 46)
         .addEnumValue('Invocable Process', 'InvocableProcess', 38)
+        .addEnumValue('Routing Flow', 'RoutingFlow', 52)
         .addEnumValue('Survey', 'Survey', 42)
         .addEnumValue('Survey Enrich', 'SurveyEnrich', 49)
         .addEnumValue('Workflow', 'Workflow'),
