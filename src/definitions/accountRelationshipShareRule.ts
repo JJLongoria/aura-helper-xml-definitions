@@ -1,7 +1,7 @@
-const { StringXMLField, EnumXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, EnumXMLField, MetadataTypes } from '@aurahelper/core';
 
-module.exports = {
+
+export const AccountRelationshipShareRule = {
     accessLevel: new EnumXMLField('accessLevel', 'Access Level')
         .setMinApi(45)
         .setEditable()
