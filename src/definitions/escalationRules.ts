@@ -1,8 +1,7 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
-const FilterItemtType = require('./types/filterItem');
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
+import { filterItem } from './types/filterItem';
 
-module.exports = {
+export const EscalationRules = {
     escalationRule: new ArrayXMLField('escalationRule', 'Escalation Rule')
         .setMinApi(27)
         .setEditable()
@@ -33,7 +32,7 @@ module.exports = {
                 .addEnumValue('Case', 'Case')
                 .addEnumValue('Static', 'Static')
             )
-            .addField('criteriaItems', FilterItemtType('criteriaItems', 'Criteria Items'))
+            .addField('criteriaItems', filterItem('criteriaItems', 'Criteria Items'))
             .addField('disableEscalationWhenModified', new BooleanXMLField('disableEscalationWhenModified', 'Disable Escalation When Modified')
                 .setEditable()
             )
