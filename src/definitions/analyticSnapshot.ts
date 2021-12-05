@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
-const { DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, EnumXMLField, DataValues, ArrayXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const AnalyticSnapshot = {
     description: new StringXMLField('description', 'Description')
         .setMinApi(16)
         .setEditable(),
