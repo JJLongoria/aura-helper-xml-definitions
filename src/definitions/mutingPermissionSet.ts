@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDataControlledField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, DataValues, MetadataTypes, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const MutingPermissionSet = {
     label: new StringXMLField('label', 'label'),
     userLicense: new StringXMLField('userLicense', 'User License')
         .setMinApi(46),
