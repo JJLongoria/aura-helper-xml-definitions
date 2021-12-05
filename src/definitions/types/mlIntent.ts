@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
+import { ArrayXMLField,  StringXMLField } from '@aurahelper/core';
 
-module.exports = function (intentName, intentApi, minApi) {
+export function mlIntent(intentName: string, intentApi: string, minApi?: number | string) {
     return new ArrayXMLField(intentName, intentApi)
         .setMinApi(minApi)
         .setEditable()
