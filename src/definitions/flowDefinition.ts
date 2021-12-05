@@ -1,6 +1,6 @@
-const { StringXMLField, IntegerXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const FlowDefinition = {
     activeVersionNumber: new IntegerXMLField('activeVersionNumber', 'Active Version Number')
         .setMinApi(34)
         .setEditable(),
