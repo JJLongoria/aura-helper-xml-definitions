@@ -15,7 +15,7 @@ export const ApexClass = {
         .setEditable()
         .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setUnique(),
-    packageVersions: packageVersion('packageVersions', 'Package Versions', 10),
+    packageVersions: packageVersion('packageVersions', 'Package Versions', 16),
     status: new EnumXMLField('status', 'Status')
         .setMinApi(10)
         .setEditable()
