@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, BooleanXMLField, XMLDataControlledField } = require('@aurahelper/core').Types;
-const { DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, DataValues, XMLDependencyField } from '@aurahelper/core';
 
-module.exports = {
+export const EventSubscription = {
     active: new BooleanXMLField('active', 'Active')
         .setMinApi(41)
         .setMaxApi(45),
@@ -16,7 +15,7 @@ module.exports = {
         )
         .addField('parameterValue', new StringXMLField('parameterValue', 'Parameter Value')
             .setEditable()
-            .addDependencyField(new XMLDataControlledField('parameterName', DataValues.NOT_NULL, true))
+            .addDependencyField(new XMLDependencyField('parameterName', DataValues.NOT_NULL, DataValues.NOT_NULL))
         ),
     eventType: new StringXMLField('eventType', 'Event Type')
         .setMinApi(41)
