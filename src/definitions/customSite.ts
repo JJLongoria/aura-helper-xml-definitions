@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const CustomSite = {
     active: new BooleanXMLField('active', 'Active')
         .setMinApi(14)
         .setEditable()
@@ -44,6 +43,10 @@ module.exports = {
         .setMinApi(41)
         .setEditable()
         .setRequired(),
+    cachePublicVisualforcePagesInProxyServers: new BooleanXMLField('cachePublicVisualforcePagesInProxyServers', 'Cache Public Visualforce Pages In Proxy Servers')
+        .setMinApi(52)
+        .setEditable()
+        .setDefaultValue(true),
     changePasswordPage: new StringXMLField('changePasswordPage', 'Change Password Page')
         .setMinApi(14)
         .setEditable()
