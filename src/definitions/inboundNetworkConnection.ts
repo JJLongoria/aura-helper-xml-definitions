@@ -1,4 +1,4 @@
-import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, IntegerXMLField, DoubleXMLField, ObjectXMLField } from '@aurahelper/core';
+import { StringXMLField, BooleanXMLField, ArrayXMLField, EnumXMLField } from '@aurahelper/core';
 
 export const InboundNetworkConnection = {
     connectionType: new EnumXMLField('connectionType', 'Connection Type')
