@@ -1,7 +1,5 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
-const { DataValues } = require('@aurahelper/core').Values;
-const CustomField = require('./customField');
-
+import { StringXMLField, ObjectXMLField, ArrayXMLField, DataValues, EnumXMLField } from '@aurahelper/core';
+import { CustomField } from './customField';
 
 export const ArticleType = {
     articleTypeChannelDisplay: new ObjectXMLField('articleTypeChannelDisplay', 'Article Type Channel Display')
