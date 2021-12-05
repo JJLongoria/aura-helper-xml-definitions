@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, MetadataTypes, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const DecisionTableDatasetLink = {
     decisionTableName: new StringXMLField('decisionTableName', 'Decision Table Name')
         .setMinApi(51)
         .setEditable()
