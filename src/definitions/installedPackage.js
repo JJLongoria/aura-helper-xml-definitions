@@ -1,6 +1,6 @@
-const { StringXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const InstalledPackage = {
     activateRSS: new BooleanXMLField('activateRSS', 'Activate RSS')
         .setMinApi(43)
         .setEditable()
