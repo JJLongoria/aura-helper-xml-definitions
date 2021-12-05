@@ -1,6 +1,6 @@
 import { ArrayXMLField,  StringXMLField, IntegerXMLField, ObjectXMLField, BooleanXMLField, DoubleXMLField, EnumXMLField, DataValues, MetadataTypes } from '@aurahelper/core';
 
-export function (type: any, dashboardComponentName: string, dashboardComponentLabel: string, minApi?: number | string) {
+export function dashboardComponent(type: any, dashboardComponentName: string, dashboardComponentLabel: string, minApi?: number | string) {
     return new type(dashboardComponentName, dashboardComponentLabel)
         .setMinApi(minApi)
         .setEditable()
