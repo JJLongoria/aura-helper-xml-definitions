@@ -1,6 +1,6 @@
-const { StringXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const MilestoneType = {
     description: new StringXMLField('description', 'Description')
         .setMinApi(27)
         .setEditable(),
