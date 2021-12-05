@@ -1,6 +1,6 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, DoubleXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, EnumXMLField, DoubleXMLField, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const LightningComponentBundle = {
     apiVersion: new DoubleXMLField('apiVersion', 'API Version')
         .setMinApi(45)
         .setEditable()
@@ -13,7 +13,7 @@ module.exports = {
         .addField('capability', new EnumXMLField('capability', 'Capability')
             .setRequired()
             .setEditable()
-            .setDefaultValue()
+            .setDefaultValue('lightningCommunity__RelaxedCSP')
             .addEnumValue('Lightning Community Relaxed CSP', 'lightningCommunity__RelaxedCSP')
         ),
     description: new StringXMLField('description', 'Description')
