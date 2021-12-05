@@ -1,9 +1,9 @@
-const { StringXMLField, DoubleXMLField } = require('@aurahelper/core').Types;
-const PackageVerionsItemType = require('./types/packageVersion');
+import { StringXMLField, DoubleXMLField,  } from '@aurahelper/core';
+import { packageVersion } from './types/packageVersion';
 
-module.exports = {
+export const ApexComponent = {
     apiVersion: new DoubleXMLField('apiVersion', 'API Version')
-        .setMinApi(12)
+        .setMinApi(16)
         .setEditable()
         .setRequired(),
     content: new StringXMLField('content', 'Content')
@@ -22,5 +22,5 @@ module.exports = {
         .setMinApi(12)
         .setEditable()
         .setRequired(),
-    packageVersions: PackageVerionsItemType('packageVersions', 'Package Versions', 12),
+    packageVersions: packageVersion('packageVersions', 'Package Versions', 16),
 }
