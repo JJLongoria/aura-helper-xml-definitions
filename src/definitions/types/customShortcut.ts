@@ -1,6 +1,6 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = function (type, shortcutName, shortcutLabel, minApi, maxApi) {
+export function customShortcut(type: any, shortcutName: string, shortcutLabel: string, minApi?: number | string, maxApi?: number | string) {
     return new type(shortcutName, shortcutLabel)
         .setMinApi(minApi)
         .setMaxApi(maxApi)
