@@ -1,8 +1,7 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, DoubleXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
-const PackageVerionsItemType = require('./types/packageVersion');
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, DoubleXMLField, ObjectXMLField } from '@aurahelper/core';
+import { packageVersion } from './types/packageVersion';
 
-module.exports = {
+export const EmailTemplate = {
     apiVersion: new DoubleXMLField('apiVersion', 'API Version')
         .setMinApi(16)
         .setEditable(),
@@ -63,7 +62,7 @@ module.exports = {
         .setMinApi(12)
         .setEditable()
         .setRequired(),
-    packageVersions: PackageVerionsItemType('packageVersions', 'Package Versions', 16),
+    packageVersions: packageVersion('packageVersions', 'Package Versions', 16),
     relatedEntityType: new EnumXMLField('relatedEntityType', 'Related Entity Type')
         .setMinApi(12),
     style: new EnumXMLField('style', 'Style')
