@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, IntegerXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, MetadataTypes, IntegerXMLField, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const LiveChatDeployment = {
     brandingImage: new StringXMLField('brandingImage', 'Branding Image')
         .setMinApi(28)
         .setEditable(),
