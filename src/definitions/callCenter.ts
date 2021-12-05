@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, ArrayXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const CallCenter = {
     adapterUrl: new StringXMLField('adapterUrl', 'Adapter URL')
         .setMinApi(27)
         .setEditable(),
