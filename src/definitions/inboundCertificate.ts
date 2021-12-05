@@ -1,6 +1,6 @@
-const { StringXMLField, DateTimeXMLField } = require('@aurahelper/core').Types;
+import { DateTimeXMLField, StringXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const InboundCertificate = {
     expirationDate: new DateTimeXMLField('expirationDate', 'Expiration Date')
         .setMinApi(49)
         .setEditable()
