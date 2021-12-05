@@ -1,7 +1,6 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, EnumXMLField, XMLDependencyField, DataValues } from '@aurahelper/core';
 
-module.exports = {
+export const AuthProvider = {
     authorizeUrl: new StringXMLField('authorizeUrl', 'Authorize URL')
         .setMinApi(29)
         .setEditable()
