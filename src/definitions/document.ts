@@ -1,7 +1,6 @@
-const { StringXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, XMLDependencyField, DataValues } from '@aurahelper/core';
 
-module.exports = {
+export const Document = {
     content: new StringXMLField('content', 'Content')
         .setMinApi(10)
         .setEditable()
