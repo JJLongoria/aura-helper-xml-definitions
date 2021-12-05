@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const BatchCalcJobDefinition = {
     aggregates: new ArrayXMLField('aggregates', 'Aggregates')
         .setMinApi(51)
         .setEditable()
