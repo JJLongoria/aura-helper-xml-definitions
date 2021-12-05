@@ -1,8 +1,6 @@
-const { StringXMLField } = require('@aurahelper/core').Types;
-const MLIntentType = require('./types/mlIntent');
-const MLSlotType = require('./types/mlSlot');
+import { StringXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const MlDomain = {
     description: new StringXMLField('description', 'Description')
         .setMinApi(43)
         .setEditable(),
