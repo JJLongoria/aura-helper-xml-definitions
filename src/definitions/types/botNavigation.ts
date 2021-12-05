@@ -1,6 +1,6 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
+import { ArrayXMLField,  StringXMLField, ObjectXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = function (botNavigationName, botNavigationLabel, minApi) {
+export function botNavigation(botNavigationName: string, botNavigationLabel: string, minApi?: number | string) {
     return new ObjectXMLField(botNavigationName, botNavigationLabel)
         .setMinApi(minApi)
         .setEditable()
