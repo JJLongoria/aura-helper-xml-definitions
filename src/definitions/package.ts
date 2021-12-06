@@ -1,4 +1,4 @@
-import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes, EnumXMLField } from '@aurahelper/core';
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes, EnumXMLField, XMLDataControlledField } from '@aurahelper/core';
 
 export const Package = {
     apiAccessLevel: new EnumXMLField('apiAccessLevel', 'API Access Level')
