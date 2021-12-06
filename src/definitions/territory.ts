@@ -1,7 +1,6 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, MetadataTypes, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const Territory = {
     accountAccessLevel: new EnumXMLField('accountAccessLevel', 'Account Access Level')
         .setMinApi(31)
         .setEditable()
