@@ -1,8 +1,6 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDataControlledField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
-const { Validator } = require('@aurahelper/core').CoreUtils;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, DataValues, MetadataTypes, EnumXMLField, ObjectXMLField, CoreUtils, XMLDataControlledField, XMLDependencyField } from '@aurahelper/core';
 
-module.exports = {
+export const Profile = {
     description: new StringXMLField('description', 'Description')
         .setMinApi(30)
         .setEditable()
@@ -72,7 +70,7 @@ module.exports = {
             .setDefaultValue(true)
         )
         .addField('name', new StringXMLField('name', 'Name')
-        .setMetadataType(MetadataTypes.CUSTOM_METADATA)
+            .setMetadataType(MetadataTypes.CUSTOM_METADATA)
             .setUnique()
         ),
     customPermissions: new ArrayXMLField('customPermissions', 'Custom Permissions')
@@ -217,16 +215,16 @@ module.exports = {
         .addField('useLightningRuntime', new BooleanXMLField('useLightningRuntime', 'Use Lightning Runtime')
             .setEditable()
             .setDefaultValue(false)
-            .addDependencyField(new XMLDataControlledField('uiLoginFlowType', 'VisualWorkflow', DataValues.NOT_NULL))
+            .addDependencyField(new XMLDependencyField('uiLoginFlowType', 'VisualWorkflow', DataValues.NOT_NULL))
         )
         .addField('vfFlowPage', new StringXMLField('vfFlowPage', 'Visualforce Flow Page')
             .setEditable()
             .setMetadataType(MetadataTypes.APEX_PAGE)
-            .addDependencyField(new XMLDataControlledField('uiLoginFlowType', 'VisualForce', DataValues.NOT_NULL))
+            .addDependencyField(new XMLDependencyField('uiLoginFlowType', 'VisualForce', DataValues.NOT_NULL))
         )
         .addField('vfFlowPageTitle', new StringXMLField('vfFlowPageTitle', 'Visualforce Page Title')
             .setEditable()
-            .addDependencyField(new XMLDataControlledField('uiLoginFlowType', 'VisualForce', DataValues.NOT_NULL))
+            .addDependencyField(new XMLDependencyField('uiLoginFlowType', 'VisualForce', DataValues.NOT_NULL))
         ),
     loginHours: new ObjectXMLField('loginHours', 'Login Hours')
         .setMinApi(25)
@@ -301,14 +299,14 @@ module.exports = {
         .addField('endAddress', new StringXMLField('endAddress', 'End Address')
             .setRequired()
             .setEditable()
-            .addMatchPattern(Validator.getIpv4Regexp())
-            .addMatchPattern(Validator.getIpv6Regexp())
+            .addMatchPattern(CoreUtils.Validator.getIpv4Regexp())
+            .addMatchPattern(CoreUtils.Validator.getIpv6Regexp())
         )
         .addField('startAddress', new StringXMLField('startAddress', 'Start Address')
             .setRequired()
             .setEditable()
-            .addMatchPattern(Validator.getIpv4Regexp())
-            .addMatchPattern(Validator.getIpv6Regexp())
+            .addMatchPattern(CoreUtils.Validator.getIpv4Regexp())
+            .addMatchPattern(CoreUtils.Validator.getIpv6Regexp())
         ),
     objectPermissions: new ArrayXMLField('objectPermissions', 'Object Permissions')
         .setMinApi(28)
