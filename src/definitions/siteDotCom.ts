@@ -1,6 +1,6 @@
-const { StringXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const SiteDotCom = {
     label: new StringXMLField('label', 'Label')
         .setMinApi(30)
         .setEditable()
