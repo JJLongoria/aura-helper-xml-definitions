@@ -7,6 +7,7 @@ export const ObjectSourceTargetMap = {
     fieldSourceTargetMaps: new ObjectXMLField('fieldSourceTargetMaps', 'Field Source Target Maps')
         .setMinApi(51)
         .setEditable()
+        .setFieldKey('sourceField')
         .addField('creationType', new StringXMLField('creationType', 'Creation Type')
             .setEditable()
         )
