@@ -1,4 +1,4 @@
-const Index = require('../index');
+const
 const { DataTypes } = require('@aurahelper/core').Values;
 
 describe('Testing index.js', () => {
