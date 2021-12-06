@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, ArrayXMLField, DataValues, MetadataTypes, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const SharingSet = {
     accessMappings: new ArrayXMLField('accessMappings', 'Access Mappings')
         .setMinApi(30)
         .setEditable()

@@ -1,9 +1,8 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
-const SharedTo = require('./sharedTo');
-const FilterItemType = require('./types/filterItem');
+import { StringXMLField, ArrayXMLField, MetadataTypes, EnumXMLField, ObjectXMLField, BooleanXMLField } from '@aurahelper/core';
+import { SharedTo } from './sharedTo';
+import { filterItem } from './types/filterItem';
 
-module.exports = {
+export const SharingRules = {
     sharingCriteriaRules: new ArrayXMLField('sharingCriteriaRules', 'Sharing Criteria Rules')
         .setMinApi(33)
         .setEditable()
@@ -45,7 +44,7 @@ module.exports = {
         .addField('booleanFilter', new StringXMLField('booleanFilter', 'Boolean Filter')
             .setEditable()
         )
-        .addField('criteriaItems', FilterItemType('criteriaItems', 'Criteria Items', 33))
+        .addField('criteriaItems', filterItem('criteriaItems', 'Criteria Items', 33))
         .addField('description', new StringXMLField('description', 'Description')
             .setEditable()
             .setMaxLength(1000)
@@ -108,7 +107,7 @@ module.exports = {
             .setMinApi(48)
             .setEditable()
         )
-        .addField('criteriaItems', FilterItemType('criteriaItems', 'Criteria Items', 48))
+        .addField('criteriaItems', filterItem('criteriaItems', 'Criteria Items', 48))
         .addField('description', new StringXMLField('description', 'Description')
             .setEditable()
             .setMaxLength(1000)
@@ -118,6 +117,12 @@ module.exports = {
             .setRequired()
             .addMatchPattern(/^[^\d\s_](\w)+$/)
             .setMetadataType(MetadataTypes.SHARING_GUEST_RULE)
+        )
+        .addField('includeHVUOwnedRecords', new BooleanXMLField('includeHVUOwnedRecords', 'Include HVU Owned Records')
+            .setMinApi(52)
+            .setEditable()
+            .setRequired()
+            .setDefaultValue(false)
         )
         .addField('label', new StringXMLField('label', 'Label')
             .setEditable()
@@ -171,7 +176,7 @@ module.exports = {
         .addField('booleanFilter', new StringXMLField('booleanFilter', 'Boolean Filter')
             .setEditable()
         )
-        .addField('criteriaItems', FilterItemType('criteriaItems', 'Criteria Items', 33))
+        .addField('criteriaItems', filterItem('criteriaItems', 'Criteria Items', 33))
         .addField('description', new StringXMLField('description', 'Description')
             .setEditable()
             .setMaxLength(1000)
@@ -241,7 +246,7 @@ module.exports = {
         .addField('booleanFilter', new StringXMLField('booleanFilter', 'Boolean Filter')
             .setEditable()
         )
-        .addField('criteriaItems', FilterItemType('criteriaItems', 'Criteria Items', 33))
+        .addField('criteriaItems', filterItem('criteriaItems', 'Criteria Items', 33))
         .addField('description', new StringXMLField('description', 'Description')
             .setEditable()
             .setMaxLength(1000)
