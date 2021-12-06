@@ -1,6 +1,6 @@
-const { StringXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const WaveDataflow = {
     application: new StringXMLField('application', 'Application')
         .setMinApi(48)
         .setEditable(),
