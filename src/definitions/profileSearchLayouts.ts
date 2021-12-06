@@ -1,7 +1,6 @@
-const { ArrayXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { ArrayXMLField, MetadataTypes } from '@aurahelper/core';
 
-module.exports = {
+export const ProfileSearchLayout = {
     profileName: new ArrayXMLField('profileName', 'Profile Name')
         .setMinApi(48)
         .setEditable()
