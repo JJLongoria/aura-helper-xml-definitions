@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const ServiceChannel = {
     doesMinimizeWidgetOnAccept: new BooleanXMLField('doesMinimizeWidgetOnAccept', 'Does Minimize Widget On Accept')
         .setMinApi(48)
         .setEditable(),
