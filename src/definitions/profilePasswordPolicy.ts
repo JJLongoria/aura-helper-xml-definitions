@@ -1,7 +1,6 @@
-const { StringXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, XMLDependencyField, MetadataTypes, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const ProfilePasswordPolicy = {
     forgotPasswordRedirect: new BooleanXMLField('forgotPasswordRedirect', 'Forgot Password Redirect')
         .setMinApi(43)
         .setEditable()
