@@ -1,6 +1,6 @@
-const { StringXMLField, IntegerXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const PlatformEventSubscriptionConfig = {
     batchSize: new IntegerXMLField('batchSize', 'Batch Size')
         .setMinApi(51)
         .setEditable()
