@@ -1,7 +1,6 @@
-const { StringXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, MetadataTypes } from '@aurahelper/core';
 
-module.exports = {
+export const ValidationRule = {
     active: new BooleanXMLField('active', 'Active')
         .setMinApi(12)
         .setEditable()
