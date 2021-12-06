@@ -1,6 +1,6 @@
-const { StringXMLField, DateTimeXMLField } = require('@aurahelper/core').Types;
+import { DateTimeXMLField, StringXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const UserAuthCertificate = {
     developerName: new StringXMLField('developerName', 'Developer Name')
         .setMinApi(50)
         .setEditable()
