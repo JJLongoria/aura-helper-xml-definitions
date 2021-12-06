@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, ArrayXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const PlatformEventChannel = {
     channelMembers: new ArrayXMLField('channelMembers', 'Channel Members')
         .setMinApi(45)
         .setMaxApi(46)
