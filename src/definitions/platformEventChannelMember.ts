@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, ArrayXMLField, MetadataTypes } from '@aurahelper/core';
 
-module.exports = {
+export const PlatformEventChannelMember = {
     enrichedFields: new ArrayXMLField('enrichedFields', 'Enriched Fields')
         .setMinApi(51)
         .setEditable()
