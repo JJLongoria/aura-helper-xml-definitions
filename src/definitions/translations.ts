@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, ArrayXMLField, MetadataTypes, ObjectXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const Translation = {
     customApplications: new ArrayXMLField('customApplications', 'Custom Applications')
         .setMinApi(14)
         .setEditable()
@@ -244,10 +243,15 @@ module.exports = {
         .setMinApi(14)
         .setEditable()
         .setFieldKey('name')
+        .addField('aspect', new EnumXMLField('aspect', 'aspect')
+            .setMinApi(53)
+            .setEditable()
+            .addEnumValue('Master', 'Master')
+            .addEnumValue('Info Message', 'InfoMessage')
+        )
         .addField('label', new StringXMLField('label', 'Label')
             .setEditable()
             .setRequired()
-            .setMaxLength(765)
         )
         .addField('name', new StringXMLField('name', 'Name')
             .setEditable()
