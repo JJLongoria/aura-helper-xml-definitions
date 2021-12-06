@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, IntegerXMLField, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const PresenceUserConfig = {
     assignments: new ObjectXMLField('assignments', 'Assignments')
         .setMinApi(44)
         .setEditable()
