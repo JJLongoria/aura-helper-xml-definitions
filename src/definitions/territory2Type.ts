@@ -1,6 +1,6 @@
-const { StringXMLField, IntegerXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const Territory2Type = {
     description: new StringXMLField('description', 'Description')
         .setMinApi(32)
         .setEditable(),
