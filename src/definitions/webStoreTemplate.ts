@@ -1,7 +1,6 @@
-const { StringXMLField, IntegerXMLField, EnumXMLField, ArrayXMLField } = require('@aurahelper/core').Types;
-const { DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, ArrayXMLField, DataValues, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const WebStoreTemplate = {
     defaultCurrency: new StringXMLField('defaultCurrency', 'Default Currency')
         .setMinApi(49)
         .setEditable(),
