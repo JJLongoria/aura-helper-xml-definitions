@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, MetadataTypes, EnumXMLField, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const ProfileSessionSetting = {
     forceLogout: new BooleanXMLField('forceLogout', 'Force Logout')
         .setMinApi(40)
         .setEditable()
