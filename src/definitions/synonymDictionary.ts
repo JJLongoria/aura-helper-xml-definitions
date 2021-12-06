@@ -1,7 +1,6 @@
-const { ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { DataValues } = require('@aurahelper/core').Values;
+import { BooleanXMLField, ArrayXMLField, DataValues, EnumXMLField, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const SynonymDictionary = {
     groups: new ObjectXMLField('groups', 'Groups')
         .setMinApi(29)
         .setEditable()
