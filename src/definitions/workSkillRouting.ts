@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const WorkSkillRouting = {
     isActive: new BooleanXMLField('isActive', 'Is Active')
         .setMinApi(46)
         .setEditable()
