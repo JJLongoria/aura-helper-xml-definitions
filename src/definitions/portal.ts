@@ -1,7 +1,6 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, DataValues, MetadataTypes, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const Portal = {
     active: new BooleanXMLField('active', 'Active')
         .setMinApi(15)
         .setEditable()
