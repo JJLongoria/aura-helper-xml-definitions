@@ -1,7 +1,6 @@
-const { ArrayXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { ArrayXMLField, MetadataTypes } from '@aurahelper/core';
 
-module.exports = {
+export const SearchLayout = {
     customTabListAdditionalFields: new ArrayXMLField('customTabListAdditionalFields', 'Custom Tab List Additional Fields')
         .setMinApi(14)
         .setEditable()
