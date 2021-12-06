@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, BooleanXMLField, ObjectXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const Queue = {
     doesSendEmailToMembers: new BooleanXMLField('doesSendEmailToMembers', 'Does Send Email To Members')
         .setMinApi(24)
         .setEditable(),
