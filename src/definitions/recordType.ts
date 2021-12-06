@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes } from '@aurahelper/core';
 
-module.exports = {
+export const RecordType = {
     active: new BooleanXMLField('active', 'Active')
         .setMinApi(12)
         .setEditable()
