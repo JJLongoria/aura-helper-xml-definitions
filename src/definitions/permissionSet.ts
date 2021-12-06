@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDataControlledField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, DataValues, MetadataTypes, EnumXMLField, XMLDataControlledField } from '@aurahelper/core';
 
-module.exports = {
+export const PermissionSet = {
     label: new StringXMLField('label', 'label')
         .setMinApi(22)
         .setEditable()
