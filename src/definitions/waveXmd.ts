@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, IntegerXMLField, DoubleXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, MetadataTypes, EnumXMLField, IntegerXMLField, DoubleXMLField, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const WaveXmd = {
     application: new StringXMLField('application', 'Application')
         .setMinApi(39)
         .setEditable(),
