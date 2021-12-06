@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const Territory2Rule = {
     active: new BooleanXMLField('active', 'Active')
         .setMinApi(32)
         .setEditable()
