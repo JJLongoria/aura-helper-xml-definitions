@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const standardValueSet = {
     groupingStringEnum: new EnumXMLField('groupingStringEnum', 'Grouping String Enum')
         .setMinApi(41)
         .setEditable()
