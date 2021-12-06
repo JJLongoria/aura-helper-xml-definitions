@@ -1,6 +1,6 @@
 import { StringXMLField, BooleanXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const LightningOnboardingConfig = {
     collaborationGroup: new StringXMLField('collaborationGroup', 'Collaboration Group')
         .setMinApi(49)
         .setEditable()
