@@ -1,6 +1,6 @@
-const { StringXMLField, BooleanXMLField, DoubleXMLField, IntegerXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, EnumXMLField, IntegerXMLField, DoubleXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const QueueRoutingConfig = {
     capacityPercentage: new DoubleXMLField('capacityPercentage', 'Capacity Percentage')
         .setMinApi(44)
         .setEditable(),
