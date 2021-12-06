@@ -1,7 +1,6 @@
-const { StringXMLField, ArrayXMLField, EnumXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, ArrayXMLField, MetadataTypes, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const PermissionSetGroup = {
     description: new StringXMLField('description', 'Description')
         .setMinApi(45)
         .setEditable(),
@@ -18,7 +17,7 @@ module.exports = {
         .setEditable()
         .setMetadataType(MetadataTypes.PERMISSION_SET),
     status: new EnumXMLField('status', 'Status')
-        .setMinApi()
+        .setMinApi(45)
         .setEditable()
         .addEnumValue('Updated', 'Updated')
         .addEnumValue('Outdated', 'Outdated')
