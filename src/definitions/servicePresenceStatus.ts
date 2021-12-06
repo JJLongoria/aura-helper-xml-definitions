@@ -1,6 +1,6 @@
-const { StringXMLField, ObjectXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const ServicePresenceStatus = {
     channels: new ObjectXMLField('channels', 'Channels')
         .setMinApi(44)
         .setEditable()
