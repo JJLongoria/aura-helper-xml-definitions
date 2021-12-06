@@ -1,9 +1,13 @@
-import { StringXMLField, ArrayXMLField, MetadataTypes, EnumXMLField } from '@aurahelper/core';
+import { StringXMLField, ArrayXMLField, MetadataTypes, EnumXMLField, BooleanXMLField } from '@aurahelper/core';
 
 export const PermissionSetGroup = {
     description: new StringXMLField('description', 'Description')
         .setMinApi(45)
         .setEditable(),
+    hasActivationRequired: new BooleanXMLField('hasActivationRequired', 'Has Activation Required')
+        .setMinApi(53)
+        .setEditable()
+        .setDefaultValue(false),
     label: new StringXMLField('label', 'Label')
         .setMinApi(45)
         .setEditable()
