@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, MetadataTypes, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const Skill = {
     assignments: new ObjectXMLField('assignments', 'Assignments')
         .setMinApi(28)
         .setEditable()
