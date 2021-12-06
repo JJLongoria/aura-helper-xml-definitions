@@ -1,7 +1,6 @@
-const { StringXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, MetadataTypes } from '@aurahelper/core';
 
-module.exports = {
+export const SharingReason = {
     fullName: new StringXMLField('fullName', 'Full Name')
         .setMinApi(14)
         .setEditable()
