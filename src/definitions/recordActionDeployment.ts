@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, IntegerXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, MetadataTypes, EnumXMLField, IntegerXMLField, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const RecordActionDeployment = {
     channelConfigurations: new ObjectXMLField('channelConfigurations', 'Channel Configurations')
         .setMinApi(45)
         .setEditable()
