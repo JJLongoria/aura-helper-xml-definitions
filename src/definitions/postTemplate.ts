@@ -1,6 +1,6 @@
-const { StringXMLField, ArrayXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField, ArrayXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const PostTemplate = {
     default: new BooleanXMLField('default', 'Default')
         .setMinApi(29)
         .setEditable()
