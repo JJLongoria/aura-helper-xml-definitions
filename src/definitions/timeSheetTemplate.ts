@@ -1,4 +1,4 @@
-import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes, EnumXMLField } from '@aurahelper/core';
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes, EnumXMLField, DateTimeXMLField } from '@aurahelper/core';
 
 export const TimeSheetTemplate = {
     active: new BooleanXMLField('active', 'Active')
