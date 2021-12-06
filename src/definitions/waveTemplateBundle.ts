@@ -1,6 +1,6 @@
-const { StringXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const WaveTemplateBundle = {
     assetIcon: new EnumXMLField('assetIcon', 'Asset Icon')
         .setMinApi(35)
         .setEditable()
