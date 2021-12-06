@@ -1,4 +1,4 @@
-import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, IntegerXMLField, DoubleXMLField, ObjectXMLField } from '@aurahelper/core';
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, DoubleXMLField, ObjectXMLField } from '@aurahelper/core';
 
 function discoveryFilter(name: string, label: string) {
     return new ArrayXMLField(name, label)
