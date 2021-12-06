@@ -1,8 +1,7 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, IntegerXMLField, DoubleXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
-const FilterItemType = require('./types/filterItem');
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, IntegerXMLField, DoubleXMLField, ObjectXMLField } from '@aurahelper/core';
+import { filterItem } from './types/filterItem';
 
-module.exports = {
+export const Workflow = {
     alerts: new ArrayXMLField('alerts', 'Alerts')
         .setMinApi(13)
         .setEditable()
@@ -286,7 +285,7 @@ module.exports = {
         .addField('booleanFilter', new StringXMLField('booleanFilter', 'Boolean Filter')
             .setEditable()
         )
-        .addField('criteriaItems', FilterItemType('criteriaItems', 'Criteria Items')
+        .addField('criteriaItems', filterItem('criteriaItems', 'Criteria Items')
             .addDependencyField(new XMLDependencyField('formula', DataValues.NOT_NULL, DataValues.NOT_AVAILABLE))
         )
         .addField('description', new StringXMLField('description', 'Description')
