@@ -1,7 +1,6 @@
-const { IntegerXMLField, EnumXMLField, StringXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, MetadataTypes, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const ServiceAISetupField = {
     entity: new EnumXMLField('entity', 'Entity')
         .setMinApi(51)
         .setEditable()
