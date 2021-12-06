@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, MetadataTypes, EnumXMLField, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const RecommendationStrategy = {
     actionContext: new ArrayXMLField('actionContext', 'Action Context')
         .setMinApi(45)
         .setEditable()
