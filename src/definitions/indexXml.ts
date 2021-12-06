@@ -1,6 +1,6 @@
 import { StringXMLField, ArrayXMLField, MetadataTypes, EnumXMLField } from '@aurahelper/core';
 
-export const IndexXml = {
+export const Index = {
     fields: new ArrayXMLField('fields', 'Fields')
         .setMinApi(41)
         .setEditable()

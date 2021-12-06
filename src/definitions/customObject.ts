@@ -1,23 +1,22 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes, DataValues } = require('@aurahelper/core').Values;
-const ActionOverride = require('./actionOverride');
-const BusinessProcess = require('./businessProcess');
-const CompractLayout = require('./compactLayout');
-const CustomField = require('./customField');
-const FieldSet = require('./fieldSet');
-const HistoryRetentionPolicy = require('./historyRetentionPolicy');
-const Index = require('./indexXml');
-const ListView = require('./listView');
-const NamedFilter = require('./namedFilter');
-const ProfileSearchLayouts = require('./profileSearchLayouts');
-const RecordType = require('./recordType');
-const SearchLayouts = require('./searchLayouts');
-const SharingReason = require('./sharingReason');
-const SharingRecalculation = require('./sharingRecalculation');
-const ValidationRule = require('./validationRule');
-const WebLink = require('./webLink');
+import { StringXMLField, BooleanXMLField, ArrayXMLField, DataValues, MetadataTypes, EnumXMLField, ObjectXMLField } from '@aurahelper/core';
+import { ActionOverride } from './actionOverride';
+import { BusinessProcess } from './businessProcess';
+import { CompactLayout } from './compactLayout';
+import { CustomField } from './customField';
+import { FieldSet } from './fieldSet';
+import { HistoryRetentionPolicy } from './historyRetentionPolicy';
+import { Index } from './indexXml';
+import { ListView } from './listView';
+import { NamedFilter } from './namedFilter';
+import { ProfileSearchLayout } from './profileSearchLayouts';
+import { RecordType } from './recordType';
+import { SearchLayout } from './searchLayouts';
+import { SharingReason } from './sharingReason';
+import { SharingRecalculation } from './sharingRecalculation';
+import { ValidationRule } from './validationRule';
+import { WebLink } from './webLink';
 
-module.exports = {
+export const CustomObject = {
     actionOverrides: new ArrayXMLField('actionOverrides', 'ActionOverrides')
         .setMinApi(18)
         .setEditable()
@@ -40,7 +39,7 @@ module.exports = {
         .setMinApi(29)
         .setEditable()
         .setFieldKey('fullName')
-        .setFields(CompractLayout),
+        .setFields(CompactLayout),
     customHelp: new StringXMLField('customHelp', 'Custom Help')
         .setMinApi(14)
         .setEditable()
@@ -202,7 +201,7 @@ module.exports = {
         .setEditable()
         .setFieldKey('profileName')
         .setSortOrder(undefined)
-        .setFields(ProfileSearchLayouts),
+        .setFields(ProfileSearchLayout),
     publishBehavior: new EnumXMLField('publishBehavior', 'Publish Behavior')
         .setMinApi(46)
         .setEditable()
@@ -224,7 +223,7 @@ module.exports = {
         .setEditable()
         .setFieldKey('customTabListAdditionalFields')
         .setSortOrder(undefined)
-        .setFields(SearchLayouts),
+        .setFields(SearchLayout),
     sharingModel: new EnumXMLField('sharingModel', 'Sharing Model')
         .setMinApi(31)
         .setEditable()
