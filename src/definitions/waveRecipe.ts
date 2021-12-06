@@ -1,7 +1,6 @@
-const { StringXMLField, EnumXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, MetadataTypes, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const WaveRecipe = {
     dataflow: new StringXMLField('dataflow', 'Dataflow')
         .setMinApi(41)
         .setEditable()
