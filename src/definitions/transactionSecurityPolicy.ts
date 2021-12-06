@@ -1,7 +1,6 @@
-const { StringXMLField, ObjectXMLField, ArrayXMLField, EnumXMLField, BooleanXMLField, XMLDependencyField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, MetadataTypes, EnumXMLField, ObjectXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const TransactionSecurityPolicy = {
     action: new ObjectXMLField('action', 'Action')
         .setMinApi(35)
         .setEditable()
