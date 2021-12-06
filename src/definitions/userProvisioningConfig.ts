@@ -1,7 +1,6 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, MetadataTypes, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const UserProvisioningConfig = {
     approvalRequired: new BooleanXMLField('approvalRequired', 'Approval Required')
         .setMinApi(49)
         .setEditable(),
