@@ -1,6 +1,6 @@
-const { StringXMLField, IntegerXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, EnumXMLField, IntegerXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const UserCriteria = {
     creationAgeInSeconds: new IntegerXMLField('creationAgeInSeconds', 'Creation Age In Seconds')
         .setMinApi(39)
         .setEditable(),
