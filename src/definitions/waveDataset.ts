@@ -1,6 +1,6 @@
-const { StringXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const WaveDataset = {
     application: new StringXMLField('application', 'Application')
         .setMinApi(37)
         .setEditable(),
