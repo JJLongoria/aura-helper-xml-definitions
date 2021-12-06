@@ -1,7 +1,6 @@
-const { StringXMLField, EnumXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
-const { MetadataTypes } = require('@aurahelper/core').Values;
+import { StringXMLField, BooleanXMLField, MetadataTypes, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const SamlSsoConfig = {
     attributeNameIdFormat: new StringXMLField('attributeNameIdFormat', 'Attribute Name Id Format')
         .setMinApi(28)
         .setEditable(),
