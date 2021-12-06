@@ -20,7 +20,10 @@ export class XMLDefinitions {
      */
     static getDefinition(type: string, apiVersion: string | number): any {
         try {
-            const typeDefinition = require('./src/definitions/' + transformTypeName(type));
+            let typeDefinition = require('./definitions/' + transformTypeName(type));
+            if (typeDefinition) {
+                typeDefinition = typeDefinition[Object.keys(typeDefinition)[0]];
+            };
             return processType(typeDefinition, apiVersion);
         } catch (error) {
             return undefined;
@@ -34,7 +37,11 @@ export class XMLDefinitions {
      */
     static getRawDefinition(type: string): any {
         try {
-            return require('./src/definitions/' + transformTypeName(type));
+            let typeDefinition = require('./definitions/' + transformTypeName(type));
+            if (typeDefinition) {
+                typeDefinition = typeDefinition[Object.keys(typeDefinition)[0]];
+            };
+            return typeDefinition;
         } catch (error) {
             return undefined;
         }
@@ -45,9 +52,9 @@ export class XMLDefinitions {
      * @param {string | number} apiVersion API Version number to get the XML Definitions
      * @returns Return an Object with all XML definitions for the selected API version. The object has the Type as key and the XML definition as value. If not exists any definition for the selected API return an empty object
      */
-    static getAllDefinitions(apiVersion: string | number): { [key: string]: any } {
+    static getAllDefinitions(apiVersion: string | number): any {
         const definitions = require('./definitions');
-        const result: { [key: string]: any } = {};
+        const result: any = {};
         for (let key of Object.keys(definitions)) {
             let typeProcessed = processType(definitions[key], apiVersion)
             if (typeProcessed != null && Object.keys(typeProcessed).length > 0) {
@@ -97,7 +104,7 @@ export class XMLDefinitions {
      * 
      * @returns {string[]} Return a List with all Metadata Object Names
      */
-    static getMetadataTypes(XMLDefinition: { [key: string]: any }): string[] {
+    static getMetadataTypes(XMLDefinition: any): string[] {
         let types: string[] = [];
         for (const fieldKey of Object.keys(XMLDefinition)) {
             const field = XMLDefinition[fieldKey];
@@ -122,18 +129,19 @@ function getMetadataFromField(fieldDefinition: any): string[] {
     return types;
 }
 
-function processType(typeDefinition: any, apiVersion: string | number) {
+function processType(typeDefinition: any, apiVersion: string | number): any {
     apiVersion = ProjectUtils.getApiAsNumber(apiVersion);
-    const result: { [key: string]: any } = {};
+    const result: any = {};
     for (let key of Object.keys(typeDefinition)) {
         let fieldData = processEntity(typeDefinition[key], apiVersion);
-        if (fieldData)
+        if (fieldData) {
             result[key] = fieldData;
+        }
     }
     return result;
 }
 
-function processEntity(entityData: any, apiVersion: string | number) {
+function processEntity(entityData: any, apiVersion: string | number): any {
     let result;
     if (!isReserved(entityData) && isApiAvailable(entityData, apiVersion)) {
         result = entityData;
@@ -141,8 +149,9 @@ function processEntity(entityData: any, apiVersion: string | number) {
             let fieldDependencies = [];
             for (let fieldDependency of entityData.fieldDependencies) {
                 let entityProcessed = processEntity(fieldDependency, apiVersion);
-                if (entityProcessed)
+                if (entityProcessed) {
                     fieldDependencies.push(entityProcessed);
+                }
             }
             entityData.fieldDependencies = fieldDependencies;
         }
@@ -150,16 +159,18 @@ function processEntity(entityData: any, apiVersion: string | number) {
             let controlledFields = [];
             for (let controlledField of entityData.controlledFields) {
                 let entityProcessed = processEntity(controlledField, apiVersion);
-                if (entityProcessed)
+                if (entityProcessed) {
                     controlledFields.push(entityProcessed);
+                }
             }
             entityData.controlledFields = controlledFields;
         }
         if (entityData.fields) {
             for (let key of Object.keys(entityData.fields)) {
                 let entityProcessed = processEntity(entityData.fields[key], apiVersion);
-                if (entityProcessed)
+                if (entityProcessed) {
                     entityData.fields[key] = entityProcessed;
+                }
             }
         }
         if (entityData.allowedValues && entityData.allowedValues.length > 0) {
@@ -167,8 +178,9 @@ function processEntity(entityData: any, apiVersion: string | number) {
                 let allowedValues = [];
                 for (let allowedValue of entityData.allowedValues) {
                     let entityProcessed = processEntity(allowedValue, apiVersion);
-                    if (entityProcessed)
+                    if (entityProcessed) {
                         allowedValues.push(entityProcessed, apiVersion);
+                    }
                 }
                 entityData.allowedValues = allowedValues;
             }
@@ -177,8 +189,9 @@ function processEntity(entityData: any, apiVersion: string | number) {
             let values = [];
             for (let value of entityData.values) {
                 let entityProcessed = processEntity(value, apiVersion);
-                if (entityProcessed)
+                if (entityProcessed) {
                     values.push(entityProcessed);
+                }
             }
             entityData.values = values;
         }

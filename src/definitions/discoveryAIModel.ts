@@ -1,4 +1,4 @@
-import { StringXMLField, BooleanXMLField, ArrayXMLField, XMLDependencyField, DataValues, MetadataTypes, EnumXMLField, IntegerXMLField, ObjectXMLField, DoubleXMLField } from '@aurahelper/core';
+import { StringXMLField, ArrayXMLField, EnumXMLField, DoubleXMLField } from '@aurahelper/core';
 
 export const DiscoveryAIModel = {
     algorithmType: new EnumXMLField('algorithmType', 'Algorithm Type')
@@ -20,6 +20,7 @@ export const DiscoveryAIModel = {
     modelFields: new ArrayXMLField('modelFields', 'Model Fields')
         .setMinApi(51)
         .setEditable()
+        .setFieldKey('name')
         .addField('label', new StringXMLField('label', 'Label')
             .setEditable()
         )

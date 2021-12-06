@@ -1,6 +1,6 @@
 import { StringXMLField, BooleanXMLField, MetadataTypes, EnumXMLField, IntegerXMLField, ObjectXMLField, CoreUtils } from '@aurahelper/core';
 
-module.exports = {
+export const ConnectedApp = {
     attributes: new ObjectXMLField('attributes', 'Attributes')
         .setMinApi(29)
         .setEditable()
