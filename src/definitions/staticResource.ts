@@ -1,6 +1,6 @@
-const { StringXMLField, EnumXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, EnumXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const StaticResource = {
     cacheControl: new EnumXMLField('cacheControl', 'Cache Control')
         .setMinApi(14)
         .setEditable()
