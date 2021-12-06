@@ -1,6 +1,6 @@
-const { StringXMLField, BooleanXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField, BooleanXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const RemoteSiteSetting = {
     description: new StringXMLField('description', 'Description')
         .setMinApi(19),
     disableProtocolSecurity: new BooleanXMLField('disableProtocolSecurity', 'Disable Protocol Security')
