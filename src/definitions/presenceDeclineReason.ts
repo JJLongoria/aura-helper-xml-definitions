@@ -1,6 +1,6 @@
-const { StringXMLField } = require('@aurahelper/core').Types;
+import { StringXMLField } from '@aurahelper/core';
 
-module.exports = {
+export const PresenseDeclineReason = {
     label: new StringXMLField('label', 'Label')
         .setMinApi(44)
         .setEditable()
