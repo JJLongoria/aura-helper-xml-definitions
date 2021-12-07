@@ -12,7 +12,7 @@ Module to get any Salesforce Metadata XML Files Definition to process Metadata f
 
 The **difference** between the **XML definition** and the **raw XML definition** is that the raw definition *is not processed*, it returns the entire XML information. The XML definitions return the XML definition processed for a *specific API version*, omitting everything that does not correspond to the indicated version.
 
-### **Support up to API 51.0**
+### **Support up to API 53.0**
 
 # [**XMLDefinitions Class**](#xmldefinitions-class)
 Class with static methods to get the XML Definitions for one Metadata Type or get all XML Definitions for all types and specific Salesforce API Version. Also you can get a XML Raw definitions and Resolve Recursive definitions on some files. 
