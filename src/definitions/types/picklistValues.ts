@@ -15,5 +15,5 @@ export function picklistValues(picklistName: string, picklistLabel: string, minA
         )
         .addField('default', new BooleanXMLField('default', 'Default')
             .setEditable()
-        )
+        );
 } 

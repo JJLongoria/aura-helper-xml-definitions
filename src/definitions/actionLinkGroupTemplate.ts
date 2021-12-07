@@ -96,4 +96,4 @@ export const ActionLinkGroupTemplate = {
         .setUnique()
         .setEditable()
         .setRequired()
-}
+};

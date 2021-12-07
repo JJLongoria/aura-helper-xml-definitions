@@ -346,4 +346,4 @@ export const CustomField = {
     writeRequiresMasterRead: new BooleanXMLField('writeRequiresMasterRead', 'Write Requires Master Read')
         .setMinApi(10)
         .setEditable(),
-}
+};

@@ -70,4 +70,4 @@ export const Community = {
         .setMinApi(27)
         .setEditable()
         .setMetadataType(MetadataTypes.CUSTOM_SITE),
-}
+};

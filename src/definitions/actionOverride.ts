@@ -39,4 +39,4 @@ export const ActionOverride = {
         .addEnumValue('S-Control', 'scontrol')
         .addEnumValue('Standard', 'standard')
         .addEnumValue('Visualforce', 'visualforce')
-}
+};

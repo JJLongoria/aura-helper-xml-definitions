@@ -39,4 +39,4 @@ export const ProfileSessionSetting = {
         .setMinApi(40)
         .setEditable()
         .setRequired(),
-}
+};

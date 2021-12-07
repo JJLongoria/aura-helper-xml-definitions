@@ -460,4 +460,4 @@ export const Profile = {
         .addField('name', new StringXMLField('name', 'Name')
             .setUnique()
         )
-}
+};

@@ -13,4 +13,4 @@ export const StandardValueSetTranslation = {
         .addField('translation', new StringXMLField('translation', 'Translation')
             .setEditable()
         )
-}
+};

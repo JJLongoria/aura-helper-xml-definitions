@@ -43,4 +43,4 @@ export const ExperienceBundle = {
         .setRequired()
         .setDefaultValue('ChatterNetworkPicasso')
         .addEnumValue('Lightning Community', 'ChatterNetworkPicasso')
-}
+};

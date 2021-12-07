@@ -39,4 +39,4 @@ export const Role = {
         .setMinApi(24)
         .setEditable()
         .setMetadataType(MetadataTypes.ROLE),
-}
+};

@@ -21,4 +21,4 @@ export const Index = {
         .setMinApi(41)
         .setEditable()
         .setRequired()
-}
+};

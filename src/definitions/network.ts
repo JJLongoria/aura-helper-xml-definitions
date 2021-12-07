@@ -428,4 +428,4 @@ export const Network = {
         .setMinApi(28)
         .setEditable()
 
-}
+};

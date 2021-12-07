@@ -54,4 +54,4 @@ export const AnalyticSnapshot = {
         .setMinApi(16)
         .setEditable()
         .setRequired(),
-}
+};

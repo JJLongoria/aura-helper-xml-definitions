@@ -30,4 +30,4 @@ export const CustomPermission = {
             .setEditable()
             .setRequired()
         )
-}
+};

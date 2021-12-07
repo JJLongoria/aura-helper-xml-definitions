@@ -9,4 +9,4 @@ export const ProfileSearchLayout = {
         .setMinApi(48)
         .setEditable()
         .setMetadataType(MetadataTypes.CUSTOM_FIELD)
-}
+};

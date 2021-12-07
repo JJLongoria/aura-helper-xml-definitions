@@ -23,4 +23,4 @@ export const CustomNotificationType = {
         .setMinApi(46)
         .setEditable()
         .setRequired(),
-}
+};

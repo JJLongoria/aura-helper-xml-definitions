@@ -78,4 +78,4 @@ export const CustomTab = {
         .addEnumValue('Traditional Chinese (Big5)', 'Big5')
         .addEnumValue('Simplified Chinese (GB2312)', 'GB2312')
         .addEnumValue('Traditional Chinese Hong Kong (Big5–HKSCS)', 'Big5-HKSCS'),
-}
+};

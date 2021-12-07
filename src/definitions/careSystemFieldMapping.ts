@@ -29,4 +29,4 @@ export const CareSystemFieldMapping = {
     targetObject: new StringXMLField('targetObject', 'Target Object')
         .setMinApi(49)
         .setEditable(),
-}
+};

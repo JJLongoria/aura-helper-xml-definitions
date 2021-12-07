@@ -18,4 +18,4 @@ export const MktCalcInsightObjectDef = {
         .setMinApi(52)
         .setRequired()
 
-}
+};

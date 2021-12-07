@@ -23,4 +23,4 @@ export const ApexComponent = {
         .setEditable()
         .setRequired(),
     packageVersions: packageVersion('packageVersions', 'Package Versions', 16),
-}
+};

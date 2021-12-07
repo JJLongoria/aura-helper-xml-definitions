@@ -19,4 +19,4 @@ export const FeatureParameterInteger = {
     value: new IntegerXMLField('value', 'Value')
         .setMinApi(41)
         .setEditable(),
-}
+};

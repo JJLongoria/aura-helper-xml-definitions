@@ -59,4 +59,4 @@ export const ArticleType = {
         .setMinApi(19)
         .setEditable()
         .setEnumValues(DataValues.STARTS_WITH),
-}
+};

@@ -84,4 +84,4 @@ export const ExternalDataSource = {
     version: new StringXMLField('version', 'Version')
         .setMinApi(28)
         .setEditable(),
-}
+};

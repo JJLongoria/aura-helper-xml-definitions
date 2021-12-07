@@ -480,4 +480,4 @@ export const WaveXmd = {
         .setEditable()
         .addEnumValue('Dashboard', 'dashboard')
         .addEnumValue('Lens', 'lens')
-}
+};

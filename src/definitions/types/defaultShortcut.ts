@@ -80,6 +80,6 @@ export function defaultShortcut(type: any, shortcutName: string, shortcutLabel: 
             .addEnumValue(']', ']')
             .addEnumValue('\\', '\\')
             .addEnumValue('\'', '\'')
-        )
+        );
 }
 

@@ -38,5 +38,5 @@ export function botInvocation(invocationName: string, invocationLabel: string, m
                 .addEnumValue('Conversation Variable', 'ConversationVariable')
                 .addEnumValue('Context Variable', 'ContextVariable')
             )
-        )
+        );
 }

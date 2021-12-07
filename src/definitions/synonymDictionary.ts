@@ -22,4 +22,4 @@ export const SynonymDictionary = {
         .setMinApi(29)
         .setEditable()
         .setRequired()
-}
+};

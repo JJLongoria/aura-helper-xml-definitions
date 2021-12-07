@@ -31,6 +31,6 @@ export function mlIntent(intentName: string, intentApi: string, minApi?: number 
             .addField('relatedMlIntent', new StringXMLField('relatedMlIntent', 'Related Machine Learning Intent')
                 .setEditable()
             )
-        )
+        );
 
 }

@@ -116,4 +116,4 @@ export const CleanDataService = {
         .setMinApi(51)
         .setEditable()
         .setRequired(),
-}
+};

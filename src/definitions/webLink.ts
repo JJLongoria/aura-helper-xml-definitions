@@ -122,4 +122,4 @@ export const WebLink = {
         .setMinApi(12)
         .setEditable()
         .addDependencyField(new XMLDependencyField('openType', 'newWindow', DataValues.NOT_NULL)),
-}
+};

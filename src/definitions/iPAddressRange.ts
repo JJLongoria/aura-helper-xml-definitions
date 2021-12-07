@@ -36,4 +36,4 @@ export const IPAddressRange = {
         .addMatchPattern(CoreUtils.Validator.getIpv4Regexp())
         .addMatchPattern(CoreUtils.Validator.getIpv6Regexp()),
 
-}
+};

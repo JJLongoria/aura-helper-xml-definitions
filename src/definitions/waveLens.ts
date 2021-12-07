@@ -37,4 +37,4 @@ export const WaveLens = {
         .addEnumValue('Values table', 'valuestable')
         .addEnumValue('Vertical bar', 'vbar')
         .addEnumValue('Vertical dot plot', 'vdot')
-}
+};

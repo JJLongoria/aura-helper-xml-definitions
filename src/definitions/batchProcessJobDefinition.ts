@@ -98,4 +98,4 @@ export const BatchProcessJobDefinition = {
         .setRequired()
         .addEnumValue('Active', 'Active')
         .addEnumValue('Inactive', 'Inactive'),
-}
+};

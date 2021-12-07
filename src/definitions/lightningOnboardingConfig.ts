@@ -35,4 +35,4 @@ export const LightningOnboardingConfig = {
         .setEditable()
         .setRequired()
         .setDefaultValue(false)
-}
+};

@@ -63,4 +63,4 @@ export const MatchingRules = {
             .addEnumValue('Activating', 'Activating')
             .addEnumValue('Activation Failed', 'ActivationFailed')
         )
-}
+};

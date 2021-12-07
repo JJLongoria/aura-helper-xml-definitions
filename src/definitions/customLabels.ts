@@ -34,4 +34,4 @@ export const CustomLabels = {
             .setRequired()
             .setMaxLength(1000)
         )
-}
+};

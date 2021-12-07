@@ -66,4 +66,4 @@ export const ProfilePasswordPolicy = {
         .setEditable()
         .setMetadataType(MetadataTypes.PROFILE)
 
-}
+};

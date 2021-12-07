@@ -78,4 +78,4 @@ export const EntitlementProcess = {
     useCriteriaStartTime: new BooleanXMLField('useCriteriaStartTime', 'Use Criteria Start Time')
         .setMinApi(27)
         .setEditable()
-}
+};

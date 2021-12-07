@@ -25,7 +25,7 @@ function referenceOrValue(valueName: string, valueLabel: string) {
         )
         .addField('stringValue', new StringXMLField('stringValue', 'String Value')
             .setEditable()
-        )
+        );
 }
 
 function processMetadataValues() {
@@ -1506,4 +1506,4 @@ export const Flow = {
                 )
             )
         )
-}
+};

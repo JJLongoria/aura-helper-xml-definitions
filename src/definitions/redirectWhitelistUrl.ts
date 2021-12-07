@@ -5,4 +5,4 @@ export const RedirectWhitelistUrl = {
         .setMinApi(48)
         .setEditable()
         .setRequired()
-}
+};

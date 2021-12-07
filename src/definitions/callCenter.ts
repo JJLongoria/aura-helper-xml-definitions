@@ -39,4 +39,4 @@ export const CallCenter = {
         .addField('name', new StringXMLField('name', 'Name')
             .setEditable()
         )
-}
+};

@@ -11,4 +11,4 @@ export const CallCoachingMediaProvider = {
     providerName: new BooleanXMLField('providerName', 'Provider Name')
         .setMinApi(49)
         .setEditable()
-}
+};

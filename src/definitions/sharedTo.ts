@@ -72,4 +72,4 @@ export const SharedTo = {
     queue: new ArrayXMLField('queue', 'Queue')
         .setMinApi(24)
         .setEditable(),
-}
+};

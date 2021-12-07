@@ -100,4 +100,4 @@ export const EmailTemplate = {
         .addEnumValue('SFX (Lightning Experience)', 'SFX')
         .addEnumValue('Custom', 'custom')
         .addEnumValue('SFX_Sample (Lightning Experience Sample)', 'SFX_Sample')
-}
+};

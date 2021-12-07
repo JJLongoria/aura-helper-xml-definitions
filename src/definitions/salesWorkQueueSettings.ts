@@ -16,4 +16,4 @@ export const SalesWorkQueueSettings = {
         .setMinApi(49)
         .setEditable()
         .setMetadataType(MetadataTypes.CUSTOM_FIELD)
-}
+};

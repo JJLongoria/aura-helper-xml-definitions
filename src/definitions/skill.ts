@@ -31,4 +31,4 @@ export const Skill = {
         .setMinApi(28)
         .setEditable()
         .setRequired()
-}
+};

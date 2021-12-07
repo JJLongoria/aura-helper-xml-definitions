@@ -808,4 +808,4 @@ export const Report = {
         .setMinApi(17)
         .setEditable(),
 
-}
+};

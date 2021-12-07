@@ -50,4 +50,4 @@ export const BusinessProcessGroup = {
         .setMinApi(49)
         .setEditable()
         .setRequired(),
-}
+};

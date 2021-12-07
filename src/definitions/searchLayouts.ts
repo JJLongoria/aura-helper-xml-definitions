@@ -37,4 +37,4 @@ export const SearchLayout = {
     searchResultsCustomButtons: new ArrayXMLField('searchResultsCustomButtons', 'Search Results Custom Buttons')
         .setMinApi(14)
         .setEditable(),
-}
+};

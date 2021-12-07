@@ -54,4 +54,4 @@ export const ManagedContentType = {
         .setMinApi(47)
         .setEditable()
         .setRequired(),
-}
+};

@@ -13,4 +13,4 @@ export const GlobalValueSetTranslation = {
         .addField('translation', new StringXMLField('translation', 'Translation')
             .setEditable()
         )
-}
+};

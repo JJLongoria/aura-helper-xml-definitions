@@ -42,4 +42,4 @@ export const CspTrustedSite = {
         .setMinApi(39)
         .setEditable(),
 
-}
+};

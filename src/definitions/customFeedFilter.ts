@@ -44,4 +44,4 @@ export const CustomFeedFilter = {
     isProtected: new StringXMLField('isProtected', 'Is Protected')
         .setMinApi(35)
         .setEditable(),
-}
+};

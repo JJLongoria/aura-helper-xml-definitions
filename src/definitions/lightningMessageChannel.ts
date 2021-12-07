@@ -23,4 +23,4 @@ export const LightningMessageChannel = {
         .setEditable()
         .setRequired()
         .setUnique(),
-}
+};

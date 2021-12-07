@@ -106,6 +106,6 @@ export function mlFilter(filterName: string, filterLabel: string, minApi?: numbe
         )
         .addField('sortOrder', new IntegerXMLField('sortOrder', 'Sort Order')
             .setEditable()
-        )
+        );
 
 }

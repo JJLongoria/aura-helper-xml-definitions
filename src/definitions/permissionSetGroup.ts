@@ -27,4 +27,4 @@ export const PermissionSetGroup = {
         .addEnumValue('Outdated', 'Outdated')
         .addEnumValue('Updating', 'Updating')
         .addEnumValue('Failed', 'Failed')
-}
+};

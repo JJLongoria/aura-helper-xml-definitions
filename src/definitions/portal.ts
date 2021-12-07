@@ -97,4 +97,4 @@ export const Portal = {
         .setEditable()
         .addEnumValue('Customer Success', 'CustomerSuccess')
         .addEnumValue('Partner', 'Partner'),
-}
+};

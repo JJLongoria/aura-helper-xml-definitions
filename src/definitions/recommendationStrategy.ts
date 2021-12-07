@@ -508,4 +508,4 @@ export const RecommendationStrategy = {
         .setMinApi(45)
         .setEditable(),
 
-}
+};

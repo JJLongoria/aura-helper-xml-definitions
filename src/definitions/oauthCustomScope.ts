@@ -28,4 +28,4 @@ export const OauthCustomScope = {
         .setMinApi(46)
         .setEditable()
         .setRequired()
-}
+};

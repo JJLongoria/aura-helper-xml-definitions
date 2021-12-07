@@ -36,4 +36,4 @@ export const ServiceAISetupField = {
         .setMetadataType(MetadataTypes.SERVICE_AI_SETUP_DEFINITION),
 
 
-}
+};

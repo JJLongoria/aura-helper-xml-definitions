@@ -21,4 +21,4 @@ export const AIApplication = {
         .setMinApi(50)
         .setEditable()
         .addEnumValue('Prediction Builder', 'PredictionBuilder')
-}
+};

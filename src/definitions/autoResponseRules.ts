@@ -44,4 +44,4 @@ export const AutoResponseRules = {
                 .setEditable()
             )
         )
-}
+};

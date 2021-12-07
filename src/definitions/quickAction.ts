@@ -154,4 +154,4 @@ export const QuickAction = {
     width: new IntegerXMLField('width', 'Width')
         .setMinApi(28)
         .setEditable(),
-}
+};

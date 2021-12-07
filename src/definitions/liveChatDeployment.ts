@@ -40,4 +40,4 @@ export const LiveChatDeployment = {
     windowTitle: new StringXMLField('windowTitle', 'Window Title')
         .setMinApi(28)
         .setEditable(),
-}
+};

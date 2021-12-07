@@ -45,4 +45,4 @@ export const Territory = {
         .setMinApi(24)
         .setEditable()
         .setMetadataType(MetadataTypes.TERRITORY),
-}
+};

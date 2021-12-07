@@ -13,4 +13,4 @@ export const HomePageLayout = {
     wideComponents: new ArrayXMLField('wideComponents', 'Wide Components')
         .setMinApi(12)
         .setEditable()
-}
+};

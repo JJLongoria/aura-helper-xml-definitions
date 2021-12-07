@@ -64,4 +64,4 @@ export const DataStreamDefinition = {
         .setMinApi(50)
         .setEditable()
         .setRequired(),
-}
+};

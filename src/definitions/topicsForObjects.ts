@@ -23,4 +23,4 @@ export const TopicsForObjects = {
         .setEditable()
         .setRequired()
         .setMetadataType(MetadataTypes.CUSTOM_OBJECT)
-}
+};

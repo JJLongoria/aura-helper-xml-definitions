@@ -18,4 +18,4 @@ export const FlowCategory = {
         .setEditable()
         .setRequired()
         .setUnique(),
-}
+};

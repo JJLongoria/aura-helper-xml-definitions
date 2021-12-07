@@ -21,4 +21,4 @@ export const WaveRecipe = {
         .setMinApi(41)
         .setEditable()
         .setMetadataType(MetadataTypes.WAVE_DATASET),
-}
+};

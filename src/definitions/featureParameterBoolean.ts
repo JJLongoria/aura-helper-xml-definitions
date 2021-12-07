@@ -19,4 +19,4 @@ export const FeatureParameterBoolean = {
     value: new BooleanXMLField('value', 'Value')
         .setMinApi(41)
         .setEditable(),
-}
+};

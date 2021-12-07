@@ -57,4 +57,4 @@ export const OcrSampleDocument = {
             .setEditable()
             .setRequired()
         )
-}
+};

@@ -124,4 +124,4 @@ export const LiveChatAgentConfig = {
         .addField('skill', new ArrayXMLField('skill', 'Skill')
             .setEditable()
         ),
-}
+};

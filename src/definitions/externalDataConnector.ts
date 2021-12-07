@@ -19,4 +19,4 @@ export const ExternalDataConnector = {
         .setEditable()
         .setRequired()
         .setUnique(),
-}
+};

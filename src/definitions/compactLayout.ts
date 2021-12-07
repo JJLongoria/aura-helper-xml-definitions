@@ -13,4 +13,4 @@ export const CompactLayout = {
     label: new StringXMLField('label', 'Label')
         .setMinApi(29)
         .setEditable(),
-}
+};

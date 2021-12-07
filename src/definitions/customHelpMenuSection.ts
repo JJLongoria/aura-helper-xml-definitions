@@ -25,4 +25,4 @@ export const CustomHelpMenuSection = {
         .setEditable()
         .setRequired()
         .setMaxLength(80)
-}
+};

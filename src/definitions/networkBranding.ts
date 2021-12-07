@@ -40,4 +40,4 @@ export const NetworkBranding ={
     zeronaryComplementColor: new StringXMLField('zeronaryComplementColor', 'Zeronary Complement Color')
         .setMinApi(41)
         .setEditable(),
-}
+};

@@ -28,4 +28,4 @@ export const AIApplicationConfig = {
         .addEnumValue('Batch', 'Batch')
         .addEnumValue('On Demand', 'OnDemand')
         .addEnumValue('Streaming', 'Streaming'),
-}
+};

@@ -44,4 +44,4 @@ export const WorkSkillRouting = {
         .addField('value', new StringXMLField('value', 'Value')
             .setEditable()
         )
-}
+};

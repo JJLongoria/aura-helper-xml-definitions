@@ -22,4 +22,4 @@ export const ApexClass = {
         .setDefaultValue('Active')
         .addEnumValue('Active', 'Active')
         .addEnumValue('Deleted', 'Deleted')
-}
+};

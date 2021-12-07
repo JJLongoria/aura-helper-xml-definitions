@@ -23,5 +23,5 @@ export function botNavigation(botNavigationName: string, botNavigationLabel: str
             .addEnumValue('Call', 'Call')
             .addEnumValue('Redirect', 'Redirect')
             .addEnumValue('Transfer To Agent', 'TransferToAgent')
-        )
+        );
 }

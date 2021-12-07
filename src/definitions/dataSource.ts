@@ -9,4 +9,4 @@ export const DataSource = {
         .setMinApi(50)
         .setEditable()
         .setRequired()
-}
+};

@@ -40,4 +40,4 @@ export const ChatterExtension = {
         .setEditable()
         .setRequired()
         .addEnumValue('Lightning', 'Lightning'),
-}
+};

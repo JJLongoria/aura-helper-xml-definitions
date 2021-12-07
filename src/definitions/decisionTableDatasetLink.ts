@@ -33,4 +33,4 @@ export const DecisionTableDatasetLink = {
         .setMinApi(51)
         .setEditable()
         .setMetadataType(MetadataTypes.CUSTOM_OBJECT)
-}
+};

@@ -30,4 +30,4 @@ export const EventDelivery = {
         .addEnumValue('Start Flow', 'StartFlow')
         .addEnumValue('Resume Flow', 'ResumeFlow'),
 
-}
+};

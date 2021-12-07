@@ -127,4 +127,4 @@ export const EmbeddedServiceConfig = {
         .setRequired()
         .setMetadataType(MetadataTypes.CUSTOM_SITE)
 
-}
+};

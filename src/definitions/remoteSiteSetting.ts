@@ -17,4 +17,4 @@ export const RemoteSiteSetting = {
     url: new StringXMLField('url', 'URL')
         .setMinApi(19)
         .setRequired()
-}
+};

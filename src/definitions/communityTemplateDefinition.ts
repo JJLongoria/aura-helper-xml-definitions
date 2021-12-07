@@ -80,4 +80,4 @@ export const CommunityTemplateDefinition = {
         .setMinApi(45)
         .setEditable()
         .setRequired(),
-}
+};

@@ -13,4 +13,4 @@ export const MyDomainDiscoverableLogin = {
     usernameLabel: new StringXMLField('usernameLabel', 'Username Label')
         .setMinApi(48)
         .setEditable(),
-}
+};

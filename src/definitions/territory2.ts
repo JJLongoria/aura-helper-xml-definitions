@@ -74,4 +74,4 @@ export const Territory2 = {
         .setEditable()
         .setRequired()
         .setMetadataType(MetadataTypes.TERRITORY_2_TYPE)
-}
+};

@@ -30,4 +30,4 @@ export const ServiceAISetupDefinition = {
         .setEnumValues(DataValues.SF_LANGUAGES)
         .setMultiChoice()
 
-}
+};

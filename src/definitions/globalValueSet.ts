@@ -43,4 +43,4 @@ export const GlobalValueSet = {
         .setMinApi(38)
         .setEditable()
         .setDefaultValue(false),
-}
+};

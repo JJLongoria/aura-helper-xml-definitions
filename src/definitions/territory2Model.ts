@@ -21,4 +21,4 @@ export const Territory2Model = {
         .setMinApi(32)
         .setEditable()
         .setRequired(),
-}
+};

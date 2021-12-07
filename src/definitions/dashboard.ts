@@ -224,4 +224,4 @@ export const Dashboard = {
         .setMinApi(14)
         .setEditable()
         .setRequired()
-}
+};

@@ -35,4 +35,4 @@ export const LiveChatSensitiveDataRule = {
         .setEditable()
         .addDependencyField(new XMLDependencyField('actionType', 'Replace', DataValues.AVAILABLE)),
 
-}
+};

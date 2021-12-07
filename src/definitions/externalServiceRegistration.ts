@@ -35,4 +35,4 @@ export const ExternalServiceRegistration = {
         .setRequired()
         .addEnumValue('Complete', 'complete')
         .addEnumValue('Incomplete', 'incomplete'),
-}
+};

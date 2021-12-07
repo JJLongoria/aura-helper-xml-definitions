@@ -20,4 +20,4 @@ export const FieldSrcTrgtRelationship = {
     targetFieldName: new StringXMLField('targetFieldName', 'Target Field Name')
         .setMinApi(51)
         .setEditable(),
-}
+};

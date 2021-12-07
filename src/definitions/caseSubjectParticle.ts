@@ -23,4 +23,4 @@ export const CaseSubjectParticle = {
         .addEnumValue('Pipe Separator', 'PipeSeparator')
         .addEnumValue('Colon Separator', 'ColonSeparator')
         .addEnumValue('Hyphen Separator', 'HyphenSeparator')
-}
+};

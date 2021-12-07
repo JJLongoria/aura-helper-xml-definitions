@@ -13,4 +13,4 @@ export const ServicePresenceStatus = {
         .setMinApi(44)
         .setEditable()
         .setRequired()
-}
+};

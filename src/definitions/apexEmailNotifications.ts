@@ -13,4 +13,4 @@ export const ApexEmailNotification = {
             .setEditable()
             .addDependencyField(new XMLDependencyField('email', DataValues.NOT_NULL, DataValues.NOT_AVAILABLE))
         )
-}
+};

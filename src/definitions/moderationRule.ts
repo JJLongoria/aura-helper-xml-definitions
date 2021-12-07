@@ -49,4 +49,4 @@ export const ModerationRule = {
     userMessage: new StringXMLField('userMessage', 'User Message')
         .setMinApi(36)
         .setEditable(),
-}
+};

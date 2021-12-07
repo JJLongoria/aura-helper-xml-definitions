@@ -36,4 +36,4 @@ export const ObjectSourceTargetMap = {
     targetObjectName: new StringXMLField('targetObjectName', 'Target Object Name')
         .setMinApi(51)
         .setEditable()
-}
+};

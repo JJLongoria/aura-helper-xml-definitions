@@ -20,4 +20,4 @@ export const FeatureParameterDate = {
         .setMinApi(41)
         .setEditable()
         .setFormat('yyyy-mm-dd'),
-}
+};

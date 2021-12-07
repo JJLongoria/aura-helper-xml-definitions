@@ -70,4 +70,4 @@ export const Folder = {
         .setFieldKey('allCustomerPortalUsers')
         .setSortOrder(undefined)
         .setFields(SharedTo)
-}
+};

@@ -339,4 +339,4 @@ export const BotVersion = {
         ),
     responseDelayMilliseconds: new IntegerXMLField('responseDelayMilliseconds', 'Response Delay Milliseconds')
         .setEditable()
-}
+};

@@ -152,4 +152,4 @@ export const CMSConnectSource = {
         .setMinApi(43)
         .setEditable()
         .addDependencyField(new XMLDependencyField('connectionType', 'Public', DataValues.NOT_NULL)),
-}
+};

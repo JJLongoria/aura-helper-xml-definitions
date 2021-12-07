@@ -375,4 +375,4 @@ export const CustomApplication = {
             )
         )
         .addDependencyField(new XMLDependencyField('isServiceCloudConsole', true, DataValues.NOT_NULL))
-}
+};

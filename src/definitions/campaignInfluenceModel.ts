@@ -24,4 +24,4 @@ export const CampaignIncluenceModel = {
         .setEditable()
         .addEnumValue('All Records', 'AllRecords')
         .addEnumValue('Records With Attribution', 'RecordsWithAttribution')
-}
+};
