@@ -45,25 +45,25 @@ Method to get the Metadata Type's XML definition for an API Version.
 
 ### **Parameters:**
   - **type**: Metadata Type API Name to get the XML definition
-    - `String` 
+    - `string` 
   - **apiVersion**: API Version number to get the version definition
-    - `String` | `Number`
+    - `string` | `number`
    
 ### **Return:**
 Return the XML definition for the selected type and API version. If the type exists, but is not available in the selected API, return an empty object. If type not exists, return undefined.
-- `Object`
+- `any`
     
 ### **Examples:**
 **Get the Profile XML definition for API 45.0**
 ```javascript
-    const XMLDefinitions = require('@aurahelper/xml-definitions');
+    import { XMLDefinitions } from '@aurahelper/xml-definitions';
 
     const ProfileDefinition = XMLDefinitions.getDefinition('Profile', 45);
     console.log(ProfileDefinition);
 ```
 **Get the CustomObject XML definition for API 33.0**
 ```javascript
-    const XMLDefinitions = require('@aurahelper/xml-definitions');
+    import { XMLDefinitions } from '@aurahelper/xml-definitions';
 
     const CustomObjectDefinition = XMLDefinitions.getDefinition('CustomObject', 33);
     console.log(CustomObjectDefinition);    
@@ -74,22 +74,22 @@ Method to get the Metadata Type's XML RAW definition
 
 ### **Parameters:**
   - **type**: Metadata Type API Name to get the XML definition
-      - `String` 
+      - `string` 
 ### **Return:**
 Return the XML raw definition for the selected type. If type not exists, return undefined
-- `Object`
+- `any`
 
 ### **Examples:**
 **Get the ConnectedApp XML raw definition**
 ```javascript
-    const XMLDefinitions = require('@aurahelper/xml-definitions');
+    import { XMLDefinitions } from '@aurahelper/xml-definitions';
 
     const ConnectedAppDefinition = XMLDefinitions.getRawDefinition('ConnectedApp');
     console.log(ConnectedAppDefinition);
 ```
 **Get the CustomField XML raw definition**
 ```javascript
-    const XMLDefinitions = require('@aurahelper/xml-definitions');
+    import { XMLDefinitions } from '@aurahelper/xml-definitions';
 
     const CustomFieldDefinition = XMLDefinitions.getRawDefinition('CustomField');
     console.log(CustomFieldDefinition);
@@ -100,15 +100,15 @@ Method to get all XML Definitions for all Metadata Types for an specific API Ver
 
 ### **Parameters:**
   - **apiVersion**: API Version number to get the version definition
-    - `String` | `Number` 
+    - `string` | `number` 
 ### **Return:**
 Return an Object with all XML definitions for the selected API version. The object has the Type as key and the XML definition as value. If not exists any definition for the selected API return an empty object
-- `Object`
+- `any`
 
 ### **Examples:**
 **Get All XML Definitions for API 43.0**
 ```javascript
-    const XMLDefinitions = require('@aurahelper/xml-definitions');
+    import { XMLDefinitions } from '@aurahelper/xml-definitions';
 
     const AllDefinitions = XMLDefinitions.getAllDefinitions(43);
 
@@ -124,12 +124,12 @@ Method to get all XML RAW Definitions for all Metadata Types
 
 ### **Return:**
 Return an Object with all XML raw definitions. The object has the Type as key and the XML definition as value
-- `Object`
+- `any`
 
 ### **Examples:**
 **Get All XML raw definitions**
 ```javascript
-    const XMLDefinitions = require('@aurahelper/xml-definitions');
+    import { XMLDefinitions } from '@aurahelper/xml-definitions';
 
     const AllRawDefinitions = XMLDefinitions.getAllRawDefinitions();
 
@@ -145,19 +145,19 @@ Method to resolve the recursive reference from some XML Definition files
 
 ### **Parameters:**
   - **typeDefinition**: XML file Definition
-    -  `Object` 
+    -  `any` 
   - **subFieldDefinition**: XML Field definition to resolve
-    - `Object` 
+    - `any` 
    
 ### **Return:**
 Returns the XML Definition to the selected XML field
-- `Object`
+- `any`
     
 ### **Examples:**
 Resolve the recursive definition references on an object like Bot Steps on Bot XML Definition
 
 ```javascript
-    const XMLDefinitions = require('@aurahelper/xml-definitions');
+    import { XMLDefinitions } from '@aurahelper/xml-definitions';
 
     const BotDefinition = XMLDefinitions.getDefinition('Bot', 50);
     ...
