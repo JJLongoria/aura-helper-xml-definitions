@@ -18,4 +18,4 @@ export const PlatformEventChannelMember = {
         .setEditable()
         .setRequired()
         .setMetadataType(MetadataTypes.CUSTOM_OBJECT)
-}
+};

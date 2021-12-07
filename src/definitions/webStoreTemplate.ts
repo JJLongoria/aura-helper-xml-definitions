@@ -41,4 +41,4 @@ export const WebStoreTemplate = {
             .setDefaultValue('B2B')
             .addEnumValue('B2B', 'B2B')
         ),
-}
+};

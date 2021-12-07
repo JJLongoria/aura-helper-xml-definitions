@@ -25,4 +25,4 @@ export const ApexTrigger = {
         .addEnumValue('Active', 'Active')
         .addEnumValue('Inactive', 'Inactive')
         .addEnumValue('Deleted', 'Deleted')
-}
+};

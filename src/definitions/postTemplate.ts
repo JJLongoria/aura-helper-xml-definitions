@@ -16,4 +16,4 @@ export const PostTemplate = {
         .setMinApi(29)
         .setEditable()
         .setRequired()
-}
+};

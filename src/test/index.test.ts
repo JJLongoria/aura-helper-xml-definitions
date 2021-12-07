@@ -16,7 +16,7 @@ describe('Testing index.js', () => {
                 try {
                     validateDefinition(XMLDefinition[fieldKey], fieldKey, fieldKey);
                 } catch (error) {
-                    throw error.message += ' ' + definitionType;
+                    throw new Error(error.message += ' ' + definitionType);
                 }
             }
         }
@@ -32,18 +32,23 @@ describe('Testing index.js', () => {
 
 // TODO
 function validateDefinition(definition: any, parentKey: string, fieldKey: string) {
-    if (!definition.key)
+    if (!definition.key) {
         throw new Error('Not key found on definition with key => ' + parentKey + '.');
-    if (definition.key !== fieldKey)
+    }
+    if (definition.key !== fieldKey) {
         throw new Error('The fieldKey (' + fieldKey + ') and the defitinion.key (' + definition.key + ') must be the same. => ' + parentKey + '.');
-    if (!definition.label)
+    }
+    if (!definition.label) {
         throw new Error('Not label found on definition with key => ' + parentKey + '.');
+    }
     if (definition.datatype === Datatypes.OBJECT || definition.datatype === Datatypes.ARRAY) {
         if (definition.fields) {
-            if (!definition.fieldKey && !definition.definitionRef)
+            if (!definition.fieldKey && !definition.definitionRef) {
                 throw new Error('Not fieldKey found on definition with key => ' + parentKey + '.');
-            else if (definition.fieldKey && !Array.isArray(definition.fieldKey) && !definition.definitionRef && Object.keys(definition.fields).length > 0 && !definition.fields[definition.fieldKey])
+            }
+            else if (definition.fieldKey && !Array.isArray(definition.fieldKey) && !definition.definitionRef && Object.keys(definition.fields).length > 0 && !definition.fields[definition.fieldKey]) {
                 throw new Error('The fieldKey ' + definition.fieldKey + ' not exists as field on definition with key => ' + parentKey + '.');
+            }
             for (const key of Object.keys(definition.fields)) {
                 validateDefinition(definition.fields[key], parentKey + '>' + key, key);
             }

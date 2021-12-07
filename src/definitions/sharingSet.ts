@@ -55,4 +55,4 @@ export const SharingSet = {
         .setMinApi(30)
         .setEditable()
         .setMetadataType(MetadataTypes.PROFILE)
-}
+};

@@ -46,7 +46,7 @@ function discoveryFilter(name: string, label: string) {
                 .addEnumValue('Constant', 'Constant')
                 .addEnumValue('PlaceHolder', 'PlaceHolder')
             )
-        )
+        );
 }
 
 export const DiscoveryGoal = {

@@ -134,4 +134,4 @@ export const AuthProvider = {
         .addDependencyField(new XMLDependencyField('providerType', 'OpenIdConnect', DataValues.NOT_AVAILABLE)
             .setMinApi(33)
         ),
-}
+};

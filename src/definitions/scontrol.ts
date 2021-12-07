@@ -53,4 +53,4 @@ export const Scontrol = {
         .setMinApi()
         .setEditable()
         .setRequired()
-}
+};

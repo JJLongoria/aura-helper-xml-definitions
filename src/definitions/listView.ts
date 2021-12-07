@@ -77,4 +77,4 @@ export const ListView = {
         .setFieldKey('allCustomerPortalUsers')
         .setSortOrder(undefined)
         .setFields(SharedTo)
-}
+};

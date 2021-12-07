@@ -18,4 +18,4 @@ export const InboundCertificate = {
         .setMinApi(49)
         .setEditable()
         .setRequired()
-}
+};

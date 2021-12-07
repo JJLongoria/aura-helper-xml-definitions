@@ -28,4 +28,4 @@ export const ValidationRule = {
         .setUnique()
         .addMatchPattern(/^[^\d\s_](\w)+$/)
         .setMetadataType(MetadataTypes.VALIDATION_RULE),
-}
+};

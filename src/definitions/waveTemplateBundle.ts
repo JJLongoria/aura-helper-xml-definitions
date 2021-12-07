@@ -37,4 +37,4 @@ export const WaveTemplateBundle = {
         .addEnumValue('App', 'App')
         .addEnumValue('Dashboard', 'Dashboard')
         .addEnumValue('Lens', 'Lens')
-}
+};

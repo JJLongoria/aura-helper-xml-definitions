@@ -18,4 +18,4 @@ export const LightningExperienceTheme = {
     shouldOverrideLoadingImage: new BooleanXMLField('shouldOverrideLoadingImage', 'Should Override Loading Image')
         .setMinApi(42)
         .setEditable()
-}
+};

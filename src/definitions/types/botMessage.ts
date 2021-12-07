@@ -15,5 +15,5 @@ export function botMessage(botMessageName: string, botMessageLabel: string, minA
             .setRequired()
             .setMinApi(53)
             .setMaxLength(255)
-        )
+        );
 }

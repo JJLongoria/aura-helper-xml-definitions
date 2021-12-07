@@ -19,4 +19,4 @@ export const EntitlementTemplate = {
     type: new StringXMLField('type', 'Type')
         .setMinApi(18)
         .setEditable(),
-}
+};

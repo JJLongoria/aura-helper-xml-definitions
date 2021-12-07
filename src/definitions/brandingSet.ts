@@ -22,4 +22,4 @@ export const BrandingSet = {
     type: new StringXMLField('type', 'Type')
         .setMinApi(40)
         .setEditable()
-}
+};

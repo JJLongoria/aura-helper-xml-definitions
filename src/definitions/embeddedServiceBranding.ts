@@ -40,4 +40,4 @@ export const EmbeddedServiceBranding = {
     width: new StringXMLField('width', 'Width')
         .setMinApi(43)
         .setEditable(),
-}
+};

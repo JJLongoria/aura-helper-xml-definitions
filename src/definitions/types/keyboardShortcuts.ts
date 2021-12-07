@@ -11,5 +11,5 @@ export function keyboardShortcut(shortcutName: string, shortcutLabel: string, mi
         .addField('customShortcuts', customShortcut(ArrayXMLField, 'customShortcuts', 'Custom Shortcuts', 42))
         .addField('customShortcut', customShortcut(ObjectXMLField, 'customShortcut', 'Custom Shortcut', minApi, 41))
         .addField('defaultShortcuts', defaultShortcut(ArrayXMLField, 'defaultShortcuts', 'Default Shortcuts', 42))
-        .addField('defaultShortcut', defaultShortcut(ObjectXMLField, 'defaultShortcut', 'Default Shortcut', minApi, 41))
+        .addField('defaultShortcut', defaultShortcut(ObjectXMLField, 'defaultShortcut', 'Default Shortcut', minApi, 41));
 }

@@ -67,4 +67,4 @@ export const NamedFilter = {
         .setMinApi(17)
         .setEditable()
         .setMetadataType(MetadataTypes.CUSTOM_OBJECT),
-}
+};

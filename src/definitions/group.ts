@@ -14,4 +14,4 @@ export const Group = {
         .setMinApi(24)
         .setEditable()
         .setRequired()
-}
+};

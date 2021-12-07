@@ -20,4 +20,4 @@ export const UserCriteria = {
         .addEnumValue('Internal', 'Internal')
         .addEnumValue('Customer', 'Customer')
         .addEnumValue('Partner', 'Partner')
-}
+};

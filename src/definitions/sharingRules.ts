@@ -275,4 +275,4 @@ export const SharingRules = {
             .setSortOrder(undefined)
             .setFields(SharedTo)
         )
-}
+};

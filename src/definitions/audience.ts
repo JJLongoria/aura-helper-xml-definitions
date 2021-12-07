@@ -251,4 +251,4 @@ export const Audience = {
                 .setRequired()
             )
         )
-}
+};

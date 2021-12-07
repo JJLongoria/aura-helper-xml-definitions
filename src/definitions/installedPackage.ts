@@ -13,4 +13,4 @@ export const InstalledPackage = {
         .setMinApi(28)
         .setEditable()
         .setRequired()
-}
+};

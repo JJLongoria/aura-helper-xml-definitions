@@ -11,4 +11,4 @@ export const MlDomain = {
         .setEditable(),
     mlIntents: mlIntent('mlIntents', 'Machine Learning Intents'),
     mlSlotClasses: mlSlot('mlSlotClasses', 'Machine Slot Classes'),
-}
+};

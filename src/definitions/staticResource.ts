@@ -24,4 +24,4 @@ export const StaticResource = {
         .setRequired()
         .setUnique()
         .addMatchPattern(/^[^\d\s_](\w)+$/)
-}
+};

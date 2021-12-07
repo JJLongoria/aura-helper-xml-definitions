@@ -74,4 +74,4 @@ export const MLDataDefinition = {
         .addEnumValue('Interaction', 'Interaction')
         .addEnumValue('Prediction', 'Prediction')
         .addEnumValue('Recipient', 'Recipient')
-}
+};

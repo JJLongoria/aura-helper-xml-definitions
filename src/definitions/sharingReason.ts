@@ -13,4 +13,4 @@ export const SharingReason = {
         .setEditable()
         .setRequired()
         .setMaxLength(40),
-}
+};

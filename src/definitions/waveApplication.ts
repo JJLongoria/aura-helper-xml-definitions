@@ -61,4 +61,4 @@ export const WaveApplication = {
         .setMinApi(37)
         .setEditable(),
 
-}
+};

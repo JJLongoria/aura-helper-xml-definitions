@@ -11,4 +11,4 @@ export const SiteDotCom = {
         .setRequired()
         .addEnumValue('Experience Cloud Sites', 'ChatterNetworkPicasso')
         .addEnumValue('Site.com sites', 'Siteforce')
-}
+};

@@ -17,4 +17,4 @@ export const KeywordList = {
         .setMinApi(36)
         .setEditable()
         .setRequired()
-}
+};

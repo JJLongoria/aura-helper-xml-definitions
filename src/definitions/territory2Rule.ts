@@ -43,4 +43,4 @@ export const Territory2Rule = {
         .addField('value', new StringXMLField('value', 'Value')
             .setEditable()
         )
-}
+};

@@ -229,4 +229,4 @@ export const MutingPermissionSet = {
         .addField('name', new StringXMLField('name', 'Name')
             .setUnique()
         )
-}
+};

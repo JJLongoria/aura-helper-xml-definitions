@@ -112,4 +112,4 @@ export const DuplicateRule = {
         .setMinApi(51)
         .setEditable()
         .setRequired()
-}
+};

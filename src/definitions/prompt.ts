@@ -225,4 +225,4 @@ export const Prompt = {
             .setMaxLength(1000)
         )
 
-}
+};

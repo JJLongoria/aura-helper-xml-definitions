@@ -48,4 +48,4 @@ export const AnimationRule = {
         .setMinApi(46)
         .setEditable()
         .setRequired(),
-}
+};

@@ -24,4 +24,4 @@ export const Certificate = {
     privateKeyExportable: new BooleanXMLField('privateKeyExportable', 'Private Key Exportable')
         .setMinApi(36)
         .setEditable(),
-}
+};

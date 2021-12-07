@@ -52,4 +52,4 @@ export const DecisionTable = {
         .addEnumValue('Activation In Progress', 'ActivationInProgress')
 
 
-}
+};

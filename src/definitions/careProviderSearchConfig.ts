@@ -25,4 +25,4 @@ export const CareProviderSearchConfig = {
         .setMinApi(48)
         .setEditable()
         .setMetadataType(MetadataTypes.CUSTOM_FIELD),
-}
+};

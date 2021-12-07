@@ -28,4 +28,4 @@ export const Document = {
         .setMinApi(10)
         .setEditable()
         .addDependencyField(new XMLDependencyField('internalUseOnly', true, DataValues.NOT_AVAILABLE))
-}
+};

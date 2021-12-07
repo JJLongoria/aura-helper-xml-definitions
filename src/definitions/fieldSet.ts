@@ -43,4 +43,4 @@ export const FieldSet = {
         .setEditable()
         .setRequired()
         .setMetadataType(MetadataTypes.FIELD_SET),
-}
+};

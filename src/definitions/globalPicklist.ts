@@ -40,4 +40,4 @@ export const GlobalPicklist = {
         .setMaxApi(37)
         .setEditable()
         .setDefaultValue(false),
-}
+};

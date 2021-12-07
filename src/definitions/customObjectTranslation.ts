@@ -53,7 +53,7 @@ function objectCaseNameValue(minApi?: number | string) {
         .addField('value', new BooleanXMLField('value', 'Value')
             .setEditable()
             .setRequired()
-        )
+        );
 }
 
 export const CustomObjectTranslation = {
@@ -277,4 +277,4 @@ export const CustomObjectTranslation = {
             .setEditable()
         )
 
-}
+};

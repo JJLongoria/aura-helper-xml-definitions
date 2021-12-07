@@ -87,6 +87,6 @@ export function customShortcut(type: any, shortcutName: string, shortcutLabel: s
         .addField('eventName', new StringXMLField('eventName', 'Event Name')
             .setEditable()
             .setRequired()
-        )
+        );
 }
 

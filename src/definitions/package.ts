@@ -97,4 +97,4 @@ export const Package = {
         .setEditable()
         .setRequired()
 
-}
+};

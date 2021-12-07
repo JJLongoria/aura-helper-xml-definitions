@@ -141,4 +141,4 @@ export const EmbeddedServiceMenuSettings = {
         .setRequired()
         .setMetadataType(MetadataTypes.CUSTOM_SITE),
 
-}
+};

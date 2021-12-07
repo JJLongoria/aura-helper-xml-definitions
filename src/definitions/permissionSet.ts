@@ -235,4 +235,4 @@ export const PermissionSet = {
         .addField('name', new StringXMLField('name', 'Name')
             .setUnique()
         )
-}
+};

@@ -60,4 +60,4 @@ export const NavigationMenu = {
             .addEnumValue('Menu Label', 'MenuLabel')
             .addEnumValue('Navigational Topic', 'NavigationalTopic')
         )
-}
+};

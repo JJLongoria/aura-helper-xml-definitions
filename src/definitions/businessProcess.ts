@@ -18,4 +18,4 @@ export const BusinessProcess = {
         .setMinApi(17)
         .setEditable(),
     values: picklistValues('values', 'Values', 17)
-}
+};

@@ -40,4 +40,4 @@ export const PlatformCachePartition = {
             .addEnumValue('Session', 'Session')
             .addEnumValue('Organization', 'Organization')
         )
-}
+};

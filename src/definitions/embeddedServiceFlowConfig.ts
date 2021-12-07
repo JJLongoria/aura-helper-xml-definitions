@@ -5,4 +5,4 @@ export const EmbeddedServiceFlowConfig = {
         .setMinApi(45)
         .setEditable()
         .setDefaultValue(false)
-}
+};

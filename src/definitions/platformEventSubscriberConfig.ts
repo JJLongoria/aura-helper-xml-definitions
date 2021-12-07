@@ -23,4 +23,4 @@ export const PlatformEventSubscriptionConfig = {
         .setEditable()
         .setRequired()
         .linkFieldToSObject('User', 'Username')
-}
+};

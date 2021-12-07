@@ -267,4 +267,4 @@ export const CustomObject = {
         .setFieldKey('fullName')
         .setFields(WebLink)
 
-}
+};

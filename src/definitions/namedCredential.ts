@@ -88,4 +88,4 @@ export const NamedCredential = {
     username: new StringXMLField('username', 'Username')
         .setMinApi(33)
         .setEditable(),
-}
+};

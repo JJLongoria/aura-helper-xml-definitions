@@ -42,4 +42,4 @@ export const HomePageComponent = {
         .addEnumValue('Narrow Components', 'narrowComponents')
         .addEnumValue('Wide Components', 'wideComponents')
 
-}
+};

@@ -111,4 +111,4 @@ export const CommunityThemeDefinition = {
             .addDependencyField(new XMLDependencyField('customThemeLayoutType', DataValues.NOT_NULL, DataValues.NOT_AVAILABLE))
         )
 
-}
+};

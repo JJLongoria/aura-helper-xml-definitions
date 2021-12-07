@@ -23,4 +23,4 @@ export const UserAuthCertificate = {
         .setEditable()
         .setRequired()
         .linkFieldToSObject('User', 'Username')
-}
+};

@@ -58,4 +58,4 @@ export const PresenceUserConfig = {
     presenceStatusOnPushTimeout: new StringXMLField('presenceStatusOnPushTimeout', 'Presence Status On Push Timeout')
         .setMinApi(44)
         .setEditable()
-}
+};

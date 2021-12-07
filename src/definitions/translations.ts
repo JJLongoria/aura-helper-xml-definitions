@@ -311,4 +311,4 @@ export const Translation = {
             .setRequired()
             .setMetadataType(MetadataTypes.QUICK_ACTION)
         ),
-}
+};

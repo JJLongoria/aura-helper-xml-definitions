@@ -344,4 +344,4 @@ export const ConnectedApp = {
     startUrl: new StringXMLField('startUrl', 'Start URL')
         .setMinApi(29)
         .setEditable()
-}
+};

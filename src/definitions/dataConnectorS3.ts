@@ -16,4 +16,4 @@ export const DataConnectorS3 ={
     s3BucketName: new StringXMLField('s3BucketName', 'S3 Bucket Name')
         .setMinApi(50)
         .setEditable(),
-}
+};

@@ -95,4 +95,4 @@ export const EmailServicesFunction = {
         .addEnumValue('Bounce', 'Bounce')
         .addEnumValue('Discard', 'Discard')
         .addEnumValue('Requeue', 'Requeue'),
-}
+};

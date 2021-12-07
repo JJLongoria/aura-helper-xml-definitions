@@ -23,4 +23,4 @@ export const PaymentGatewayProvider = {
         .setMinApi(48)
         .setEditable()
         .setRequired()
-}
+};

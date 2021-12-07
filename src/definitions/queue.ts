@@ -73,4 +73,4 @@ export const Queue = {
             .setEditable()
             .setMetadataType(MetadataTypes.CUSTOM_OBJECT)
         )
-}
+};

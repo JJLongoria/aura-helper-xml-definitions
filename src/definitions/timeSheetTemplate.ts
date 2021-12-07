@@ -57,4 +57,4 @@ export const TimeSheetTemplate = {
         .addEnumValue('Friday', 'Friday')
         .addEnumValue('Saturday', 'Saturday')
         .addEnumValue('Sunday', 'Sunday'),
-}
+};

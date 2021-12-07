@@ -105,4 +105,4 @@ export const EmbeddedServiceLiveAgent = {
         .setMinApi(38)
         .setEditable()
         .setRequired(),
-}
+};

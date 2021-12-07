@@ -27,4 +27,4 @@ export const EventSubscription = {
         .setMaxApi(45)
         .setEditable()
         .setRequired()
-}
+};

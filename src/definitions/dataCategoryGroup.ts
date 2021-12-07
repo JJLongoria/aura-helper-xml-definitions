@@ -42,4 +42,4 @@ export const DataCategoryGroup = {
             .addEnumValue('Knowledge Article Version', 'KnowledgeArticleVersion')
             .addEnumValue('Question', 'Question')
         )
-}
+};

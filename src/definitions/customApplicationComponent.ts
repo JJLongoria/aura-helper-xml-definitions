@@ -35,4 +35,4 @@ export const CustomApplicationComponent = {
     width: new IntegerXMLField('width', 'Width')
         .setMinApi(25)
         .setEditable(),
-}
+};

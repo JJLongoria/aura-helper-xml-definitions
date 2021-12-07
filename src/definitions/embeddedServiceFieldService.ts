@@ -41,4 +41,4 @@ export const EmbeddedServiceFieldService = {
         .setMinApi(43)
         .setEditable()
         .setDefaultValue(false)
-}
+};

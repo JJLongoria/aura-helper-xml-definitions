@@ -5,4 +5,4 @@ export const PresenseDeclineReason = {
         .setMinApi(44)
         .setEditable()
         .setRequired()
-}
+};

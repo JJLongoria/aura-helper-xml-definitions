@@ -45,4 +45,4 @@ export const MobileApplicationDetail = {
         .setMinApi(47)
         .setEditable()
         .setRequired(),
-}
+};

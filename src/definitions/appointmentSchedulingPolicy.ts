@@ -66,4 +66,4 @@ export const AppointmentSchedulingPolicy = {
         .setMinApi(47)
         .setEditable()
         .setRequired(),
-}
+};

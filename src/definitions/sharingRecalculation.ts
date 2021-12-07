@@ -5,4 +5,4 @@ export const SharingRecalculation = {
         .setMinApi(14)
         .setEditable()
         .setRequired()
-}
+};

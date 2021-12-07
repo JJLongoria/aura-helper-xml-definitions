@@ -53,5 +53,5 @@ export function mlSlot(intentName: string, intentApi: string, minApi?: number | 
             .addField('value', new StringXMLField('value', 'Value')
                 .setEditable()
             )
-        )
+        );
 }

@@ -923,4 +923,4 @@ export const Layout = {
             .addEnumValue('Quick Action Layout Left Right', 'QuickActionLayoutLeftRight', 28)
             .addEnumValue('Quick Action Layout Top Down', 'QuickActionLayoutTopDown', 28)
         )
-}
+};

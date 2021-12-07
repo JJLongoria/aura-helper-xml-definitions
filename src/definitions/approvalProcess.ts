@@ -160,4 +160,4 @@ export const ApprovalProcess = {
     showApprovalHistory: new BooleanXMLField('showApprovalHistory', 'Show Approval History')
         .setMinApi(28)
         .setEditable(),
-}
+};

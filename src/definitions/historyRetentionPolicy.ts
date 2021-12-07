@@ -22,4 +22,4 @@ export const HistoryRetentionPolicy = {
         .setDefaultValue(1)
         .setMinValue(0)
         .setMaxValue(10),
-}
+};

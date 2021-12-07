@@ -14,4 +14,4 @@ export const WaveDashboard = {
     templateAssetSourceName: new StringXMLField('templateAssetSourceName', 'Template Asset Source Name')
         .setMinApi(37)
         .setEditable(),
-}
+};

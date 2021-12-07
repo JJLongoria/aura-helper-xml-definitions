@@ -89,4 +89,4 @@ export const SamlSsoConfig = {
     validationCert: new StringXMLField('validationCert', 'ValidationCert')
         .setMinApi(28)
         .setEditable(),
-}
+};

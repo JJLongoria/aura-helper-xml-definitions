@@ -56,8 +56,8 @@ export class XMLDefinitions {
         const definitions = require('./definitions');
         const result: any = {};
         for (let key of Object.keys(definitions)) {
-            let typeProcessed = processType(definitions[key], apiVersion)
-            if (typeProcessed != null && Object.keys(typeProcessed).length > 0) {
+            let typeProcessed = processType(definitions[key], apiVersion);
+            if (typeProcessed !== null && Object.keys(typeProcessed).length > 0) {
                 result[key] = typeProcessed;
             }
         }
@@ -204,7 +204,7 @@ function isReserved(entityData: any): boolean {
 }
 
 function isApiAvailable(entityData: any, apiVersion: string | number): boolean {
-    return entityData.minApi <= apiVersion && (entityData.maxApi == -1 || entityData.maxApi >= apiVersion);
+    return entityData.minApi <= apiVersion && (entityData.maxApi === -1 || entityData.maxApi >= apiVersion);
 }
 
 function transformTypeName(type: string): string {

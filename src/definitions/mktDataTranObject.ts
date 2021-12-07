@@ -21,4 +21,4 @@ export const MktDataTranObject = {
         .addEnumValue('Engagement', 'Engagement')
         .addEnumValue('Other', 'Other'),
 
-}
+};

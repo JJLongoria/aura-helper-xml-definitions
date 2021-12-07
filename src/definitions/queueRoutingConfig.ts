@@ -41,4 +41,4 @@ export const QueueRoutingConfig = {
         .setEditable()
         .linkFieldToSObject('User', 'Username'),
 
-}
+};

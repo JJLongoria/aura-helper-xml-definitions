@@ -37,4 +37,4 @@ export const EclairGeoData = {
         .setEditable()
         .setRequired()
         .setUnique()
-}
+};

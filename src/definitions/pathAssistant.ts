@@ -37,4 +37,4 @@ export const PathAssistant = {
         .setEditable()
         .setRequired()
         .setMetadataType(MetadataTypes.RECORD_TYPE),
-}
+};

@@ -29,4 +29,4 @@ export const Delegategroup = {
         .setMinApi(36)
         .setEditable()
         .setMetadataType(MetadataTypes.ROLE),
-}
+};

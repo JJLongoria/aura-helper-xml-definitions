@@ -83,4 +83,4 @@ export const LightningBold = {
         .setEditable()
         .setRequired(),
 
-}
+};

@@ -113,4 +113,4 @@ export const TransactionSecurityPolicy = {
         .setDefaultValue('CustomApexPolicy')
         .addEnumValue('Custom Apex Policy', 'CustomApexPolicy')
         .addEnumValue('Custom Condition Builder Policy', 'CustomConditionBuilderPolicy')
-}
+};

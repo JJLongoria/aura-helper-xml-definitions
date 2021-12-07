@@ -312,5 +312,5 @@ export function dashboardComponent(type: any, dashboardComponentName: string, da
         )
         .addField('useReportChart', new BooleanXMLField('useReportChart', 'Use Report Chart')
             .setEditable()
-        )
+        );
 }

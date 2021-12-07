@@ -12,4 +12,4 @@ export const Territory2Type = {
         .setMinApi(32)
         .setEditable()
         .setRequired(),
-}
+};

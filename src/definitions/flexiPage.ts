@@ -25,7 +25,7 @@ function componentInstanceProperties(name: string, label: string) {
                     .setEditable()
                 )
             )
-        )
+        );
 }
 
 function componentInstance(type: any, name: string, label: string) {
@@ -77,7 +77,7 @@ function componentInstance(type: any, name: string, label: string) {
                     .setRequired()
                 )
             )
-        )
+        );
 }
 
 export const FlexiPage = {
@@ -469,4 +469,4 @@ export const FlexiPage = {
         .addEnumValue('Record Page', 'RecordPage', 37)
         .addEnumValue('Record Preview', 'RecordPreview', 45)
         .addEnumValue('Utility Bar', 'UtilityBar', 38)
-}
+};

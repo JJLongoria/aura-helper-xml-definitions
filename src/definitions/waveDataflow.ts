@@ -17,4 +17,4 @@ export const WaveDataflow = {
         .setMinApi(37)
         .setEditable()
         .setRequired(),
-}
+};

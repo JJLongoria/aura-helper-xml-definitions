@@ -16,4 +16,4 @@ export const DataSourceObject = {
     sourceIdentifier: new StringXMLField('sourceIdentifier', 'Source Identifier')
         .setMinApi(50)
         .setEditable(),
-}
+};

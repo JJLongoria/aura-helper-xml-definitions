@@ -93,4 +93,4 @@ export const Bot = {
         .setEditable(),
     logPrivateConversationData: new BooleanXMLField('logPrivateConversationData', 'Log Private Conversation Data')
         .setEditable(),
-}
+};

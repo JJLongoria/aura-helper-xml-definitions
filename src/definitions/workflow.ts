@@ -399,4 +399,4 @@ export const Workflow = {
             .setEditable()
             .setRequired()
         )
-}
+};

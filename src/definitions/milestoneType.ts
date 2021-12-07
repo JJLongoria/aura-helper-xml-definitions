@@ -11,4 +11,4 @@ export const MilestoneType = {
         .addEnumValue('Recurs Independently', 'recursIndependently')
         .addEnumValue('Recurs Chained', 'recursChained'),
 
-}
+};

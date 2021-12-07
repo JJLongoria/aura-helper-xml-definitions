@@ -46,4 +46,4 @@ export const MLPredictionDefinition = {
         .addEnumValue('Multiclass Classification', 'MulticlassClassification')
         .addEnumValue('Regression', 'Regression')
         .addEnumValue('Scoring Specific Outcome', 'ScoringSpecificOutcome'),
-}
+};

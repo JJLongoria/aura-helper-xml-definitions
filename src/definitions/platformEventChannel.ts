@@ -21,4 +21,4 @@ export const PlatformEventChannel = {
         .setEditable()
         .setRequired()
 
-}
+};
