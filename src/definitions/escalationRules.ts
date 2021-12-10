@@ -6,6 +6,7 @@ export const EscalationRules = {
         .setMinApi(27)
         .setEditable()
         .setFieldKey('fullName')
+        .setSortOrder(undefined)
         .addField('active', new BooleanXMLField('active', 'Active')
             .setEditable()
         )
