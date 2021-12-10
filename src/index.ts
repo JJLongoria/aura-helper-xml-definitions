@@ -16,9 +16,9 @@ export class XMLDefinitions {
      * Method to get the Metadata Type's XML definition for an API Version.  
      * @param {string} type Metadata Type API Name to get the XML definition
      * @param {string | number} apiVersion API Version number to get the version definition
-     * @returns Return the XML definition for the selected type and API version. If the type exists, but is not available in the selected API, return an empty object. If type not exists, return undefined.
+     * @returns {{ [key: string]: any } | undefined} Return the XML definition for the selected type and API version. If the type exists, but is not available in the selected API, return an empty object. If type not exists, return undefined.
      */
-    static getDefinition(type: string, apiVersion: string | number): any {
+    static getDefinition(type: string, apiVersion: string | number): { [key: string]: any } | undefined {
         try {
             let typeDefinition = require('./definitions/' + transformTypeName(type));
             if (typeDefinition) {
@@ -33,9 +33,9 @@ export class XMLDefinitions {
     /**
      * Method to get the Metadata Type's XML RAW definition  
      * @param {string} type Metadata Type API Name to get the XML RAW definition
-     * @returns Return the XML raw definition for the selected type. If type not exists, return undefined.
+     * @returns {{ [key: string]: any } | undefined} Return the XML raw definition for the selected type. If type not exists, return undefined.
      */
-    static getRawDefinition(type: string): any {
+    static getRawDefinition(type: string): { [key: string]: any } | undefined {
         try {
             let typeDefinition = require('./definitions/' + transformTypeName(type));
             if (typeDefinition) {
@@ -50,9 +50,9 @@ export class XMLDefinitions {
     /**
      * Method to get all XML Definitions for all Metadata Types for an specific API Version
      * @param {string | number} apiVersion API Version number to get the XML Definitions
-     * @returns Return an Object with all XML definitions for the selected API version. The object has the Type as key and the XML definition as value. If not exists any definition for the selected API return an empty object
+     * @returns {{ [key: string]: { [key: string]: any } }} Return an Object with all XML definitions for the selected API version. The object has the Type as key and the XML definition as value. If not exists any definition for the selected API return an empty object
      */
-    static getAllDefinitions(apiVersion: string | number): any {
+    static getAllDefinitions(apiVersion: string | number): { [key: string]: { [key: string]: any } } {
         const definitions = require('./definitions');
         const result: any = {};
         for (let key of Object.keys(definitions)) {
@@ -66,9 +66,9 @@ export class XMLDefinitions {
 
     /**
      * Method to get all XML RAW Definitions for all Metadata Types
-     * @returns Return an Object with all XML raw definitions. The object has the Type as key and the XML definition as value
+     * @returns {{ [key: string]: { [key: string]: any } }} Return an Object with all XML raw definitions. The object has the Type as key and the XML definition as value
      */
-    static getAllRawDefinitions(): any {
+    static getAllRawDefinitions(): { [key: string]: { [key: string]: any } } {
         return require('./definitions');
     }
 
@@ -76,7 +76,7 @@ export class XMLDefinitions {
      * Method to resolve the recursive reference from some XML Definition files
      * @param {any} typeDefinition XML file Definition
      * @param {any} subFieldDefinition XML Field definition to resolve
-     * @returns Returns the XML Definition to the selected XML field
+     * @returns {any} Returns the XML Definition to the selected XML field
      */
     static resolveDefinitionReference(typeDefinition: any, subFieldDefinition: any): any {
         if (typeDefinition) {

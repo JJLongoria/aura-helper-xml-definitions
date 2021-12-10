@@ -51,7 +51,7 @@ Method to get the Metadata Type's XML definition for an API Version.
    
 ### **Return:**
 Return the XML definition for the selected type and API version. If the type exists, but is not available in the selected API, return an empty object. If type not exists, return undefined.
-- `any`
+- `{ [key: string]: any }` | `undefined`
     
 ### **Examples:**
 **Get the Profile XML definition for API 45.0**
@@ -77,7 +77,7 @@ Method to get the Metadata Type's XML RAW definition
       - `string` 
 ### **Return:**
 Return the XML raw definition for the selected type. If type not exists, return undefined
-- `any`
+- `{ [key: string]: any }` | `undefined`
 
 ### **Examples:**
 **Get the ConnectedApp XML raw definition**
@@ -103,7 +103,7 @@ Method to get all XML Definitions for all Metadata Types for an specific API Ver
     - `string` | `number` 
 ### **Return:**
 Return an Object with all XML definitions for the selected API version. The object has the Type as key and the XML definition as value. If not exists any definition for the selected API return an empty object
-- `any`
+- `{ [key: string]: { [key: string]: any } }`
 
 ### **Examples:**
 **Get All XML Definitions for API 43.0**
@@ -124,7 +124,7 @@ Method to get all XML RAW Definitions for all Metadata Types
 
 ### **Return:**
 Return an Object with all XML raw definitions. The object has the Type as key and the XML definition as value
-- `any`
+- `{ [key: string]: { [key: string]: any } }`
 
 ### **Examples:**
 **Get All XML raw definitions**
