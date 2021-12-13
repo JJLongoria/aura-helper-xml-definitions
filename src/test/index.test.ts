@@ -21,12 +21,14 @@ describe('Testing index.js', () => {
             }
         }
         let getRawDefinitionResult3 = XMLDefinitions.getRawDefinition('BotVersion');
-        const reference = XMLDefinitions.resolveDefinitionReference(getRawDefinitionResult3, getRawDefinitionResult3.botDialogs.fields.botSteps.fields.botSteps);
-        XMLDefinitions.resolveDefinitionReference(undefined, getRawDefinitionResult3.botDialogs.fields.botSteps.fields.botSteps);
+        const reference = XMLDefinitions.resolveDefinitionReference(getRawDefinitionResult3, getRawDefinitionResult3!.botDialogs!.fields!.botSteps!.fields!.botSteps);
+        XMLDefinitions.resolveDefinitionReference(undefined, getRawDefinitionResult3!.botDialogs!.fields!.botSteps!.fields!.botSteps);
         expect(reference.label).toEqual('Bot Steps');
         expect(Object.keys(reference.fields).length).toBeGreaterThan(0);
         let getDefinitionResult3 = XMLDefinitions.getDefinition('Index', 50);
-        expect(Object.keys(getDefinitionResult3).length).toBeGreaterThan(0);
+        if (getDefinitionResult3) {
+            expect(Object.keys(getDefinitionResult3).length).toBeGreaterThan(0);
+        }
     });
 });
 
