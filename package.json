@@ -2,7 +2,7 @@
   "name": "@aurahelper/xml-definitions",
   "productName": "Aura Helper SalesForce XML Definitions",
   "displayName": "Aura Helper Framework SalesForce XML Definitions",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Powerfull Libraries to get the XML Definitions of ALL XML Salesforce Metadata Files. Support All API Versions up to API 53.0. You can get the definition of one or more XML files for a specific version of Salesforce. For Example: You can get the XML Definition of the Profile or Custom Object XML File on API Version 35.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
